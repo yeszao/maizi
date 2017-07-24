@@ -95,15 +95,17 @@ if ( ! function_exists( 'qiaomi_widgets_init' ) ) {
 			'after_title'   => '</h3>',
 		) );
 
-		register_sidebar( array(
-			'name'          => __( 'Shop Sidebar', 'qiaomi' ),
-			'id'            => 'shop-sidebar',
-			'description'   => 'WooCommerce sidebar widget area',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		) );
+		if ( function_exists( 'is_woocommerce' ) ) {
+			register_sidebar( array(
+				'name'          => __( 'Shop Sidebar', 'qiaomi' ),
+				'id'            => 'shop-sidebar',
+				'description'   => 'WooCommerce sidebar widget area',
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			) );
+		}
 
 		register_sidebar( array(
 			'name'          => __( 'Index Slider', 'qiaomi' ),
