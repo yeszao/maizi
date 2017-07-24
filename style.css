@@ -1,0 +1,305 @@
+/*
+Theme Name: Qiaomi
+Theme URI: http://hostingpress.themedesigner.in
+Author: ThemeDesigner
+Author URI: http://www.themedesigner.in
+Description: Hostingpress theme
+Version: 1.0
+License: GNU General Public License v3.0 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: black, orange, responsive-layout, featured-images, full-width-template, threaded-comments, post-formats, translation-ready, custom-menu, theme-options
+Text Domain: hostingpress
+Domain Path: /languages
+*/
+html,body {
+    font-size: 14px;
+}
+a:focus, a:hover {
+    text-decoration: none;
+}
+h1{font-size: 1.4rem; font-weight: 700;}
+h2{font-size: 1.3rem; font-weight: 600;}
+h3, h4, h5, h6{font-size: 1.2rem; font-weight: 600;}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {cursor: pointer;}
+
+ul, li {
+    list-style-position: inside;
+}
+
+aside li {padding-left: 1rem; line-height: 1.75rem;}
+aside ul,
+aside > ul > li {padding-left: 0;}
+aside.widget {margin-bottom: 2rem;}
+aside.widget h3 {color: #666; padding-bottom: 0.5rem; border-bottom: 1px solid #e0e0e0;}
+
+
+
+.thumbnail {max-width: 100%; max-height: 10rem;height: auto;}
+
+/*
+ * Gallery
+ */
+.gallery {
+    margin-bottom: 1.5em; }
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%; }
+.gallery-columns-2 .gallery-item {
+    max-width: 50%; }
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%; }
+.gallery-columns-4 .gallery-item {
+    max-width: 25%; }
+.gallery-columns-5 .gallery-item {
+    max-width: 20%; }
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%; }
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%; }
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%; }
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%; }
+
+.gallery-caption {
+    display: block; }
+
+/*
+ * Custom Style
+ */
+.wrapper {
+    padding: 30px 0; }
+
+#wrapper-hero {
+    padding: 0px !important; }
+
+.sticky,
+.gallery-caption,
+.bypostauthor {
+    font-size: inherit; }
+
+.wrapper#wrapper-sticky {
+    border-bottom: 1px solid #636c72; }
+
+#wrapper-footer-full,
+#wrapper-static-hero {
+    background-color: #eceeef; }
+
+.wp-caption {
+    font-size: inherit; }
+
+.wp-caption-text {
+    font-size: inherit; }
+
+.screen-reader-text {
+    font-size: inherit; }
+
+.alignright {
+    float: right;
+    padding-left: 10px; }
+
+.alignleft {
+    float: left;
+    padding-right: 10px; }
+
+.aligncenter {
+    margin: 0px auto; }
+
+.entry-footer span {
+    padding-right: 10px; }
+
+/*img.wp-post-image,
+article img,
+figure,
+img,
+#secondary img {
+    max-width: 100%;
+    height: auto; }*/
+
+a.skip-link {
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    right: 0px; }
+
+.jumbotron {
+    margin-bottom: 0px; }
+
+
+
+
+
+.gallery:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+aside.widget {
+    clear: both; }
+
+#wrapper-hero .carousel-inner .textwidget {
+    width: 100%; }
+
+h1.navbar-brand a {
+    color: inherit; }
+
+h1.navbar-brand a:hover {
+    text-decoration: none; }
+
+
+
+/*
+ * override CF7 style
+ */
+.wpcf7 {
+    max-width: 600px;
+    margin: 0 auto !important; }
+.wpcf7 .wpcf7-form label {
+    width: 100%; }
+.wpcf7 .wpcf7-not-valid-tip {
+    color: #d9534f !important; }
+.wpcf7 .wpcf7-validation-errors {
+    color: #d9534f !important;
+    border: 1px solid #eceeef !important; }
+
+
+
+
+
+/* 主菜单样式 */
+.navbar-nav .nav-link,
+.dropdown-item {
+    opacity: .65;
+}
+
+.navbar-nav .active>.nav-link,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.open,
+.navbar-nav .open>.nav-link,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover,
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:focus,
+.dropdown-item:hover{
+    opacity: 1;
+}
+
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:focus,
+.dropdown-item:hover{
+    background: inherit;
+}
+
+
+/* 内容 */
+
+.article-content h2,
+.article-content h3{
+    margin: 1.2rem 0 .6rem;
+}
+
+/* 页面中的【添加到购物车】按钮 */
+.btn-add-to-cart {
+    background-color: #ebe9eb;
+    border-color: #ebe9eb;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #dad8da;
+    border-color: #dad8da;
+}
+
+.btn-add-to-cart:active, .btn-add-to-cart.active,
+.show > .btn-add-to-cart.dropdown-toggle {
+    background-color: #dad8da;
+    background-image: none;
+    border-color: #dad8da;
+}
+
+/* Scroll to Top */
+.scroll-top {
+    display: none;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    padding: 0;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    background: #727272;
+    text-align: center;
+    text-decoration: none;
+    opacity:0.85;
+    filter:alpha(opacity=85);
+    cursor: pointer;
+}
+.scroll-top:hover, .scroll-top:focus {
+    outline: 0;
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+
+/**
+ * 地址中国家和省份的样式
+ */
+.select2-container .select2-selection--single,
+.woocommerce form .form-row input.input-text{
+    height: 2.31rem;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: 2.31rem;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    top: 6px;
+}
+
+/* 购物车中的数量 */
+.woocommerce .quantity .qty{
+    width: 5rem;
+}
+
+/* 图标 */
+[class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url(assets/img/glyphicons-halflings.png);
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+    margin-top: 4px;
+}
+.icon-white {
+    background-image: url(assets/img/glyphicons-halflings-white.png);
+}
+.meta-item [class^="icon-"],
+.meta-item [class*="icon-"],
+.post-navigation [class^="icon-"],
+.post-navigation [class*="icon-"]
+{
+    opacity: 0.40;
+    filter: alpha(opacity=40);
+}
+.icon12 {margin-top: 2px;}
+.icon-time {background-position: -48px -24px;}
+.icon-comment {background-position: -240px -120px;}
+.icon-account {background-position: -168px 0;}
+.icon-category {background-position: -360px -48px;}
+.icon-tag {background-position: -72px -48px;}
+.icon-edit {background-position: 0 -72px;}
+.icon-eye-open {background-position: -96px -120px;}
+.icon-arrow-up {background-position: -288px -120px;}
+.icon-arrow-down {background-position: -312px -120px;}
+.icon-arrow-left{background-position: -432px -72px;}
+.icon-arrow-right{background-position: -456px -72px;}
+
