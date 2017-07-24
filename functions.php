@@ -3,68 +3,67 @@
 /**
  * Theme setup and custom theme supports.
  */
-require get_template_directory() . '/inc/setup.php';
+require get_template_directory() . '/includes/setup.php';
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-require get_template_directory() . '/inc/widgets-position.php';
-require get_template_directory() . '/inc/widget-singular-menu.php';
-require get_template_directory() . '/inc/widget-slider-unit.php';
+require get_template_directory() . '/includes/widgets-position.php';
+require get_template_directory() . '/includes/widget-singular-menu.php';
+require get_template_directory() . '/includes/widget-slider-unit.php';
 
 /**
  * Load functions to secure your WP install.
  */
-require get_template_directory() . '/inc/security.php';
+require get_template_directory() . '/includes/security.php';
 
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/includes/template-tags.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/pagination.php';
+require get_template_directory() . '/includes/pagination.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
+require get_template_directory() . '/includes/extras.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/includes/customizer.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/custom-comments.php';
+require get_template_directory() . '/includes/custom-comments.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/includes/jetpack.php';
 
 /**
  * Load custom WordPress nav walker.
  */
-//require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
-require get_template_directory() . '/inc/bs4Navwalker.php';
+require get_template_directory() . '/includes/bs4Navwalker.php';
 
 /**
  * Load WooCommerce functions.
  */
-require get_template_directory() . '/inc/woocommerce.php';
+require get_template_directory() . '/includes/woocommerce.php';
 
 /**
  * Load Editor functions.
  */
-require get_template_directory() . '/inc/editor.php';
+require get_template_directory() . '/includes/editor.php';
 
 /**
  * register javascript and css file

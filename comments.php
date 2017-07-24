@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 /**
  * Bootstrap Comment Walker
  */
-require get_template_directory() . '/inc/wp-bootstrap-comments.php';
+require get_template_directory() . '/includes/wp-bootstrap-comments.php';
 ?>
 
 <div class="comments-area mt-5" id="comments">

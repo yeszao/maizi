@@ -35,6 +35,6 @@ add_action( 'after_setup_theme', 'qiaomi_wpcom_setup' );
  * WordPress.com-specific styles
  */
 function qiaomi_wpcom_styles() {
-	wp_enqueue_style( 'qiaomi-wpcom', get_template_directory_uri() . '/inc/style-wpcom.css', '20160411' );
+	wp_enqueue_style( 'qiaomi-wpcom', get_template_directory_uri() . '/includes/style-wpcom.css', '20160411' );
 }
 add_action( 'wp_enqueue_scripts', 'qiaomi_wpcom_styles' );
