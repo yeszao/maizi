@@ -19,6 +19,7 @@ $container = get_theme_mod( 'qiaomi_container_type' );
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<title><?php wp_title( '-', true, 'right' ); ?></title>
 	<?php wp_head(); ?>
 </head>
 

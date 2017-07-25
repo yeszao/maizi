@@ -20,11 +20,10 @@ if ( ! function_exists( 'qiaomi_setup' ) ) :
 			'primary' => __( 'Primary Menu', 'qiaomi' ),
 		) );
 
-        add_theme_support( 'title-tag' );
-		add_theme_support( 'html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption',) );
+		add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'customize-selective-refresh-widgets' );
-		add_theme_support( 'post-formats', array('aside', 'image', 'video', 'quote', 'link') );
+		add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 		add_theme_support( 'custom-background' );
 		add_theme_support( 'custom-logo' );
 
@@ -32,13 +31,13 @@ if ( ! function_exists( 'qiaomi_setup' ) ) :
 		// Caution: DO NOT check existence using === always check with == .
 		// Latest blog posts style.
 		$qiaomi_sidebar_position = get_theme_mod( 'qiaomi_sidebar_position' );
-		if ( $qiaomi_sidebar_position == '') {
+		if ( '' == $qiaomi_sidebar_position ) {
 			set_theme_mod( 'qiaomi_sidebar_position', 'left' );
 		}
 
 		// Container width.
 		$qiaomi_container_type = get_theme_mod( 'qiaomi_container_type' );
-		if ( $qiaomi_container_type == '') {
+		if ( '' == $qiaomi_container_type ) {
 			set_theme_mod( 'qiaomi_container_type', 'container' );
 		}
 	}
