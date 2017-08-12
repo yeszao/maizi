@@ -1,35 +1,43 @@
 jQuery(function($){
+    var frame;
+
     $('.upload-custom-img').on('click', function(e) {
         e.preventDefault();
         var self = $(this),
-            parent = self.parent('p'),
+            parent = self.parent('.upload-img-box'),
             delImgLink = parent.find('.delete-custom-img'),
             imgContainer = parent.find('.custom-img-container'),
             imgIdInput = parent.find('.custom-img-id');
 
-        var custom_uploader = wp.media({
-            multiple: false
-        })
-            .on('select', function() {
-                var attachment = custom_uploader.state().get('selection').first().toJSON();
-                imgContainer.html( '<img src="'+attachment.url+'" alt="" style="max-width:100%;"/>' );
-                // imgInput.val(attachment.url);
-                imgIdInput.val(attachment.id);
+        if (frame) {
+            frame.open();
+            return;
+        }
 
-                // Unhide the remove image link
-                delImgLink.removeClass( 'hidden' );
-            })
-            .open();
+        frame = wp.media({
+            multiple: false
+        });
+
+        frame.on('select', function() {
+            var attachment = frame.state().get('selection').first().toJSON();
+
+            imgContainer.html( '<img src="'+attachment.url+'" alt="" style="max-width:100%;"/>' );
+            imgIdInput.val(attachment.id);
+            delImgLink.removeClass( 'hidden' );
+        });
+
+        frame.open();
     });
 
     // DELETE IMAGE LINK
     $('.delete-custom-img').on( 'click', function( event ){
         event.preventDefault();
         var self = $(this),
-            parent = self.parent('p'),
+            parent = self.parent('.upload-img-box'),
             delImgLink = parent.find('.delete-custom-img'),
             imgContainer = parent.find('.custom-img-container'),
             imgIdInput = parent.find('.custom-img-id');
+
         // Clear out the preview image
         imgContainer.html( '' );
         // Hide the delete image link

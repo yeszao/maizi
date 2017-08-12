@@ -5,10 +5,10 @@ function qiaomi_widgets() {
 	register_widget( 'Slider_Unit_Widget' );
 }
 
-function ctUp_wdScript(){
+function wp_media_script() {
 	wp_enqueue_media();
 }
-add_action('admin_enqueue_scripts', 'ctUp_wdScript');
+add_action( 'admin_enqueue_scripts', 'wp_media_script' );
 
 
 function widgets_scripts( $hook ) {
@@ -17,14 +17,10 @@ function widgets_scripts( $hook ) {
 	}
 	wp_enqueue_style( 'wp-color-picker' );
 	wp_enqueue_script( 'wp-color-picker' );
+	wp_enqueue_script( 'qiaomi-admin-js', get_template_directory_uri() . '/assets/js/qiaomi-admin.js' );
 }
 add_action( 'admin_enqueue_scripts', 'widgets_scripts' );
 
-
-function load_custom_wp_admin_script() {
-	wp_enqueue_script( 'qiaomi-admin-js', get_template_directory_uri() . '/assets/js/qiaomi-admin.js');
-}
-add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_script' );
 
 /**
  * 滑动幻灯片Widget
@@ -115,16 +111,24 @@ class Slider_Unit_Widget extends WP_Widget {
                    value="<?php echo esc_attr( $instance['height'] ); ?>" />
         </p>
 
-		<p>
+		<div class="upload-img-box">
             <label for="<?php echo esc_attr( $this->get_field_id( 'img' ) ); ?>">
                 <?php _e('Image' ); ?>
             </label>
-			<br />
-			<span class="custom-img-container">
-				<img src="<?php echo wp_get_attachment_image_src( $instance['img'], 'full' )[0]; ?>"
-					 style="max-width: 100%;" />
-			</span>
-			<br />
+			<div class="media-widget-control">
+				<div class="media-widget-preview">
+					<div class="attachment-media-view custom-img-container">
+						<?php if ($instance['img']) { ?>
+							<img src="<?php echo wp_get_attachment_image_src( $instance['img'], 'full' )[0]; ?>"
+								 style="max-width: 100%;" />
+						<?php } else { ?>
+							<div class="placeholder">
+								<?php _e('No image selected'); ?>
+							</div>
+						<?php } ?>
+					</div>
+				</div>
+			</div>
 			<input class="widefat custom-img-id" type="hidden"
                    id="<?php echo esc_attr( $this->get_field_id( 'img' ) ); ?>"
                    name="<?php echo $this->get_field_name('img'); ?>"
@@ -133,7 +137,7 @@ class Slider_Unit_Widget extends WP_Widget {
 			<a class="button delete-custom-img <?php echo $instance['img'] ?'':'hidden'; ?>">
                 <?php _e( 'Remove Image'); ?>
             </a>
-		</p>
+		</div>
 
 		<p>
                 <label for="<?php echo esc_attr( $this->get_field_id( 'caption' ) ); ?>">
