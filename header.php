@@ -79,3 +79,9 @@ $container = get_theme_mod( 'qiaomi_container_type' );
 		</nav><!-- .site-navigation -->
 
 	</div><!-- .wrapper-navbar end -->
+
+	<?php if ( is_front_page() ) : ?>
+
+		<?php get_template_part( 'sidebar-slider' ); ?>
+
+	<?php endif; ?>

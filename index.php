@@ -17,12 +17,6 @@ $container   = get_theme_mod( 'qiaomi_container_type' );
 $sidebar_pos = get_theme_mod( 'qiaomi_sidebar_position' );
 ?>
 
-<?php if ( is_front_page() && is_home() ) : ?>
-
-	<?php get_template_part( 'sidebar-slider' ); ?>
-
-<?php endif; ?>
-
 <div class="wrapper" id="wrapper-index">
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
