@@ -17,7 +17,8 @@ function widgets_scripts( $hook ) {
 	}
 	wp_enqueue_style( 'wp-color-picker' );
 	wp_enqueue_script( 'wp-color-picker' );
-	wp_enqueue_script( 'qiaomi-admin-js', get_template_directory_uri() . '/assets/js/qiaomi-admin.js' );
+	wp_enqueue_script( 'qiaomi-admin-js', get_template_directory_uri() . '/assets/js/qiaomi-admin.js', array(
+		'jquery' ), false, true );
 }
 add_action( 'admin_enqueue_scripts', 'widgets_scripts' );
 

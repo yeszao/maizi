@@ -1,18 +1,18 @@
 jQuery(function($){
     var frame;
 
-    $('.upload-custom-img').on('click', function(e) {
+    $(document).on('click', '.upload-custom-img', function(e) {
         e.preventDefault();
         var self = $(this),
             parent = self.parent('.upload-img-box'),
             delImgLink = parent.find('.delete-custom-img'),
             imgContainer = parent.find('.custom-img-container'),
             imgIdInput = parent.find('.custom-img-id');
-
+/*
         if (frame) {
             frame.open();
             return;
-        }
+        }*/
 
         frame = wp.media({
             multiple: false
@@ -30,7 +30,7 @@ jQuery(function($){
     });
 
     // DELETE IMAGE LINK
-    $('.delete-custom-img').on( 'click', function( event ){
+    $(document).on( 'click', '.delete-custom-img', function( event ){
         event.preventDefault();
         var self = $(this),
             parent = self.parent('.upload-img-box'),
