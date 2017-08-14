@@ -8,11 +8,11 @@ jQuery(function($){
             delImgLink = parent.find('.delete-custom-img'),
             imgContainer = parent.find('.custom-img-container'),
             imgIdInput = parent.find('.custom-img-id');
-/*
+
         if (frame) {
             frame.open();
             return;
-        }*/
+        }
 
         frame = wp.media({
             multiple: false
