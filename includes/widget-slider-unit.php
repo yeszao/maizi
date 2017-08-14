@@ -134,7 +134,7 @@ class Slider_Unit_Widget extends WP_Widget {
                    name="<?php echo $this->get_field_name('img'); ?>"
                    value="<?php echo $instance['img']; ?>" />
 			<a class="button upload-custom-img"><?php _e( 'Select Image' ); ?></a>
-			<a class="button delete-custom-img <?php echo $instance['img'] ?'':'hidden'; ?>">
+			<a class="button delete-custom-img<?php echo $instance['img'] ?'':' hidden'; ?>">
                 <?php _e( 'Remove Image'); ?>
             </a>
 		</div>

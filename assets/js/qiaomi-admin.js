@@ -21,7 +21,7 @@ jQuery(function($){
         frame.on('select', function() {
             var attachment = frame.state().get('selection').first().toJSON();
 
-            imgContainer.html( '<img src="'+attachment.url+'" alt="" style="max-width:100%;"/>' );
+            imgContainer.html( '<img src="'+attachment.url+'" style="max-width:100%;"/>' );
             imgIdInput.val(attachment.id);
             delImgLink.removeClass( 'hidden' );
         });
