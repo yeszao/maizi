@@ -1,6 +1,4 @@
 jQuery(function($){
-    var frame;
-
     $(document).on('click', '.upload-custom-img', function(e) {
         e.preventDefault();
         var self = $(this),
@@ -9,12 +7,7 @@ jQuery(function($){
             imgContainer = parent.find('.custom-img-container'),
             imgIdInput = parent.find('.custom-img-id');
 
-        if (frame) {
-            frame.open();
-            return;
-        }
-
-        frame = wp.media({
+        var frame = wp.media({
             multiple: false
         });
 

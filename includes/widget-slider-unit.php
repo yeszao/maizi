@@ -61,7 +61,7 @@ class Slider_Unit_Widget extends WP_Widget {
         $text .= $img_link ? "<a href='$img_link' class='w-100 h-100'>" : '';
 
         $img_url = wp_get_attachment_image_src($img, 'full')[0];
-        $text .= $img ? "<img class='d-block mh-100 mw-100 img-fluid' src='$img_url' />" : '';
+        $text .= $img ? "<img class='d-block w-100 img-fluid' src='$img_url' />" : '';
 
         $text .= $img_link ? '</a>' : '';
 
