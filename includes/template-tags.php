@@ -90,12 +90,16 @@ function qiaomi_category_transient_flusher() {
 add_action( 'edit_category', 'qiaomi_category_transient_flusher' );
 add_action( 'save_post',     'qiaomi_category_transient_flusher' );
 
-function custom_excerpt_more( $more ) {
-    return '&hellip;';
-}
-add_filter( 'excerpt_more', 'custom_excerpt_more' );
+/**
+ * Custom excerpt function
+ * @param int $limit int excerpt word limit.
+ */
+function qiaomi_excerpt( $limit = 180 ) {
+	$excerpt = get_the_content();
+	$excerpt = preg_replace( '/\s+/', ' ', strip_tags( $excerpt ) );
+	if ( mb_strwidth( $excerpt ) > $limit ) {
+		$excerpt = mb_strimwidth( $excerpt, 0, $limit, '&hellip;' );
+	}
 
-function custom_excerpt_length( $length ) {
-    return 120;
+	echo $excerpt;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

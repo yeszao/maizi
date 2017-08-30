@@ -49,7 +49,7 @@ $list_type = get_theme_mod( 'qiaomi_post_list_type', 'none' );
 
             <?php endif; ?>
 
-            <?php the_excerpt(); ?>
+            <?php qiaomi_excerpt(); ?>
 
         </div>
 
