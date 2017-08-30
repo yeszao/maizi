@@ -80,7 +80,7 @@ $container = get_theme_mod( 'qiaomi_container_type' );
 
 	</div><!-- .wrapper-navbar end -->
 
-	<?php if ( is_front_page() ) : ?>
+	<?php if ( is_home() || is_front_page() ) : ?>
 
 		<?php get_template_part( 'sidebar-slider' ); ?>
 
