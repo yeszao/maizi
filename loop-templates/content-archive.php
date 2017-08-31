@@ -7,7 +7,7 @@
 $list_type = get_theme_mod( 'qiaomi_post_list_type', 'none' );
 ?>
 
-<article <?php post_class('container py-2') ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('container mb-5') ?> id="post-<?php the_ID(); ?>">
 
     <div class="row">
 

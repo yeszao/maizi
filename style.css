@@ -17,9 +17,9 @@ html,body {
 a:focus, a:hover {
     text-decoration: none;
 }
-h1{font-size: 1.4rem; font-weight: 700;}
-h2{font-size: 1.3rem; font-weight: 600;}
-h3, h4, h5, h6{font-size: 1.2rem; font-weight: 600;}
+h1{font-size: 1.4rem; font-weight: 600;}
+h2{font-size: 1.3rem; font-weight: 500;}
+h3, h4, h5, h6{font-size: 1.2rem; font-weight: 500;}
 
 button,
 [type="button"],
@@ -78,7 +78,7 @@ aside.widget h3 {color: #666; padding-bottom: 0.5rem; border-bottom: 1px solid #
     padding: 30px 0; }
 
 #wrapper-hero {
-    padding: 0px !important; }
+    padding: 0 !important; }
 
 .sticky,
 .gallery-caption,
