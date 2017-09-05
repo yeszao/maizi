@@ -98,11 +98,7 @@ function qiaomi_wp_title( $title, $sep, $seplocation ) {
 		}
 	}
 
-	if ( is_archive() ) {
-		$title = sanitize_text_field( get_the_archive_title() );
-	} else {
-		$title = trim( str_replace( '&#8211;', $sep, $title ), $sep . ' ' );
-	}
+	$title = trim( str_replace( '&#8211;', $sep, $title ), $sep . ' ' );
 
 	if ( 'left' === $seplocation ) {
 		$title = sprintf( '%s %s %s %s %s', $blog_name, $sep, $title, $sep, $page_num );
