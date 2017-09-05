@@ -25,15 +25,10 @@ $container = get_theme_mod( 'qiaomi_container_type' );
 
 					<div class="site-info">
 
-							<a href="<?php  echo esc_url( __( 'http://wordpress.org/','qiaomi' ) ); ?>"><?php printf( 
-							/* translators:*/
-							esc_html__( 'Proudly powered by %s', 'qiaomi' ),'WordPress' ); ?></a>
-								<span class="sep"> | </span>
-					
-							<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Theme: %1$s by %2$s.', 'qiaomi' ), $the_theme->get( 'Name' ),  '<a href="'.esc_url( __('http://qiaomi.org', 'qiaomi')).'">qiaomi.org</a>' ); ?> 
+							<?php printf(
+								esc_html__( '%1$s by %2$s', 'qiaomi' ), $the_theme->get( 'Name' ),  '<a href="'.esc_url( __('https://www.awaimai.com', 'qiaomi')).'" target="_blank">歪麦博客</a>' ); ?>
 
+						<span class="mr-0"><script src="https://s95.cnzz.com/z_stat.php?id=1256189163&web_id=1256189163" language="JavaScript"></script></span>
 					</div><!-- .site-info -->
 
 					<a href="#" class="scroll-top">
