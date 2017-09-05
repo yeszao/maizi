@@ -109,3 +109,22 @@ function qiaomi_wp_title( $title, $sep, $seplocation ) {
 }
 
 add_filter( 'wp_title', 'qiaomi_wp_title', 10, 3 );
+
+
+/**
+ * Replace image url if use https
+ * @param $content
+ *
+ * @return mixed
+ */
+function https_image_replacer( $content ) {
+	if ( is_ssl() ) {
+		$host_name       = $_SERVER['HTTP_HOST'];
+		$http_host_name  = 'http://' . $host_name . '/wp-content/uploads';
+		$https_host_name = 'https://' . $host_name . '/wp-content/uploads';
+		$content         = str_replace( $http_host_name, $https_host_name, $content );
+	}
+
+	return $content;
+}
+add_filter('the_content', 'https_image_replacer');
