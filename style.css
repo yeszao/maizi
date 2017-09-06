@@ -13,13 +13,16 @@ Domain Path: /languages
 */
 html,body {
     font-size: 14px;
+    font-family: "Segoe UI", "SimSun", "Microsoft YaHei", "SimHei", "Arial", 'sans-serif';
 }
 a:focus, a:hover {
     text-decoration: none;
 }
 h1{font-size: 1.4rem; font-weight: 600;}
-h2{font-size: 1.3rem; font-weight: 500;}
-h3, h4, h5, h6{font-size: 1.2rem; font-weight: 500;}
+h2{font-size: 1.3rem; font-weight: 600;}
+h3, h4, h5, h6{font-size: 1.2rem; font-weight: 600;}
+
+article h1, h2, h3, h4, h5, h6 {font-family: "Microsoft YaHei UI Light", "SimHei", "SimSun", 'sans-serif'}
 
 button,
 [type="button"],

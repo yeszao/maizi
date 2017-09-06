@@ -30,18 +30,18 @@ $list_type = get_theme_mod( 'qiaomi_post_list_type', 'none' );
 		<?php endif; ?>
 
 
-		<div class="entry-content text-muted <?php echo ( $list_type === 'thumbnail' ) ? 'col-sm-9' : 'col-sm-12'; ?>">
+		<div class="entry-content <?php echo ( $list_type === 'thumbnail' ) ? 'col-sm-9' : 'col-sm-12'; ?>">
 
 
 			<header class="entry-header">
 
-				<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+				<?php the_title( sprintf( '<h2 class="entry-title font-weight-bold"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 			</header><!-- .entry-header -->
 
 			<?php if ( 'post' == get_post_type() ) : ?>
 
-				<div class="entry-meta my-1 small">
+				<div class="entry-meta my-1 text-muted small">
 
 					<?php qiaomi_posted_on(); ?>
 
