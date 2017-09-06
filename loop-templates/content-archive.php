@@ -7,51 +7,51 @@
 $list_type = get_theme_mod( 'qiaomi_post_list_type', 'none' );
 ?>
 
-<article <?php post_class('container mb-5') ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class( 'container mb-5' ) ?> id="post-<?php the_ID(); ?>">
 
-    <div class="row">
+	<div class="row">
 
-        <?php if ($list_type === 'thumbnail') : ?>
+		<?php if ( 'thumbnail' === $list_type ) : ?>
 
-            <div class="col-sm-3 align-middle">
+			<div class="col-sm-3 align-middle">
 
-                <?php if (has_post_thumbnail()): ?>
+				<?php if ( has_post_thumbnail() ) : ?>
 
-                    <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('class' => 'thumbnail') ); ?>
+					<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'class' => 'thumbnail' ) ); ?>
 
-                <?php else: ?>
+				<?php else : ?>
 
-                    <img class="thumbnail" src="<?php echo get_template_directory_uri() ?>/assets/img/thumbnail.png" />
+					<img class="thumbnail" src="<?php echo get_template_directory_uri() ?>/assets/img/thumbnail.png"/>
 
-                <?php endif; ?>
+				<?php endif; ?>
 
-            </div>
+			</div>
 
-        <?php endif; ?>
-
-
-        <div class="entry-content text-muted <?php echo ($list_type === 'thumbnail') ? 'col-sm-9' : 'col-sm-12'; ?>">
+		<?php endif; ?>
 
 
-            <header class="entry-header">
+		<div class="entry-content text-muted <?php echo ( $list_type === 'thumbnail' ) ? 'col-sm-9' : 'col-sm-12'; ?>">
 
-                <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-            </header><!-- .entry-header -->
+			<header class="entry-header">
 
-            <?php if ( 'post' == get_post_type() ) : ?>
+				<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-                <div class="entry-meta my-1 small">
+			</header><!-- .entry-header -->
 
-                    <?php qiaomi_posted_on(); ?>
+			<?php if ( 'post' == get_post_type() ) : ?>
 
-                </div><!-- .entry-meta -->
+				<div class="entry-meta my-1 small">
 
-            <?php endif; ?>
+					<?php qiaomi_posted_on(); ?>
 
-            <?php qiaomi_excerpt(); ?>
+				</div><!-- .entry-meta -->
 
-        </div>
+			<?php endif; ?>
+
+			<?php qiaomi_excerpt(); ?>
+
+		</div>
 
 	</div><!-- .entry-content -->
 

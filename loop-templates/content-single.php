@@ -5,13 +5,13 @@
  */
 
 ?>
-<article <?php post_class('article-content'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class( 'article-content' ); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title mb-3">', '</h1>' ); ?>
 
-		<div class="entry-meta my-2 small">
+		<div class="entry-meta mb-4 small text-muted">
 
 			<?php qiaomi_posted_on(); ?>
 
@@ -38,7 +38,13 @@
 
 		<?php if ( $tags_list ) : ?>
 
-			<span class="tags-links meta-item"><i class="icon-tag icon12"></i> <?php echo $tags_list ?></span>
+			<span class="tags-links meta-item">
+
+				<i class="icon-tag icon12"></i>
+
+				<?php echo $tags_list ?>
+
+			</span>
 
 		<?php endif; ?>
 
