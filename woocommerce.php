@@ -14,44 +14,38 @@ get_header();
 
 $container   = get_theme_mod( 'qiaomi_container_type' );
 $sidebar_pos = get_theme_mod( 'qiaomi_sidebar_position' );
-
 ?>
 
 <div class="wrapper" id="woocommerce-wrapper">
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
+		<div class="row d-flex <?php echo 'left' === $sidebar_pos ? 'flex-row-reverse' : 'flex-row'; ?>">
 
-			<?php if ( $sidebar_pos === 'left' ): ?>
-				<?php get_sidebar(); ?>
-			<?php endif; ?>
+			<?php if ( 'none' !== $sidebar_pos ) : ?>
 
-			<?php if ( $sidebar_pos === 'left' || $sidebar_pos === 'right' ) : ?>
 			<div class="col-md-9 content-area" id="primary">
-				<?php else: ?>
+
+				<?php else : ?>
+
 				<div class="col-md-12 content-area" id="primary">
+
 					<?php endif; ?>
 
-			<main class="site-main" id="main">
+					<main class="site-main" id="main">
 
-				<?php woocommerce_content(); ?>
+						<?php woocommerce_content(); ?>
 
-			</main><!-- #main -->
+					</main><!-- #main -->
 
-		</div><!-- #primary -->
+				</div><!-- #primary -->
 
+				<?php get_sidebar(); ?>
 
-		<?php if ( $sidebar_pos === 'right' ) : ?>
+			</div><!-- .row -->
 
-			<?php get_sidebar(); ?>
+		</div><!-- Container end -->
 
-		<?php endif; ?>
+	</div><!-- Wrapper end -->
 
-	</div><!-- .row -->
-
-</div><!-- Container end -->
-
-</div><!-- Wrapper end -->
-
-<?php get_footer(); ?>
+	<?php get_footer(); ?>

@@ -21,21 +21,23 @@ $sidebar_pos = get_theme_mod( 'qiaomi_sidebar_position' );
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
+		<div class="row d-flex <?php echo 'left' === $sidebar_pos ? 'flex-row-reverse' : 'flex-row'; ?>">
 
-			<?php if ( $sidebar_pos === 'left' ): ?>
-				<?php get_sidebar(); ?>
-			<?php endif; ?>
+			<?php if ( 'none' !== $sidebar_pos ) : ?>
 
-			<?php if ( $sidebar_pos === 'left' || $sidebar_pos === 'right' ) : ?>
 			<div class="col-md-9 content-area" id="primary">
-				<?php else: ?>
+
+				<?php else : ?>
+
 				<div class="col-md-12 content-area" id="primary">
+
 					<?php endif; ?>
 
 			<main class="site-main" id="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php while ( have_posts() ) : ?>
+
+					<?php the_post(); ?>
 
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
@@ -46,17 +48,14 @@ $sidebar_pos = get_theme_mod( 'qiaomi_sidebar_position' );
 					endif;
 					?>
 
-				<?php endwhile; // end of the loop. ?>
+				<?php endwhile; ?>
 
 			</main><!-- #main -->
 
 		</div><!-- #primary -->
-				
-		<?php if ( $sidebar_pos === 'right' ) : ?>
 
-			<?php get_sidebar(); ?>
+		<?php get_sidebar(); ?>
 
-		<?php endif; ?>
 
 	</div><!-- .row -->
 

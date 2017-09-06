@@ -14,50 +14,47 @@ $sidebar_pos = get_theme_mod( 'qiaomi_sidebar_position' );
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
+		<div class="row d-flex <?php echo 'left' === $sidebar_pos ? 'flex-row-reverse' : 'flex-row'; ?>">
 
-			<?php if ( $sidebar_pos === 'left' ): ?>
-				<?php get_sidebar(); ?>
-			<?php endif; ?>
+			<?php if ( 'none' !== $sidebar_pos ) : ?>
 
-			<?php if ( $sidebar_pos === 'left' || $sidebar_pos === 'right' ) : ?>
 			<div class="col-md-9 content-area" id="primary">
-				<?php else: ?>
+
+				<?php else : ?>
+
 				<div class="col-md-12 content-area" id="primary">
+
 					<?php endif; ?>
-					
 
-			<main class="site-main" id="main">
+					<main class="site-main" id="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+						<?php while ( have_posts() ) : ?>
 
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+							<?php the_post(); ?>
 
-						<?php qiaomi_post_nav(); ?>
+							<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
+							<?php qiaomi_post_nav(); ?>
 
-				<?php endwhile; // end of the loop. ?>
+							<?php
+							// If comments are open or we have at least one comment, load up the comment template.
+							if ( comments_open() || get_comments_number() ) :
+								comments_template();
+							endif;
+							?>
 
-			</main><!-- #main -->
+						<?php endwhile; ?>
 
-		</div><!-- #primary -->
+					</main><!-- #main -->
 
-		<?php if ( $sidebar_pos === 'right' ) : ?>
+				</div><!-- #primary -->
 
-			<?php get_sidebar(); ?>
+				<?php get_sidebar(); ?>
 
-		<?php endif; ?>
+			</div><!-- .row -->
 
-	</div><!-- .row -->
+		</div><!-- Container end -->
 
-</div><!-- Container end -->
+	</div><!-- Wrapper end -->
 
-</div><!-- Wrapper end -->
-
-<?php get_footer(); ?>
+	<?php get_footer(); ?>
