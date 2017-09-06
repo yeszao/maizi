@@ -27,6 +27,8 @@ if ( ! function_exists( 'qiaomi_setup' ) ) :
 		add_theme_support( 'custom-background' );
 		add_theme_support( 'custom-logo' );
 
+		add_editor_style( 'editor-style.css' );
+
 		// check if settings are set, if not set defaults.
 		// Caution: DO NOT check existence using === always check with == .
 		// Latest blog posts style.
