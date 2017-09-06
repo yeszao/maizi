@@ -24,6 +24,12 @@ h3, h4, h5, h6{font-size: 1.2rem; font-weight: 600;}
 
 article h1, h2, h3, h4, h5, h6 {font-family: "Microsoft YaHei UI Light", "SimHei", "SimSun", 'sans-serif'}
 
+article img, figure, img
+{
+    max-width: 100%;
+    height: auto;
+}
+
 button,
 [type="button"],
 [type="reset"],
@@ -117,14 +123,6 @@ aside.widget h3 {color: #666; padding-bottom: 0.5rem; border-bottom: 1px solid #
 
 .entry-footer span {
     padding-right: 10px; }
-
-/*img.wp-post-image,
-article img,
-figure,
-img,
-#secondary img {
-    max-width: 100%;
-    height: auto; }*/
 
 a.skip-link {
     position: fixed;
