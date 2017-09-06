@@ -36,7 +36,11 @@ $container   = get_theme_mod( 'qiaomi_container_type' );
 								<?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'qiaomi' ); ?>
 							</p>
 
+							<div class="my-4">
+
 							<?php get_search_form(); ?>
+
+							</div>
 
 							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
