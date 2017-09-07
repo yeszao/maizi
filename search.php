@@ -33,7 +33,7 @@ $sidebar_pos = get_theme_mod( 'qiaomi_sidebar_position' );
 
 							<header class="page-header container">
 
-								<h1 class="page-title">
+								<h1 class="page-title mb-3">
 
 									<?php
 									printf(
