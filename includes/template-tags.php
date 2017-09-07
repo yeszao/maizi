@@ -36,9 +36,11 @@ if ( ! function_exists( 'qiaomi_posted_on' ) ) :
 			}
 		}
 
-		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		$comments_number = get_comments_number();
+		if ( ! post_password_required() && ( comments_open() || $comments_number ) ) {
 			echo '<span class="comments-link meta-item mr-3"><i class="icon-comment icon12"></i> ';
-			comments_popup_link( esc_html__( 'Leave a comment', 'qiaomi' ), esc_html__( '1 Comment', 'qiaomi' ), esc_html__( '% Comments', 'qiaomi' ), 'text-muted' );
+			comments_popup_link( __( 'Leave a Comment' ), __( '1 Comment' ), esc_html__('% Comments', 'qiaomi' ),
+				'text-muted' );
 			echo '</span>';
 		}
 

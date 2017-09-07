@@ -21,16 +21,18 @@ if ( post_password_required() ) {
  * Bootstrap Comment Walker
  */
 require get_template_directory() . '/includes/wp-bootstrap-comments.php';
+$comments_number = get_comments_number();
 ?>
 
 <div class="comments-area mt-5" id="comments">
 
-	<?php // You can start editing here -- including this comment! ?>
-
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
-            <?php echo get_comments_number(); ?> <?php echo __( 'Comment(s)', 'qiaomi' ) ?>
-		</h2><!-- .comments-title -->
+
+			<?php echo sprintf(_n('%s Comment', '%s Comments', $comments_number), number_format_i18n
+			($comments_number)); ?>
+			
+		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 			<nav class="comment-navigation" id="comment-nav-above">
