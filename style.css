@@ -14,6 +14,8 @@ Domain Path: /languages
 html,body {
     font-size: 14px;
     font-family: "Segoe UI", "SimSun", "Microsoft YaHei", "SimHei", "Arial", 'sans-serif';
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 a:focus, a:hover {
     text-decoration: none;
@@ -38,6 +40,8 @@ button,
 ul, li {
     list-style-position: inside;
 }
+
+p, pre{overflow-x: hidden;overflow-y:hidden;word-break:break-all;word-wrap:break-word;white-space: pre-wrap; max-width: 100%;}
 
 aside li {padding-left: 1rem; line-height: 1.75rem;}
 aside ul,
