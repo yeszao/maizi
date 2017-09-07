@@ -30,6 +30,7 @@ if ( ! function_exists( 'qiaomi_posted_on' ) ) :
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'qiaomi' ) );
+			$categories_list = str_replace( '<a href="', '<a class="text-muted" href="', $categories_list );
 			if ( $categories_list && qiaomi_categorized_blog() ) {
 				printf( '<span class="cat-links meta-item mr-3"><i class="icon-category icon12"></i> ' . esc_html__( 'Posted in %1$s', 'qiaomi' ) . '</span>', $categories_list );
 			}
@@ -49,14 +50,6 @@ if ( ! function_exists( 'qiaomi_posted_on' ) ) :
 		);
 	}
 endif;
-
-/*
- * Custom the_category function
- */
-function add_class_to_category( $thelist, $separator, $parents ) {
-	return str_replace( '<a href="', '<a class="text-muted" href="', $thelist );
-}
-add_filter( 'the_category', 'add_class_to_category', 10, 3 );
 
 /**
  * Returns true if a blog has more than 1 category.
