@@ -191,7 +191,7 @@ class WP_Bootstrap_Comments_Walker extends Walker_Comment {
 
             <?php }; ?>
 
-            <div class="media-body ml-3">
+            <div class="media-body ml-1">
 
                 <div class="comment-meta text-muted small">
                     <span class="comment-author vcard meta-item mr-2">
