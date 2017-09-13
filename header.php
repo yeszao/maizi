@@ -30,7 +30,7 @@ $container = get_theme_mod( 'qiaomi_container_type' );
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 
-		<nav class="navbar navbar-toggleable-md  navbar-inverse bg-inverse">
+		<nav id="primaryMenu" class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container">

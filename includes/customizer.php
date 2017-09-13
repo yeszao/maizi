@@ -260,21 +260,21 @@ function mytheme_customize_css()
 {
     ?>
     <style type="text/css">
-        .navbar, .dropdown-menu {
+        #primaryMenu.navbar, #primaryMenu .dropdown-menu {
 			background-color: <?php echo get_theme_mod('qiaomi_navbar_bg_color', '#000000'); ?> !important;
 		}
-		.navbar-nav .nav-link:focus,
-		.navbar-nav .nav-link:hover,
-		.navbar-nav .nav-link,
-		.navbar-nav .active>.nav-link,
-		.navbar-nav .nav-link.active,
-		.navbar-nav .nav-link.open,
-		.navbar-nav .open>.nav-link,
-		.dropdown-item,
-		.dropdown-item.active,
-		.dropdown-item:active,
-		.dropdown-item:focus,
-		.dropdown-item:hover{
+        #primaryMenu .nav-link:focus,
+        #primaryMenu .nav-link:hover,
+        #primaryMenu .nav-link,
+        #primaryMenu .active>.nav-link,
+        #primaryMenu .nav-link.active,
+        #primaryMenu .nav-link.open,
+        #primaryMenu .open>.nav-link,
+        #primaryMenu .dropdown-item,
+        #primaryMenu .dropdown-item.active,
+        #primaryMenu .dropdown-item:active,
+        #primaryMenu .dropdown-item:focus,
+        #primaryMenu .dropdown-item:hover{
 			color: <?php echo get_theme_mod('qiaomi_navbar_text_color', '#ffffff'); ?> !important;
 		}
         a, h2, h3, h4, h5, h6 {
