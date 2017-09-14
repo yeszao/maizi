@@ -52,9 +52,9 @@ aside ul,
 aside > ul > li {padding-left: 0;}
 aside.widget {margin-bottom: 2rem;}
 aside.widget h3 {color: #666; padding-bottom: 0.5rem; border-bottom: 1px solid #e0e0e0;}
-aside .menu-item a {padding-left: 0.3rem;}
+
 aside .sub-menu {display: none;}
-aside .sub-menu li {padding-left: 1rem;}
+aside .sub-menu li {padding-left: 2rem;}
 aside .current-menu-item > a{font-weight: 700;}
 aside li[class*="current-menu-"] > .sub-menu
 {display: block;}
