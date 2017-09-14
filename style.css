@@ -43,7 +43,7 @@ ul, li {
 
 
 
-p, pre{overflow-x: hidden;overflow-y:hidden;word-break:break-all;word-wrap:break-word;white-space: pre-wrap; max-width: 100%;}
+p, pre{word-break:break-all;word-wrap:break-word;white-space: pre-wrap; max-width: 100%;}
 
 
 /* Sidebar menu */
@@ -60,9 +60,9 @@ aside li[class*="current-menu-"] > .sub-menu
 {display: block;}
 
 
-aside .menu-item-has-children > a::before,
-aside .current-menu-parent > a::before,
-aside .current-menu-item.menu-item-has-children > a::before
+aside .menu-item-has-children > a:before,
+aside .current-menu-parent > a:before,
+aside .current-menu-item.menu-item-has-children > a:before
 {
     border: .3rem solid transparent;
     vertical-align: middle;
@@ -70,14 +70,14 @@ aside .current-menu-item.menu-item-has-children > a::before
     display: inline-block;
 }
 
-aside .menu-item-has-children > a::before
+aside .menu-item-has-children > a:before
 {
     border-color: transparent;
     border-left: .3rem solid #444;
 }
 
-aside .current-menu-parent > a::before,
-aside .current-menu-item.menu-item-has-children > a::before{
+aside .current-menu-parent > a:before,
+aside .current-menu-item.menu-item-has-children > a:before{
     margin-right: .3rem;
     border-color: transparent;
     border-top: .3rem solid #444;
