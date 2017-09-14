@@ -1,6 +1,3 @@
-/**
- * Scroll to top
- */
 (function ($) {
     $(document).ready(function () {
         // Fade In and Out when Scroll
@@ -16,6 +13,11 @@
             e.preventDefault();
             $("html, body").animate({scrollTop: 0}, 100);
             return false;
+        });
+
+        // Sidebar menu
+        $('aside .menu-item').click(function() {
+            $(this).addClass('current-menu-item');
         });
     });
 })(jQuery);
