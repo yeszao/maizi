@@ -16,8 +16,9 @@
         });
 
         // Sidebar menu
-        $('aside .menu-item').click(function() {
-            $(this).addClass('current-menu-item');
+        $('aside .menu-item a').click(function() {
+            $('.menu-item').not($(this).parents()).removeClass('current-menu-item');
+            $(this).parent().addClass('current-menu-item');
         });
     });
 })(jQuery);

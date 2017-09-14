@@ -47,7 +47,7 @@ p, pre{overflow-x: hidden;overflow-y:hidden;word-break:break-all;word-wrap:break
 
 
 /* Sidebar menu */
-aside li {line-height: 1.75rem; list-style-type: none;}
+aside li {line-height: 2rem; list-style-type: none;}
 aside ul,
 aside > ul > li {padding-left: 0;}
 aside.widget {margin-bottom: 2rem;}
