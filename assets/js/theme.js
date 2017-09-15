@@ -16,9 +16,13 @@
         });
 
         // Sidebar menu
-        $('aside .menu-item a').click(function() {
-            $('.menu-item').not($(this).parents()).removeClass('current-menu-item');
-            $(this).parent().addClass('current-menu-item');
+        $('aside .menu-item a').click(function(e) {
+            var self = $(this);
+            if (self.attr('href') === '#') {
+                e.preventDefault();
+            }
+            $('.menu-item').not(self.parents()).removeClass('current-menu-item');
+            self.parent().addClass('current-menu-item');
         });
     });
 })(jQuery);
