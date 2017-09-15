@@ -260,9 +260,11 @@ function mytheme_customize_css()
 {
     ?>
     <style type="text/css">
-        #primaryMenu.navbar, #primaryMenu .dropdown-menu {
+        #primaryMenu.navbar,
+        #primaryMenu .dropdown-menu {
 			background-color: <?php echo get_theme_mod('qiaomi_navbar_bg_color', '#000000'); ?> !important;
 		}
+        #primaryMenu .navbar-brand a,
         #primaryMenu .nav-link:focus,
         #primaryMenu .nav-link:hover,
         #primaryMenu .nav-link,
