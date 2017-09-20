@@ -43,7 +43,7 @@ ul, li {
 
 
 
-p, pre{word-break:break-all;word-wrap:break-word;white-space: pre-wrap; max-width: 100%;}
+p, pre{/*word-break:break-all*/;word-wrap:break-word;white-space: pre-wrap; max-width: 100%;}
 
 
 /* Sidebar menu */
@@ -184,13 +184,6 @@ aside.widget {
 
 #wrapper-hero .carousel-inner .textwidget {
     width: 100%; }
-
-/*h1.navbar-brand a {
-    color: inherit; }
-
-h1.navbar-brand a:hover {
-    text-decoration: none; }*/
-
 
 
 /*
