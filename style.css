@@ -232,7 +232,9 @@ aside.widget {
 
 
 /* 内容 */
-
+.article-content {
+    color: #3f3f3f;
+}
 .article-content h2,
 .article-content h3{
     margin: 1.2rem 0 .6rem;

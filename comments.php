@@ -24,7 +24,7 @@ require get_template_directory() . '/includes/wp-bootstrap-comments.php';
 $comments_number = get_comments_number();
 ?>
 
-<div class="comments-area mt-5" id="comments">
+<div class="comments-area mt-5 text-small" id="comments">
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
