@@ -32,7 +32,7 @@
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer mt-3">
 
 		<?php $tags_list = get_the_tag_list( '', esc_html__( ', ', 'qiaomi' ) ); ?>
 
@@ -40,9 +40,9 @@
 
 			<span class="tags-links meta-item">
 
-				<i class="icon-tag icon12"></i>
+				<strong><?php echo esc_html__( 'Tags: ' ); ?></strong>
 
-				<?php echo $tags_list ?>
+                <?php echo $tags_list ?>
 
 			</span>
 
