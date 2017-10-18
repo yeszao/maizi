@@ -29,10 +29,14 @@ $container = get_theme_mod( 'maizi_container_type' );
 
                         <span>Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>.</span>
 
+						<?php dynamic_sidebar( 'footer-copyright' ); ?>
+
 					</div><!-- .site-info -->
 
 					<a href="#" class="scroll-top">
+
 						<i class="icon12 icon-arrow-up icon-white"></i>
+
 					</a>
 				</footer><!-- #colophon -->
 

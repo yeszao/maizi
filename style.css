@@ -262,6 +262,10 @@ aside.widget {
     border-color: #dad8da;
 }
 
+.footer-copyright, .footer-copyright div, .footer-copyright p{
+    display: inline;
+}
+
 /* Scroll to Top */
 .scroll-top {
     display: none;

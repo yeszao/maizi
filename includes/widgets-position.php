@@ -127,6 +127,16 @@ if ( ! function_exists( 'maizi_widgets_init' ) ) {
 		    'after_title'    => '</h3>', 
 		) );
 
+		register_sidebar( array(
+			'name'          => __( 'Footer Copyright', 'maizi' ),
+			'id'            => 'footer-copyright',
+			'description'   => 'Widget area below Footer Full and above page bottom',
+			'before_widget'  => '<div class="footer-copyright">',
+			'after_widget'   => '</div>',
+			'before_title'   => '',
+			'after_title'    => '',
+		) );
+
 	}
 }
 add_action( 'widgets_init', 'maizi_widgets_init' );
