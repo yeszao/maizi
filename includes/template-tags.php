@@ -45,9 +45,10 @@ if ( ! function_exists( 'maizi_posted_on' ) ) :
 		}
 
 		edit_post_link(
-			__( 'Edit', 'maizi' ),
+			__( 'Edit' ),
 			'<span class="edit-link meta-item mr-3"><i class="icon-edit icon12"></i> ',
 			'</span>',
+			0,
 			'text-muted'
 		);
 	}
