@@ -2,10 +2,10 @@
 /**
  * Sidebar setup for footer full.
  *
- * @package mai
+ * @package maizi
  */
 
-$container   = get_theme_mod( 'mai_container_type' );
+$container   = get_theme_mod( 'maizi_container_type' );
 
 ?>
 

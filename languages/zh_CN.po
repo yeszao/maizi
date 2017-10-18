@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: mai\n"
+"Project-Id-Version: maizi\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2017-05-21 21:19+0800\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
@@ -733,7 +733,7 @@ msgid_plural "%s customer reviews"
 msgstr[0] ""
 
 #. Name of the theme
-msgid "Mai"
+msgid "Maizi"
 msgstr ""
 
 #. Description of the theme
@@ -744,11 +744,11 @@ msgid ""
 "support, built-in widget slider and much more you need for basic websites. "
 "IMPORTANT: All developer dependencies are not bundled with this install "
 "file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /mai folder."
+"copy-assets\" inside the extracted /maizi folder."
 msgstr ""
 
 #. Theme URI of the theme
-msgid "http://mai.org"
+msgid "http://maizi.org"
 msgstr ""
 
 #. Author of the theme

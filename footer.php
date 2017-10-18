@@ -4,11 +4,11 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package mai
+ * @package maizi
  */
 
 $the_theme = wp_get_theme();
-$container = get_theme_mod( 'mai_container_type' );
+$container = get_theme_mod( 'maizi_container_type' );
 ?>
 
 <?php get_sidebar( 'footerfull' ); ?>
@@ -25,7 +25,7 @@ $container = get_theme_mod( 'mai_container_type' );
 
 					<div class="site-info">
 
-                        <span>Theme: <a href="https://www.awaimai.com/mai">Mai</a>.</span>
+                        <span>Theme: <a href="https://www.awaimai.com/maizi">Maizi</a>.</span>
 
                         <span>Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>.</span>
 

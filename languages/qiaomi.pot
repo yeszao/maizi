@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mai\n"
+"Project-Id-Version: maizi\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2017-07-21 17:10+0800\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
@@ -89,7 +89,7 @@ msgid "Theme: %1$s by %2$s."
 msgstr ""
 
 #: footer.php:35
-msgid "http://mai.org"
+msgid "http://maizi.org"
 msgstr ""
 
 #: inc/custom-comments.php:24

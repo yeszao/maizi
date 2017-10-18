@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package mai
+ * @package maizi
  */
 
 /*
@@ -36,14 +36,14 @@ $comments_number = get_comments_number();
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 			<nav class="comment-navigation" id="comment-nav-above">
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'mai' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'maizi' ); ?></h1>
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
-					'mai' ) ); ?></div>
+					'maizi' ) ); ?></div>
 				<?php }
 if ( get_next_comments_link() ) { ?>
 					<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;',
-					'mai' ) ); ?></div>
+					'maizi' ) ); ?></div>
 				<?php } ?>
 			</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation. ?>
@@ -61,14 +61,14 @@ if ( get_next_comments_link() ) { ?>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 			<nav class="comment-navigation" id="comment-nav-below">
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'mai' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'maizi' ); ?></h1>
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
-					'mai' ) ); ?></div>
+					'maizi' ) ); ?></div>
 				<?php }
 if ( get_next_comments_link() ) { ?>
 					<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;',
-					'mai' ) ); ?></div>
+					'maizi' ) ); ?></div>
 				<?php } ?>
 			</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation. ?>
@@ -80,7 +80,7 @@ if ( get_next_comments_link() ) { ?>
 	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
 
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'mai' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'maizi' ); ?></p>
 
 	<?php endif; ?>
 

@@ -20,4 +20,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-mai_pagination();
+maizi_pagination();

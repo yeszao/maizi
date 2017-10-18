@@ -2,12 +2,12 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package mai
+ * @package maizi
  */
 
 get_header();
 
-$container   = get_theme_mod( 'mai_container_type' );
+$container   = get_theme_mod( 'maizi_container_type' );
 ?>
 
 <div class="wrapper" id="404-wrapper">
@@ -25,7 +25,7 @@ $container   = get_theme_mod( 'mai_container_type' );
 						<header class="page-header">
 
 							<h1 class="page-title">
-								<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'mai' ); ?>
+								<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'maizi' ); ?>
 							</h1>
 
 						</header><!-- .page-header -->
@@ -33,7 +33,7 @@ $container   = get_theme_mod( 'mai_container_type' );
 						<div class="page-content">
 
 							<p>
-								<?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'mai' ); ?>
+								<?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'maizi' ); ?>
 							</p>
 
 							<div class="my-4">
@@ -44,11 +44,11 @@ $container   = get_theme_mod( 'mai_container_type' );
 
 							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-							<?php if ( mai_categorized_blog() ) : ?>
+							<?php if ( maizi_categorized_blog() ) : ?>
 
 								<div class="widget widget_categories">
 
-									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'mai' ); ?></h2>
+									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'maizi' ); ?></h2>
 
 									<ul>
 										<?php
@@ -69,7 +69,7 @@ $container   = get_theme_mod( 'mai_container_type' );
 							<?php
 							/* translators: %1$s: smiley */
 							$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s',
-							'mai' ), convert_smilies( ':)' ) ) . '</p>';
+							'maizi' ), convert_smilies( ':)' ) ) . '</p>';
 							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 							?>
 

@@ -2,12 +2,12 @@
 /**
  * The template for displaying all single posts.
  *
- * @package mai
+ * @package maizi
  */
 
 get_header();
-$container   = get_theme_mod( 'mai_container_type' );
-$sidebar_pos = get_theme_mod( 'mai_sidebar_position' );
+$container   = get_theme_mod( 'maizi_container_type' );
+$sidebar_pos = get_theme_mod( 'maizi_sidebar_position' );
 ?>
 
 <div class="wrapper" id="single-wrapper">

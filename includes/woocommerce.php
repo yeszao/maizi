@@ -2,7 +2,7 @@
 /**
  * Add WooCommerce support
  *
- * @package mai
+ * @package maizi
  */
 add_action( 'after_setup_theme', 'woocommerce_support' );
 if ( ! function_exists( 'woocommerce_support' ) ) {

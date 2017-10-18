@@ -13,7 +13,7 @@
 
 		<div class="entry-meta mb-4 small text-muted">
 
-			<?php mai_posted_on(); ?>
+			<?php maizi_posted_on(); ?>
 
 		</div><!-- .entry-meta -->
 
@@ -25,7 +25,7 @@
 
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'mai' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'maizi' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -34,7 +34,7 @@
 
 	<footer class="entry-footer mt-3">
 
-		<?php $tags_list = get_the_tag_list( '', esc_html__( ', ', 'mai' ) ); ?>
+		<?php $tags_list = get_the_tag_list( '', esc_html__( ', ', 'maizi' ) ); ?>
 
 		<?php if ( $tags_list ) : ?>
 

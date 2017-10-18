@@ -48,7 +48,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 							<?php elseif ( 'order-number' === $column_id ) : ?>
 								<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
-									<?php echo _x( '#', 'hash before order number', 'mai' ) . $order->get_order_number(); ?>
+									<?php echo _x( '#', 'hash before order number', 'maizi' ) . $order->get_order_number(); ?>
 								</a>
 
 							<?php elseif ( 'order-date' === $column_id ) : ?>
@@ -60,7 +60,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 							<?php elseif ( 'order-total' === $column_id ) : ?>
 								<?php
 								/* translators: 1: formatted order total 2: total order items */
-								printf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'mai' ), $order->get_formatted_order_total(), $item_count );
+								printf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'maizi' ), $order->get_formatted_order_total(), $item_count );
 								?>
 
 							<?php elseif ( 'order-actions' === $column_id ) : ?>
@@ -68,15 +68,15 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 									$actions = array(
 										'pay'    => array(
 											'url'  => $order->get_checkout_payment_url(),
-											'name' => __( 'Pay', 'mai' )
+											'name' => __( 'Pay', 'maizi' )
 										),
 										'view'   => array(
 											'url'  => $order->get_view_order_url(),
-											'name' => __( 'View', 'mai' )
+											'name' => __( 'View', 'maizi' )
 										),
 										'cancel' => array(
 											'url'  => $order->get_cancel_order_url( wc_get_page_permalink( 'myaccount' ) ),
-											'name' => __( 'Cancel', 'mai' )
+											'name' => __( 'Cancel', 'maizi' )
 										)
 									);
 
@@ -107,11 +107,11 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 	<?php if ( 1 < $customer_orders->max_num_pages ) : ?>
 		<div class="woocommerce-pagination woocommerce-pagination--without-numbers woocommerce-Pagination">
 			<?php if ( 1 !== $current_page ) : ?>
-				<a class="woocommerce-button woocommerce-button--previous woocommerce-Button woocommerce-Button--previous button" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page - 1 ) ); ?>"><?php _e( 'Previous', 'mai' ); ?></a>
+				<a class="woocommerce-button woocommerce-button--previous woocommerce-Button woocommerce-Button--previous button" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page - 1 ) ); ?>"><?php _e( 'Previous', 'maizi' ); ?></a>
 			<?php endif; ?>
 
 			<?php if ( intval( $customer_orders->max_num_pages ) !== $current_page ) : ?>
-				<a class="woocommerce-button woocommerce-button--next woocommerce-Button woocommerce-Button--next btn btn-outline-primary" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page + 1 ) ); ?>"><?php _e( 'Next', 'mai' ); ?></a>
+				<a class="woocommerce-button woocommerce-button--next woocommerce-Button woocommerce-Button--next btn btn-outline-primary" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page + 1 ) ); ?>"><?php _e( 'Next', 'maizi' ); ?></a>
 			<?php endif; ?>
 		</div>
 	<?php endif; ?>
@@ -119,9 +119,9 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 <?php else : ?>
 	<div class="woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info">
 		<a class="btn btn-outline-primary" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-			<?php _e( 'Go shop', 'mai' ) ?>
+			<?php _e( 'Go shop', 'maizi' ) ?>
 		</a>
-		<?php _e( 'No order has been made yet.', 'mai' ); ?>
+		<?php _e( 'No order has been made yet.', 'maizi' ); ?>
 	</div>
 <?php endif; ?>
 

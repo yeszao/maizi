@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.me/
  *
- * @package Mai
+ * @package Maizi
  */
 
 /**

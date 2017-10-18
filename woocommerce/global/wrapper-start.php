@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // load container setting
-$container = get_theme_mod( 'mai_container_type' );
+$container = get_theme_mod( 'maizi_container_type' );
 
 // if we use container-fluid add some margin
 if ( 'container-fluid' === $container ) {

@@ -7,7 +7,7 @@
  */
 
 get_header();
-$container = get_theme_mod( 'mai_container_type' );
+$container = get_theme_mod( 'maizi_container_type' );
 ?>
 
 <div class="wrapper" id="full-width-page-wrapper">

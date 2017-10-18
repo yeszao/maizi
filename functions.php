@@ -2,9 +2,9 @@
 /**
  * Functions file.
  *
- * @package         Mai
+ * @package         Maizi
  * @description     Multipurpose Wordpress theme
- * @author          mai.org
+ * @author          maizi.org
  * @version         Release: 1.0
  */
 

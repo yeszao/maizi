@@ -2,13 +2,13 @@
 /**
  * The template for displaying search results pages.
  *
- * @package mai
+ * @package maizi
  */
 
 get_header();
 
-$container   = get_theme_mod( 'mai_container_type' );
-$sidebar_pos = get_theme_mod( 'mai_sidebar_position' );
+$container   = get_theme_mod( 'maizi_container_type' );
+$sidebar_pos = get_theme_mod( 'maizi_sidebar_position' );
 ?>
 
 <div class="wrapper" id="search-wrapper">
@@ -37,7 +37,7 @@ $sidebar_pos = get_theme_mod( 'mai_sidebar_position' );
 
 									<?php
 									printf(
-										esc_html__( 'Search Results for: %s', 'mai' ),
+										esc_html__( 'Search Results for: %s', 'maizi' ),
 										'<span>' . get_search_query() . '</span>' );
 									?>
 
@@ -69,7 +69,7 @@ $sidebar_pos = get_theme_mod( 'mai_sidebar_position' );
 					</main><!-- #main -->
 
 					<!-- The pagination component -->
-					<?php mai_pagination(); ?>
+					<?php maizi_pagination(); ?>
 
 				</div><!-- #primary -->
 

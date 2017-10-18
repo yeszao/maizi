@@ -1,7 +1,7 @@
 <?php
-add_action( 'widgets_init', 'mai_widgets' );
+add_action( 'widgets_init', 'maizi_widgets' );
 
-function mai_widgets() {
+function maizi_widgets() {
 	register_widget( 'Slider_Unit_Widget' );
 }
 
@@ -18,7 +18,7 @@ function widgets_scripts( $hook ) {
 	}
 	wp_enqueue_style( 'wp-color-picker' );
 	wp_enqueue_script( 'wp-color-picker' );
-	wp_enqueue_script( 'mai-admin-js', get_template_directory_uri() . '/assets/js/mai-admin.js', array(
+	wp_enqueue_script( 'maizi-admin-js', get_template_directory_uri() . '/assets/js/maizi-admin.js', array(
 		'jquery'
 	), false, true );
 }
@@ -28,7 +28,7 @@ add_action( 'admin_enqueue_scripts', 'widgets_scripts' );
 
 /**
  * 滑动幻灯片Widget
- * Class mai_widget
+ * Class maizi_widget
  */
 class Slider_Unit_Widget extends WP_Widget {
 	private $defaults = array(

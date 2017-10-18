@@ -8,17 +8,17 @@ function wpdocs_theme_add_editor_styles() {
 add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
 // Add TinyMCE style formats.
-add_filter( 'mce_buttons_2', 'mai_tiny_mce_style_formats' );
+add_filter( 'mce_buttons_2', 'maizi_tiny_mce_style_formats' );
 
-function mai_tiny_mce_style_formats( $styles ) {
+function maizi_tiny_mce_style_formats( $styles ) {
 
     array_unshift( $styles, 'styleselect' );
     return $styles;
 }
 
-add_filter( 'tiny_mce_before_init', 'mai_tiny_mce_before_init' );
+add_filter( 'tiny_mce_before_init', 'maizi_tiny_mce_before_init' );
 
-function mai_tiny_mce_before_init( $settings ) {
+function maizi_tiny_mce_before_init( $settings ) {
 
   $style_formats = array(
       array(

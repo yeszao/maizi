@@ -9,8 +9,8 @@ get_header();
 ?>
 
 <?php
-$container   = get_theme_mod( 'mai_container_type' );
-$sidebar_pos = get_theme_mod( 'mai_sidebar_position' );
+$container   = get_theme_mod( 'maizi_container_type' );
+$sidebar_pos = get_theme_mod( 'maizi_sidebar_position' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
@@ -65,7 +65,7 @@ $sidebar_pos = get_theme_mod( 'mai_sidebar_position' );
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php mai_pagination(); ?>
+			<?php maizi_pagination(); ?>
 
 		</div><!-- #primary -->
 

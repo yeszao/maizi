@@ -10,10 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $my_orders_columns = apply_filters( 'woocommerce_my_account_my_orders_columns', array(
-	'order-number'  => __( 'Order', 'mai' ),
-	'order-date'    => __( 'Date', 'mai' ),
-	'order-status'  => __( 'Status', 'mai' ),
-	'order-total'   => __( 'Total', 'mai' ),
+	'order-number'  => __( 'Order', 'maizi' ),
+	'order-date'    => __( 'Date', 'maizi' ),
+	'order-status'  => __( 'Status', 'maizi' ),
+	'order-total'   => __( 'Total', 'maizi' ),
 	'order-actions' => '&nbsp;',
 ) );
 
@@ -27,7 +27,7 @@ $customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_q
 
 if ( $customer_orders ) : ?>
 
-	<h2><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Recent Orders', 'mai' ) ); ?></h2>
+	<h2><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Recent Orders', 'maizi' ) ); ?></h2>
 
 	<table class="shop_table shop_table_responsive my_account_orders table-hover table-striped">
 
@@ -52,7 +52,7 @@ if ( $customer_orders ) : ?>
 
 							<?php elseif ( 'order-number' === $column_id ) : ?>
 								<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
-									<?php echo _x( '#', 'hash before order number', 'mai' ) . $order->get_order_number(); ?>
+									<?php echo _x( '#', 'hash before order number', 'maizi' ) . $order->get_order_number(); ?>
 								</a>
 
 							<?php elseif ( 'order-date' === $column_id ) : ?>
@@ -62,22 +62,22 @@ if ( $customer_orders ) : ?>
 								<?php echo wc_get_order_status_name( $order->get_status() ); ?>
 
 							<?php elseif ( 'order-total' === $column_id ) : ?>
-								<?php echo sprintf( _n( '%s for %s item', '%s for %s items', $item_count, 'mai' ), $order->get_formatted_order_total(), $item_count ); ?>
+								<?php echo sprintf( _n( '%s for %s item', '%s for %s items', $item_count, 'maizi' ), $order->get_formatted_order_total(), $item_count ); ?>
 
 							<?php elseif ( 'order-actions' === $column_id ) : ?>
 								<?php
 									$actions = array(
 										'pay'    => array(
 											'url'  => $order->get_checkout_payment_url(),
-											'name' => __( 'Pay', 'mai' )
+											'name' => __( 'Pay', 'maizi' )
 										),
 										'view'   => array(
 											'url'  => $order->get_view_order_url(),
-											'name' => __( 'View', 'mai' )
+											'name' => __( 'View', 'maizi' )
 										),
 										'cancel' => array(
 											'url'  => $order->get_cancel_order_url( wc_get_page_permalink( 'myaccount' ) ),
-											'name' => __( 'Cancel', 'mai' )
+											'name' => __( 'Cancel', 'maizi' )
 										)
 									);
 

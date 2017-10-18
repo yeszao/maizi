@@ -1,7 +1,7 @@
-Mai - Best brand Wordpress theme build with bootstrap
+Maizizi - Best brand Wordpress theme build with bootstrap
 
-* [Official Website and Demo](https://mai.org/)
-* [Official Docs Page](https://mai.org/docs)
+* [Official Website and Demo](https://maizi.org/)
+* [Official Docs Page](https://maizi.org/docs)
 
 ## Basic Features
 
@@ -17,21 +17,11 @@ integration (v4.7.0)
 ## Installation
 
 ### Classic install
-- Download the mai folder from GitHub or from [https://mai.org](https://mai.org)
-- IMPORTANT: If you download it from GitHub make sure you rename the "mai-master.zip" file just to "mai.zip" or you might have problems using child themes !!
+- Download the maizi folder from GitHub or from [https://www.awaimai.com/maizi](https://www.awaimai.com/maizi)
 - Upload it into your WordPress installation subfolder here: `/wp-content/themes/`
 - Login to your WordPress backend
 - Go to Appearance → Themes
-- Activate the Mai theme
-
-### WordPress.org install
-- Open your WordPress backend
-- Click on "Appearance -> Themes"
-- Hit the "Add new" button
-- Search for "Mai"
-- Hit the "install" button
-- Activate the theme
-
+- Activate the Maizizi theme
 
 ## Licenses & Credits
 - Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

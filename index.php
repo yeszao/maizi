@@ -8,13 +8,13 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package mai
+ * @package maizi
  */
 
 get_header();
 
-$container   = get_theme_mod( 'mai_container_type' );
-$sidebar_pos = get_theme_mod( 'mai_sidebar_position' );
+$container   = get_theme_mod( 'maizi_container_type' );
+$sidebar_pos = get_theme_mod( 'maizi_sidebar_position' );
 ?>
 
 <div class="wrapper" id="wrapper-index">
@@ -62,7 +62,7 @@ $sidebar_pos = get_theme_mod( 'mai_sidebar_position' );
 				</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php mai_pagination(); ?>
+			<?php maizi_pagination(); ?>
 
 		</div><!-- #primary -->
 

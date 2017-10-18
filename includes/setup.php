@@ -2,10 +2,10 @@
 /**
  * Theme basic setup.
  *
- * @package mai
+ * @package maizi
  */
 
-if ( ! function_exists( 'mai_setup' ) ) :
+if ( ! function_exists( 'maizi_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -13,11 +13,11 @@ if ( ! function_exists( 'mai_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function mai_setup() {
-		load_theme_textdomain( 'mai', get_template_directory() . '/languages' );
+	function maizi_setup() {
+		load_theme_textdomain( 'maizi', get_template_directory() . '/languages' );
 
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'mai' ),
+			'primary' => __( 'Primary Menu', 'maizi' ),
 		) );
 
 		add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
@@ -32,19 +32,19 @@ if ( ! function_exists( 'mai_setup' ) ) :
 		// check if settings are set, if not set defaults.
 		// Caution: DO NOT check existence using === always check with == .
 		// Latest blog posts style.
-		$mai_sidebar_position = get_theme_mod( 'mai_sidebar_position' );
-		if ( '' == $mai_sidebar_position ) {
-			set_theme_mod( 'mai_sidebar_position', 'left' );
+		$maizi_sidebar_position = get_theme_mod( 'maizi_sidebar_position' );
+		if ( '' == $maizi_sidebar_position ) {
+			set_theme_mod( 'maizi_sidebar_position', 'left' );
 		}
 
 		// Container width.
-		$mai_container_type = get_theme_mod( 'mai_container_type' );
-		if ( '' == $mai_container_type ) {
-			set_theme_mod( 'mai_container_type', 'container' );
+		$maizi_container_type = get_theme_mod( 'maizi_container_type' );
+		if ( '' == $maizi_container_type ) {
+			set_theme_mod( 'maizi_container_type', 'container' );
 		}
 	}
 endif;
-add_action( 'after_setup_theme', 'mai_setup' );
+add_action( 'after_setup_theme', 'maizi_setup' );
 
 
 if ( ! function_exists( 'add_script' ) ) {
@@ -66,7 +66,7 @@ if ( ! function_exists( 'add_script' ) ) {
 		wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/assets/js/theme.js', array(), '1.0.0', true );
 
 		// Code Highlight.
-		$code_highlight   = get_theme_mod( 'mai_code_highlight', false );
+		$code_highlight   = get_theme_mod( 'maizi_code_highlight', false );
 		if ( $code_highlight && (is_page() || is_singular()) ) {
 			wp_enqueue_style( 'highlight-css', get_stylesheet_directory_uri() . '/assets/css/github-gist.css', array(),
 				'9.9.0' );
@@ -82,7 +82,7 @@ add_action( 'wp_enqueue_scripts', 'add_script' );
 /**
  * Use custom title
  */
-function mai_wp_title( $title, $sep, $seplocation ) {
+function maizi_wp_title( $title, $sep, $seplocation ) {
 	$paged = get_query_var( 'paged' );
 	$blog_name = get_bloginfo( 'name' );
 	$site_description = get_bloginfo( 'description' );
@@ -110,7 +110,7 @@ function mai_wp_title( $title, $sep, $seplocation ) {
 	return trim( $title, $sep . ' ' );
 }
 
-add_filter( 'wp_title', 'mai_wp_title', 10, 3 );
+add_filter( 'wp_title', 'maizi_wp_title', 10, 3 );
 
 
 /**

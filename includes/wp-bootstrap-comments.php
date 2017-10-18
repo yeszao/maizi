@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 if ( ! class_exists( 'WP_Bootstrap_Comments_Walker' ) ) :
 
 /**
- * Main WP Bootstrap Comments Walker Class
+ * Maizin WP Bootstrap Comments Walker Class
  *
  * @since 0.1.0
  */
