@@ -26,9 +26,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<table class="shop_table">
 		<thead>
 			<tr>
-				<th class="product-name"><?php _e( 'Product', 'qiaomi' ); ?></th>
-				<th class="product-quantity"><?php _e( 'Qty', 'qiaomi' ); ?></th>
-				<th class="product-total"><?php _e( 'Totals', 'qiaomi' ); ?></th>
+				<th class="product-name"><?php _e( 'Product', 'mai' ); ?></th>
+				<th class="product-quantity"><?php _e( 'Qty', 'mai' ); ?></th>
+				<th class="product-total"><?php _e( 'Totals', 'mai' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -76,7 +76,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
 						}
 					} else {
-						echo '<li>' . apply_filters( 'woocommerce_no_available_payment_methods_message', __( 'Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements.', 'qiaomi' ) ) . '</li>';
+						echo '<li>' . apply_filters( 'woocommerce_no_available_payment_methods_message', __( 'Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements.', 'mai' ) ) . '</li>';
 					}
 				?>
 			</ul>

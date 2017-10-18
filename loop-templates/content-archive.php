@@ -4,7 +4,7 @@
  *
  */
 
-$list_type = get_theme_mod( 'qiaomi_post_list_type', 'none' );
+$list_type = get_theme_mod( 'mai_post_list_type', 'none' );
 ?>
 
 <article <?php post_class( 'container mb-5' ) ?> id="post-<?php the_ID(); ?>">
@@ -43,13 +43,13 @@ $list_type = get_theme_mod( 'qiaomi_post_list_type', 'none' );
 
 				<div class="entry-meta my-1 text-muted small">
 
-					<?php qiaomi_posted_on(); ?>
+					<?php mai_posted_on(); ?>
 
 				</div><!-- .entry-meta -->
 
 			<?php endif; ?>
 
-			<?php qiaomi_excerpt(); ?>
+			<?php mai_excerpt(); ?>
 
 		</div>
 

@@ -2,12 +2,12 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package qiaomi
+ * @package mai
  */
 
 get_header();
 
-$container   = get_theme_mod( 'qiaomi_container_type' );
+$container   = get_theme_mod( 'mai_container_type' );
 ?>
 
 <div class="wrapper" id="404-wrapper">
@@ -25,7 +25,7 @@ $container   = get_theme_mod( 'qiaomi_container_type' );
 						<header class="page-header">
 
 							<h1 class="page-title">
-								<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'qiaomi' ); ?>
+								<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'mai' ); ?>
 							</h1>
 
 						</header><!-- .page-header -->
@@ -33,7 +33,7 @@ $container   = get_theme_mod( 'qiaomi_container_type' );
 						<div class="page-content">
 
 							<p>
-								<?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'qiaomi' ); ?>
+								<?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'mai' ); ?>
 							</p>
 
 							<div class="my-4">
@@ -44,11 +44,11 @@ $container   = get_theme_mod( 'qiaomi_container_type' );
 
 							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-							<?php if ( qiaomi_categorized_blog() ) : ?>
+							<?php if ( mai_categorized_blog() ) : ?>
 
 								<div class="widget widget_categories">
 
-									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'qiaomi' ); ?></h2>
+									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'mai' ); ?></h2>
 
 									<ul>
 										<?php
@@ -69,7 +69,7 @@ $container   = get_theme_mod( 'qiaomi_container_type' );
 							<?php
 							/* translators: %1$s: smiley */
 							$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s',
-							'qiaomi' ), convert_smilies( ':)' ) ) . '</p>';
+							'mai' ), convert_smilies( ':)' ) ) . '</p>';
 							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 							?>
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: qiaomi\n"
+"Project-Id-Version: mai\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2017-05-21 21:19+0800\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
@@ -733,7 +733,7 @@ msgid_plural "%s customer reviews"
 msgstr[0] ""
 
 #. Name of the theme
-msgid "Qiaomi"
+msgid "Mai"
 msgstr ""
 
 #. Description of the theme
@@ -744,11 +744,11 @@ msgid ""
 "support, built-in widget slider and much more you need for basic websites. "
 "IMPORTANT: All developer dependencies are not bundled with this install "
 "file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /qiaomi folder."
+"copy-assets\" inside the extracted /mai folder."
 msgstr ""
 
 #. Theme URI of the theme
-msgid "http://qiaomi.org"
+msgid "http://mai.org"
 msgstr ""
 
 #. Author of the theme

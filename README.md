@@ -1,7 +1,7 @@
-Qiaomi - Best brand Wordpress theme build with bootstrap
+Mai - Best brand Wordpress theme build with bootstrap
 
-* [Official Website and Demo](https://qiaomi.org/)
-* [Official Docs Page](https://qiaomi.org/docs)
+* [Official Website and Demo](https://mai.org/)
+* [Official Docs Page](https://mai.org/docs)
 
 ## Basic Features
 
@@ -17,18 +17,18 @@ integration (v4.7.0)
 ## Installation
 
 ### Classic install
-- Download the qiaomi folder from GitHub or from [https://qiaomi.org](https://qiaomi.org)
-- IMPORTANT: If you download it from GitHub make sure you rename the "qiaomi-master.zip" file just to "qiaomi.zip" or you might have problems using child themes !!
+- Download the mai folder from GitHub or from [https://mai.org](https://mai.org)
+- IMPORTANT: If you download it from GitHub make sure you rename the "mai-master.zip" file just to "mai.zip" or you might have problems using child themes !!
 - Upload it into your WordPress installation subfolder here: `/wp-content/themes/`
 - Login to your WordPress backend
 - Go to Appearance → Themes
-- Activate the Qiaomi theme
+- Activate the Mai theme
 
 ### WordPress.org install
 - Open your WordPress backend
 - Click on "Appearance -> Themes"
 - Hit the "Add new" button
-- Search for "Qiaomi"
+- Search for "Mai"
 - Hit the "install" button
 - Activate the theme
 

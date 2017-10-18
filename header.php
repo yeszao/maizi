@@ -6,7 +6,7 @@
  *
  */
 
-$container = get_theme_mod( 'qiaomi_container_type' );
+$container = get_theme_mod( 'mai_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

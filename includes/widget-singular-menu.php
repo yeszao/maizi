@@ -2,7 +2,7 @@
 /**
  * Declaring widgets
  *
- * @package qiaomi
+ * @package mai
  */
 add_action( 'widgets_init', function(){
 	register_widget( 'Sidebar_Singular_Menu_Widget' );
@@ -21,9 +21,9 @@ class Sidebar_Singular_Menu_Widget extends WP_Widget {
 	public function __construct() {
 		$widget_ops = array(
 			'classname' => 'sidebar_menu_widget',
-			'description' => esc_html__('Add custom menu to specific category sidebar', 'qiaomi'),
+			'description' => esc_html__('Add custom menu to specific category sidebar', 'mai'),
 		);
-		parent::__construct( 'Sidebar_Singular_Menu_Widget', esc_html__('Category Sidebar Menu', 'qiaomi'), $widget_ops );
+		parent::__construct( 'Sidebar_Singular_Menu_Widget', esc_html__('Category Sidebar Menu', 'mai'), $widget_ops );
 	}
 
     public function isPage( $page_id ) {
@@ -83,15 +83,15 @@ class Sidebar_Singular_Menu_Widget extends WP_Widget {
 		$instance = wp_parse_args((array)$instance, $this->defaults);
 		?>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'qiaomi' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'mai' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'page_id' ) ); ?>"><?php esc_attr_e( 'Page IDs, Separated by commas:', 'qiaomi' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'page_id' ) ); ?>"><?php esc_attr_e( 'Page IDs, Separated by commas:', 'mai' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'page_id' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'page_id' ) ); ?>" type="text" value="<?php echo esc_attr( $instance['page_id'] ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'category_id' ) ); ?>"><?php esc_attr_e( 'Category IDs, Separated by commas:', 'qiaomi' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'category_id' ) ); ?>"><?php esc_attr_e( 'Category IDs, Separated by commas:', 'mai' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'category_id' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'category_id' ) ); ?>" type="text" value="<?php echo esc_attr(
 				$instance['category_id']	); ?>">
 		</p>

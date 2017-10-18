@@ -59,13 +59,13 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 										</a>
 										<?php break;
 									case 'download-remaining' :
-										echo is_numeric( $download['downloads_remaining'] ) ? esc_html( $download['downloads_remaining'] ) : __( '&infin;', 'qiaomi' );
+										echo is_numeric( $download['downloads_remaining'] ) ? esc_html( $download['downloads_remaining'] ) : __( '&infin;', 'mai' );
 										break;
 									case 'download-expires' : ?>
 										<?php if ( ! empty( $download['access_expires'] ) ) : ?>
 											<time datetime="<?php echo date( 'Y-m-d', strtotime( $download['access_expires'] ) ); ?>" title="<?php echo esc_attr( strtotime( $download['access_expires'] ) ); ?>"><?php echo date_i18n( get_option( 'date_format' ), strtotime( $download['access_expires'] ) ); ?></time>
 										<?php else : ?>
-											<?php _e( 'Never', 'qiaomi' ); ?>
+											<?php _e( 'Never', 'mai' ); ?>
 										<?php endif; ?>
 										<?php break;
 									case 'download-actions' : ?>
@@ -73,7 +73,7 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 											$actions = array(
 												'download'  => array(
 													'url'  => $download['download_url'],
-													'name' => __( 'Download', 'qiaomi' ),
+													'name' => __( 'Download', 'mai' ),
 												),
 											);
 											if ( $actions = apply_filters( 'woocommerce_account_download_actions', $actions, $download ) ) {
@@ -95,9 +95,9 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 <?php else : ?>
 	<div class="woocommerce-Message woocommerce-Message--info woocommerce-info">
 		<a class="btn btn-outline-primary" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-			<?php esc_html_e( 'Go Shop', 'qiaomi' ) ?>
+			<?php esc_html_e( 'Go Shop', 'mai' ) ?>
 		</a>
-		<?php esc_html_e( 'No downloads available yet.', 'qiaomi' ); ?>
+		<?php esc_html_e( 'No downloads available yet.', 'mai' ); ?>
 	</div>
 <?php endif; ?>
 

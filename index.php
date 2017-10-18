@@ -8,13 +8,13 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package qiaomi
+ * @package mai
  */
 
 get_header();
 
-$container   = get_theme_mod( 'qiaomi_container_type' );
-$sidebar_pos = get_theme_mod( 'qiaomi_sidebar_position' );
+$container   = get_theme_mod( 'mai_container_type' );
+$sidebar_pos = get_theme_mod( 'mai_sidebar_position' );
 ?>
 
 <div class="wrapper" id="wrapper-index">
@@ -62,7 +62,7 @@ $sidebar_pos = get_theme_mod( 'qiaomi_sidebar_position' );
 				</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php qiaomi_pagination(); ?>
+			<?php mai_pagination(); ?>
 
 		</div><!-- #primary -->
 

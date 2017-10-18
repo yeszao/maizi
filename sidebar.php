@@ -2,10 +2,10 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package qiaomi
+ * @package mai
  */
 
-$sidebar_pos = get_theme_mod( 'qiaomi_sidebar_position' );
+$sidebar_pos = get_theme_mod( 'mai_sidebar_position' );
 ?>
 
 <?php if ( 'none' !== $sidebar_pos ) : ?>

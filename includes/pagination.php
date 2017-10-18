@@ -2,14 +2,14 @@
 /**
  * Pagination.
  *
- * @package qiaomi
+ * @package mai
  */
 
-if ( ! function_exists( 'qiaomi_pagination' ) ) :
+if ( ! function_exists( 'mai_pagination' ) ) :
 	/**
 	 * Custom pagination
 	 */
-	function qiaomi_pagination() {
+	function mai_pagination() {
 		if ( is_singular() ) {
 			return;
 		}

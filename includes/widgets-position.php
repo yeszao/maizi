@@ -40,13 +40,13 @@ function widgets_css_class( $sidebar_id ) {
 }
 
 
-if ( ! function_exists( 'qiaomi_widgets_init' ) ) {
+if ( ! function_exists( 'mai_widgets_init' ) ) {
 	/**
 	 * Initializes themes widgets.
 	 */
-	function qiaomi_widgets_init() {
+	function mai_widgets_init() {
 		register_sidebar( array(
-			'name'          => __( 'Global Sidebar', 'qiaomi' ),
+			'name'          => __( 'Global Sidebar', 'mai' ),
 			'id'            => 'global-sidebar',
 			'description'   => 'Global sidebar widget area',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -56,7 +56,7 @@ if ( ! function_exists( 'qiaomi_widgets_init' ) ) {
 		) );
 
 		register_sidebar( array(
-			'name'          => __( 'Index Sidebar', 'qiaomi' ),
+			'name'          => __( 'Index Sidebar', 'mai' ),
 			'id'            => 'index-sidebar',
 			'description'   => 'Index sidebar widget area',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -66,7 +66,7 @@ if ( ! function_exists( 'qiaomi_widgets_init' ) ) {
 		) );
 
 		register_sidebar( array(
-			'name'          => __( 'Single Sidebar', 'qiaomi' ),
+			'name'          => __( 'Single Sidebar', 'mai' ),
 			'id'            => 'single-sidebar',
 			'description'   => 'Single sidebar widget area',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -76,7 +76,7 @@ if ( ! function_exists( 'qiaomi_widgets_init' ) ) {
 		) );
 
 		register_sidebar( array(
-			'name'          => __( 'Page Sidebar', 'qiaomi' ),
+			'name'          => __( 'Page Sidebar', 'mai' ),
 			'id'            => 'page-sidebar',
 			'description'   => 'page sidebar widget area',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -86,7 +86,7 @@ if ( ! function_exists( 'qiaomi_widgets_init' ) ) {
 		) );
 
 		register_sidebar( array(
-			'name'          => __( 'Archive Sidebar', 'qiaomi' ),
+			'name'          => __( 'Archive Sidebar', 'mai' ),
 			'id'            => 'archive-sidebar',
 			'description'   => 'Archive sidebar widget area',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -97,7 +97,7 @@ if ( ! function_exists( 'qiaomi_widgets_init' ) ) {
 
 		if ( function_exists( 'is_woocommerce' ) ) {
 			register_sidebar( array(
-				'name'          => __( 'Shop Sidebar', 'qiaomi' ),
+				'name'          => __( 'Shop Sidebar', 'mai' ),
 				'id'            => 'shop-sidebar',
 				'description'   => 'WooCommerce sidebar widget area',
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -108,7 +108,7 @@ if ( ! function_exists( 'qiaomi_widgets_init' ) ) {
 		}
 
 		register_sidebar( array(
-			'name'          => __( 'Index Slider', 'qiaomi' ),
+			'name'          => __( 'Index Slider', 'mai' ),
 			'id'            => 'index-slider',
 			'description'   => 'Index slider area. Place two or more widgets here and they will slide!',
 			'before_widget' => '<div class="carousel-item">',
@@ -118,7 +118,7 @@ if ( ! function_exists( 'qiaomi_widgets_init' ) ) {
 		) );
 
 		register_sidebar( array(
-			'name'          => __( 'Footer Full', 'qiaomi' ),
+			'name'          => __( 'Footer Full', 'mai' ),
 			'id'            => 'footerfull',
 			'description'   => 'Widget area below main content and above footer',
 		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. widgets_css_class( 'footerfull' ) .'">',
@@ -129,5 +129,5 @@ if ( ! function_exists( 'qiaomi_widgets_init' ) ) {
 
 	}
 }
-add_action( 'widgets_init', 'qiaomi_widgets_init' );
+add_action( 'widgets_init', 'mai_widgets_init' );
 

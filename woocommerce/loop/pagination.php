@@ -20,4 +20,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-qiaomi_pagination();
+mai_pagination();

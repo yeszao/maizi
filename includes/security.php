@@ -2,7 +2,7 @@
 /**
  * Inspired by Simon Bradburys cleanup.php fromb4st theme https://github.com/SimonPadbury/b4st
  *
- * @package qiaomi
+ * @package mai
  */
 
 /**

@@ -2,9 +2,9 @@
 /**
  * Functions file.
  *
- * @package         Qiaomi
+ * @package         Mai
  * @description     Multipurpose Wordpress theme
- * @author          qiaomi.org
+ * @author          mai.org
  * @version         Release: 1.0
  */
 

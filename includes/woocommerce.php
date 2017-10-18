@@ -2,7 +2,7 @@
 /**
  * Add WooCommerce support
  *
- * @package qiaomi
+ * @package mai
  */
 add_action( 'after_setup_theme', 'woocommerce_support' );
 if ( ! function_exists( 'woocommerce_support' ) ) {

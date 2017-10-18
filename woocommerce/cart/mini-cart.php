@@ -74,8 +74,8 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 	<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 
 	<p class="buttons">
-		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn btn-outline-primary"><?php _e( 'View Cart', 'qiaomi' ); ?></a>
-		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn btn-primary"><?php _e( 'Checkout', 'qiaomi' ); ?></a>
+		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn btn-outline-primary"><?php _e( 'View Cart', 'mai' ); ?></a>
+		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn btn-primary"><?php _e( 'Checkout', 'mai' ); ?></a>
 	</p>
 <?php else : ?>
 	<p class="woocommerce-mini-cart__empty-message"><?php _e( 'No products in the cart.', 'woocommerce' ); ?></p>

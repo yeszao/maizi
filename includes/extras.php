@@ -6,7 +6,7 @@
  *
  */
 
-if ( ! function_exists( 'qiaomi_body_classes' ) ) {
+if ( ! function_exists( 'mai_body_classes' ) ) {
 	/**
 	 * Adds custom classes to the array of body classes.
 	 *
@@ -14,7 +14,7 @@ if ( ! function_exists( 'qiaomi_body_classes' ) ) {
 	 *
 	 * @return array
 	 */
-	function qiaomi_body_classes( $classes ) {
+	function mai_body_classes( $classes ) {
 		// Adds a class of group-blog to blogs with more than 1 published author.
 		if ( is_multi_author() ) {
 			$classes[] = 'group-blog';
@@ -27,7 +27,7 @@ if ( ! function_exists( 'qiaomi_body_classes' ) ) {
 		return $classes;
 	}
 }
-add_filter( 'body_class', 'qiaomi_body_classes' );
+add_filter( 'body_class', 'mai_body_classes' );
 
 // Removes tag class from the body_class array to avoid Bootstrap markup styling issues.
 add_filter( 'body_class', 'adjust_body_class' );

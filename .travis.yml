@@ -1,8 +1,8 @@
 # Travis CI (MIT License) configuration file for the Underscores WordPress theme.
 # @link https://travis-ci.org/
 
-# For use with the Qiaomi WordPress theme
-# @link https://github.com/yeszao/qiaomi
+# For use with the Mai WordPress theme
+# @link https://github.com/yeszao/mai
 
 # Ditch sudo and use containers.
 # @link http://docs.travis-ci.com/user/migrating-from-legacy/#Why-migrate-to-container-based-infrastructure%3F

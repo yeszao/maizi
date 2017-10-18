@@ -2,10 +2,10 @@
 /**
  * Sidebar setup for footer full.
  *
- * @package qiaomi
+ * @package mai
  */
 
-$container   = get_theme_mod( 'qiaomi_container_type' );
+$container   = get_theme_mod( 'mai_container_type' );
 
 ?>
 

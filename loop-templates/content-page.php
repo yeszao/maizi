@@ -11,7 +11,7 @@
 
 		<?php the_title( '<h1 class="entry-title mb-3">', '</h1>' ); ?>
 
-		<?php edit_post_link( __( 'Edit', 'qiaomi' ), '<div class="entry-meta mb-4 small text-muted"><span class="edit-link">', '</span></div>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'mai' ), '<div class="entry-meta mb-4 small text-muted"><span class="edit-link">', '</span></div>' ); ?>
 
 	</header><!-- .entry-header -->
 
@@ -21,7 +21,7 @@
 
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'qiaomi' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'mai' ),
 			'after'  => '</div>',
 		) );
 		?>
