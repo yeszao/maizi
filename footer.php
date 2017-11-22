@@ -29,6 +29,8 @@ $container = get_theme_mod( 'maizi_container_type' );
 
                         <span>Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>.</span>
 
+                        <span><a href="http://www.miitbeian.gov.cn/" target="_blank"><?php echo get_option( 'zh_cn_l10n_icp_num' );?></a></span>
+
 						<?php dynamic_sidebar( 'footer-copyright' ); ?>
 
 					</div><!-- .site-info -->
