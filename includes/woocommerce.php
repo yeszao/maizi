@@ -106,15 +106,15 @@ add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 10 );
 function woo_rename_tabs( $tabs ) {
 	// Rename the description tab
 	if (isset($tabs['description'])) {
-		$tabs['description']['title'] = __('Product Details');
+		$tabs['description']['title'] = __('Product Details', 'maizi');
 	}
 	// Rename the reviews tab
 	if (isset($tabs['reviews'])) {
-		$tabs['reviews']['title'] = __('Reviews');
+		$tabs['reviews']['title'] = __('Reviews', 'maizi');
 	}
 	// Rename the additional information tab
 	if (isset($tabs['additional_information'])) {
-		$tabs['additional_information']['title'] = __('Specifications');
+		$tabs['additional_information']['title'] = __('Specifications', 'maizi');
 	}
 
 	return $tabs;
