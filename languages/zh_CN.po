@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: maizi\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2017-11-29 15:09+0800\n"
-"PO-Revision-Date: 2017-11-29 15:10+0800\n"
+"PO-Revision-Date: 2017-11-29 20:00+0800\n"
 "Last-Translator: \n"
 "Language-Team: http://www.awaimai.com\n"
 "Language: zh_CN\n"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: author.php:42
 msgid "About:"
-msgstr ""
+msgstr "关于: "
 
 #: author.php:50 includes/custom-comments.php:30
 msgid "Website"
@@ -70,11 +70,10 @@ msgid "Posts by"
 msgstr "作者"
 
 #: comments.php:32
-#, fuzzy, php-format
-#| msgid "% Comments"
+#, php-format
 msgid "%s Comment"
 msgid_plural "%s Comments"
-msgstr[0] "%评论"
+msgstr[0] "%s评论"
 
 #: comments.php:39 comments.php:64
 msgid "Comment navigation"
@@ -106,74 +105,64 @@ msgid "Comment"
 msgstr "评论"
 
 #: includes/customizer.php:31
-#, fuzzy
-#| msgid "Theme Layout Settings"
 msgid "Layout Settings"
-msgstr "主题布局"
+msgstr "布局设置"
 
 #: includes/customizer.php:47
 msgid "Container Width"
 msgstr "容器宽度"
 
 #: includes/customizer.php:52
-#, fuzzy
-#| msgid "Fixed width container"
 msgid "Fixed width"
-msgstr "固定宽度容器"
+msgstr "固定宽度"
 
 #: includes/customizer.php:53 includes/widget-slider-unit.php:172
-#, fuzzy
-#| msgid "Full width container"
 msgid "Full width"
-msgstr "全宽容器"
+msgstr "全宽"
 
 #: includes/customizer.php:72
-#, fuzzy
-#| msgid "Sidebar Positioning"
 msgid "Sidebar Position"
 msgstr "侧边栏位置"
 
 #: includes/customizer.php:77
 msgid "Left"
-msgstr ""
+msgstr "左侧"
 
 #: includes/customizer.php:78
 msgid "Right"
-msgstr ""
+msgstr "右侧"
 
 #: includes/customizer.php:79
 msgid "No sidebar"
 msgstr "无"
 
 #: includes/customizer.php:97
-#, fuzzy
-#| msgid "Posts by"
 msgid "Post List Type"
-msgstr "作者"
+msgstr "文章列表样式"
 
 #: includes/customizer.php:102
 msgid "Do not display thumbnail"
-msgstr ""
+msgstr "不显示缩略图"
 
 #: includes/customizer.php:103
 msgid "Display thumbnail and placeholder image"
-msgstr ""
+msgstr "显示缩略图和占位图片"
 
 #: includes/customizer.php:121
 msgid "Display or not author name"
-msgstr ""
+msgstr "是否显示作者名称"
 
 #: includes/customizer.php:126
 msgid "Do not display author name"
-msgstr ""
+msgstr "不显示"
 
 #: includes/customizer.php:127
 msgid "Yes, display author name"
-msgstr ""
+msgstr "显示"
 
 #: includes/customizer.php:145
 msgid "Enable Code highlight"
-msgstr ""
+msgstr "使用代码高亮？"
 
 #: includes/setup.php:20
 msgid "Primary Menu"
@@ -182,7 +171,7 @@ msgstr "主菜单"
 #: includes/setup.php:91
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "%s 页"
 
 #: includes/template-tags.php:32 loop-templates/content-single.php:37
 msgid ", "
@@ -194,8 +183,6 @@ msgid "Posted in %1$s"
 msgstr "%1$s"
 
 #: includes/template-tags.php:42
-#, fuzzy
-#| msgid "Leave a comment"
 msgid "Leave a Comment"
 msgstr "去评论"
 
@@ -219,74 +206,72 @@ msgstr ""
 
 #: includes/widget-singular-menu.php:26
 msgid "Category Sidebar Menu"
-msgstr ""
+msgstr "文章/分类侧边菜单"
 
 #: includes/widget-singular-menu.php:86
 msgid "Title:"
-msgstr ""
+msgstr "标题: "
 
 #: includes/widget-singular-menu.php:90
 msgid "Page IDs, Separated by commas:"
-msgstr ""
+msgstr "页面ID，多个以“,”分隔"
 
 #: includes/widget-singular-menu.php:94
 msgid "Category IDs, Separated by commas:"
-msgstr ""
+msgstr "文章/分类ID，多个以“,”分隔"
 
 #: includes/widget-singular-menu.php:114
 #, php-format
 msgid "No menus have been created yet. <a href=\"%s\">Create some</a>."
-msgstr ""
+msgstr "暂无菜单，<a href=\"%s\">马上创建</a>。"
 
 #: includes/widget-singular-menu.php:118
 msgid "Select Menu:"
-msgstr ""
+msgstr "选择菜单: "
 
 #: includes/widget-singular-menu.php:120
 msgid "&mdash; Select &mdash;"
-msgstr ""
+msgstr "&mdash; 选择 &mdash;"
 
 #: includes/widget-singular-menu.php:130
-#, fuzzy
-#| msgid "Edit %s"
 msgid "Edit Menu"
-msgstr "编辑%s"
+msgstr "编辑菜单"
 
 #: includes/widget-slider-unit.php:88
 msgid "Title"
-msgstr ""
+msgstr "标题"
 
 #: includes/widget-slider-unit.php:98
 msgid "Background color"
-msgstr ""
+msgstr "背景颜色"
 
 #: includes/widget-slider-unit.php:109
 msgid "Height"
-msgstr ""
+msgstr "高度"
 
 #: includes/widget-slider-unit.php:119
 msgid "Image"
-msgstr ""
+msgstr "图像"
 
 #: includes/widget-slider-unit.php:129
 msgid "No image selected"
-msgstr ""
+msgstr "未选择图像"
 
 #: includes/widget-slider-unit.php:139
 msgid "Select Image"
-msgstr ""
+msgstr "选择图像"
 
 #: includes/widget-slider-unit.php:141
 msgid "Remove Image"
-msgstr ""
+msgstr "删除图像"
 
 #: includes/widget-slider-unit.php:147
 msgid "Caption"
-msgstr ""
+msgstr "标题"
 
 #: includes/widget-slider-unit.php:157
 msgid "Links"
-msgstr ""
+msgstr "链接"
 
 #: includes/widgets-position.php:49
 #, fuzzy
@@ -490,7 +475,7 @@ msgstr ""
 
 #: woocommerce/checkout/form-checkout.php:55
 msgid "Your order"
-msgstr ""
+msgstr "详情"
 
 #: woocommerce/checkout/form-coupon.php:28
 msgid "Have a coupon?"
@@ -693,15 +678,15 @@ msgstr ""
 
 #: woocommerce/myaccount/my-orders.php:13
 msgid "Order"
-msgstr ""
+msgstr "订单"
 
 #: woocommerce/myaccount/my-orders.php:14
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: woocommerce/myaccount/my-orders.php:15
 msgid "Status"
-msgstr ""
+msgstr "状态"
 
 #: woocommerce/myaccount/my-orders.php:30
 msgid "Recent Orders"
