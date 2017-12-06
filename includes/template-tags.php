@@ -15,7 +15,9 @@ if ( ! function_exists( 'maizi_posted_on' ) ) :
 		$posted_on = '<time class="published" datetime="%1$s">%2$s</time>';
 		$posted_on = sprintf( $posted_on, esc_attr( get_the_date( 'c' ) ), esc_html( get_the_date() ) );
 
-		echo '<span class="posted-date meta-item mr-3"><i class="icon-time icon12"></i> ' . $posted_on . '</span>';
+		echo '<span class="posted-date meta-item mr-3 text-muted"><i class="icon-time icon12"></i> ',
+			$posted_on,
+		'</span>';
 
 		// Display author name.
 		$display_author = get_theme_mod( 'maizi_display_author', 'no' );
@@ -23,7 +25,14 @@ if ( ! function_exists( 'maizi_posted_on' ) ) :
 			$byline = sprintf(
 				'<span class="author vcard"><a class="url fn n text-muted" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 			);
-			echo '<span class="byline meta-item mr-3"><i class="icon-account icon12"></i> ' . $byline . '</span>';
+			echo '<span class="byline meta-item mr-3 text-muted"><i class="icon-user icon12"></i> ', $byline, '</span>';
+		}
+
+		if ( in_array( 'wp-postviews-plus/wp-postviews-plus.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+			echo '<span class="posted-view meta-item mr-3 text-muted"><i class="ico icon-eye-open icon12"></i> ',
+			(int) get_post_meta( get_the_ID(), 'views', true ),
+			esc_html__( 'View', 'maizi' ),
+			'</span>';
 		}
 
 		// Hide category and tag text for pages.
@@ -32,7 +41,7 @@ if ( ! function_exists( 'maizi_posted_on' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'maizi' ) );
 			$categories_list = str_replace( '<a href="', '<a class="text-muted" href="', $categories_list );
 			if ( $categories_list && maizi_categorized_blog() ) {
-				printf( '<span class="cat-links meta-item mr-3"><i class="icon-category icon12"></i> ' . esc_html__( 'Posted in %1$s', 'maizi' ) . '</span>', $categories_list );
+				printf( '<span class="cat-links meta-item mr-3 text-muted"><i class="icon-list icon12"></i> ' . esc_html__( 'Posted in %1$s', 'maizi' ) . '</span>', $categories_list );
 			}
 		}
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maizi\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2017-11-29 15:09+0800\n"
-"PO-Revision-Date: 2017-11-29 20:00+0800\n"
+"POT-Creation-Date: 2017-12-06 15:43+0800\n"
+"PO-Revision-Date: 2017-12-06 15:43+0800\n"
 "Last-Translator: \n"
 "Language-Team: http://www.awaimai.com\n"
 "Language: zh_CN\n"
@@ -173,28 +173,33 @@ msgstr "主菜单"
 msgid "Page %s"
 msgstr "%s 页"
 
-#: includes/template-tags.php:32 loop-templates/content-single.php:37
+#: includes/template-tags.php:24 woocommerce/myaccount/my-orders.php:76
+#: woocommerce/myaccount/orders.php:75
+msgid "View"
+msgstr "浏览"
+
+#: includes/template-tags.php:39 loop-templates/content-single.php:37
 msgid ", "
 msgstr ""
 
-#: includes/template-tags.php:35
+#: includes/template-tags.php:42
 #, php-format
 msgid "Posted in %1$s"
 msgstr "%1$s"
 
-#: includes/template-tags.php:42
+#: includes/template-tags.php:49
 msgid "Leave a Comment"
 msgstr "去评论"
 
-#: includes/template-tags.php:42
+#: includes/template-tags.php:49
 msgid "1 Comment"
 msgstr "1评论"
 
-#: includes/template-tags.php:42
+#: includes/template-tags.php:49
 msgid "% Comments"
 msgstr "%评论"
 
-#: includes/template-tags.php:48 includes/wp-bootstrap-comments.php:213
+#: includes/template-tags.php:55 includes/wp-bootstrap-comments.php:213
 #: includes/wp-bootstrap-comments.php:289 loop-templates/content-page.php:16
 #: woocommerce/myaccount/my-address.php:51
 msgid "Edit"
@@ -705,10 +710,6 @@ msgstr[0] ""
 
 #: woocommerce/myaccount/my-orders.php:72 woocommerce/myaccount/orders.php:71
 msgid "Pay"
-msgstr ""
-
-#: woocommerce/myaccount/my-orders.php:76 woocommerce/myaccount/orders.php:75
-msgid "View"
 msgstr ""
 
 #: woocommerce/myaccount/my-orders.php:80 woocommerce/myaccount/orders.php:79
