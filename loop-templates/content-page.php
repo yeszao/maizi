@@ -11,15 +11,11 @@
 
 		<?php the_title( '<h1 class="entry-title mb-3">', '</h1>' ); ?>
 
-		<?php
-			edit_post_link(
-				__( 'Edit' ),
-				'<div class="entry-meta mb-4"><span class="edit-link">',
-				'</span></div>',
-				0,
-				'small text-muted'
-			);
-		?>
+		<div class="entry-meta mb-4 small text-muted">
+
+			<?php maizi_posted_on(); ?>
+
+		</div><!-- .entry-meta -->
 
 	</header><!-- .entry-header -->
 
