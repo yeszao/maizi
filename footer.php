@@ -37,7 +37,7 @@ $container = get_theme_mod( 'maizi_container_type' );
 
 					<a href="#" class="scroll-top">
 
-						<i class="icon12 icon-arrow-up icon-white"></i>
+						<i class="icon10 icon-arrow-up icon-white"></i>
 
 					</a>
 				</footer><!-- #colophon -->

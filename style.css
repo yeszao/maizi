@@ -329,6 +329,9 @@ aside.widget {
 .icon12{
     margin-top: 0;
 }
+.icon10 {
+    margin-top: 2px;
+}
 
 .text-muted [class^="icon-"],
 .text-muted [class*=" icon-"]{opacity: 0.40;
