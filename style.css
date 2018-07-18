@@ -244,6 +244,13 @@ aside.widget {
     padding: 3px;
 }
 
+/* 评论 */
+.comment-content p, .comment-content pre {
+    white-space: normal;
+    line-height: 1.7rem;
+}
+
+
 /* 页面中的【添加到购物车】按钮 */
 .btn-add-to-cart {
     background-color: #ebe9eb;

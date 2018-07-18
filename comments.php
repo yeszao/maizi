@@ -54,6 +54,7 @@ if ( get_next_comments_link() ) { ?>
 				'style'             => 'div',
 				'short_ping' 		=> true,
 				'avatar_size'       => 36,
+                'max_depth'         => 2,
                 'walker'            => new WP_Bootstrap_Comments_Walker(),
 			) );
 			?>
