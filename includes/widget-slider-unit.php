@@ -122,8 +122,8 @@ class Slider_Unit_Widget extends WP_Widget {
             <div class="media-widget-control">
                 <div class="media-widget-preview">
                     <div class="attachment-media-view custom-img-container">
-						<?php if ( $instance['img'] ) { ?>
-                            <img src="<?php echo wp_get_attachment_image_src( $instance['img'], 'full' )[0]; ?>"
+						<?php if ( $instance['img'] ) { $img_url = wp_get_attachment_image_src( $instance['img'], 'full' ); ?>
+                            <img src="<?php echo $img_url[0]; ?>"
                                  style="max-width: 100%;"/>
 						<?php } else { ?>
                             <div class="placeholder">
