@@ -143,7 +143,8 @@ aside .current-menu-item.menu-item-has-children > a:before{
     text-align: center;}
 
 .wp-caption-text {
-    font-size: inherit; }
+    font-size: inherit;
+    text-align: center;}
 
 .screen-reader-text {
     font-size: inherit; }
