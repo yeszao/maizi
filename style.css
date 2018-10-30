@@ -139,7 +139,8 @@ aside .current-menu-item.menu-item-has-children > a:before{
     background-color: #eceeef; }
 
 .wp-caption {
-    font-size: inherit; }
+    font-size: inherit;
+    text-align: center;}
 
 .wp-caption-text {
     font-size: inherit; }
