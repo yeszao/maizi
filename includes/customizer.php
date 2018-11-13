@@ -322,3 +322,134 @@ if ( ! function_exists( 'maizi_customize_preview_js' ) ) {
 	}
 }
 //add_action( 'customize_preview_init', 'maizi_customize_preview_js' );
+
+
+if ( ! function_exists( 'maizi_ad_register' ) ) {
+    /**
+     * Register individual settings through customizer's API.
+     *
+     * @param WP_Customize_Manager $wp_customize Customizer reference.
+     */
+    function maizi_ad_register( $wp_customize ) {
+
+        $wp_customize->add_section( 'maizi_ad_options', array(
+            'title'       => __( 'Ad Settings', 'maizi' ),
+            'capability'  => 'edit_theme_options',
+            'priority'    => 180,
+        ) );
+
+        // Global ad under nav bar
+        $wp_customize->add_setting( 'maizi_ad_under_nav_bar', array(
+            'default'           => '',
+            'type'              => 'theme_mod',
+            'sanitize_callback' => 'esc_textarea',
+            'capability'        => 'edit_theme_options',
+        ) );
+
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+                'ad_under_nav_bar', array(
+                    'label'       => __( '#1. Global Ad under nav bar', 'maizi' ),
+                    'section'     => 'maizi_ad_options',
+                    'settings'    => 'maizi_ad_under_nav_bar',
+                    'type'        => 'textarea',
+                    'priority'    => '10',
+                )
+            ) );
+
+        // Ad before content
+        $wp_customize->add_setting( 'maizi_ad_before_content', array(
+            'default'           => '',
+            'type'              => 'theme_mod',
+            'sanitize_callback' => 'esc_textarea',
+            'capability'        => 'edit_theme_options',
+        ) );
+
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+                'ad_before_content', array(
+                    'label'       => __( '#2. Ad before content', 'maizi' ),
+                    'section'     => 'maizi_ad_options',
+                    'settings'    => 'maizi_ad_before_content',
+                    'type'        => 'textarea',
+                    'priority'    => '20',
+                )
+            ) );
+
+        // Show ad before content option
+        $wp_customize->add_setting( 'maizi_ad_before_content_option', array(
+            'default'           => 'both',
+            'type'              => 'theme_mod',
+            'sanitize_callback' => 'esc_textarea',
+            'capability'        => 'edit_theme_options',
+        ) );
+
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+                'ad_before_content_option', array(
+                    'label'       => __( 'Show #2 ad in: ', 'maizi' ),
+                    'section'     => 'maizi_ad_options',
+                    'settings'    => 'maizi_ad_before_content_option',
+                    'type'        => 'select',
+                    'choices'     => array(
+                        'both'  => __( 'Page and Post', 'maizi' ),
+						'post' => __( 'Only Post', 'maizi' ),
+                        'page' => __( 'Only Page', 'maizi' ),
+                        'none' => __( 'Neither', 'maizi' ),
+                    ),
+                    'priority'    => '20',
+                )
+            ) );
+
+        // Ad after content
+        $wp_customize->add_setting( 'maizi_ad_after_content', array(
+            'default'           => '',
+            'type'              => 'theme_mod',
+            'sanitize_callback' => 'esc_textarea',
+            'capability'        => 'edit_theme_options',
+        ) );
+
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+                'ad_after_content', array(
+                    'label'       => __( '#3. Ad after content content', 'maizi' ),
+                    'section'     => 'maizi_ad_options',
+                    'settings'    => 'maizi_ad_after_content',
+                    'type'        => 'textarea',
+                    'priority'    => '20',
+                )
+            ) );
+
+        // Show ad before content option
+        $wp_customize->add_setting( 'maizi_ad_after_content_option', array(
+            'default'           => 'both',
+            'type'              => 'theme_mod',
+            'sanitize_callback' => 'esc_textarea',
+            'capability'        => 'edit_theme_options',
+        ) );
+
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+                'ad_after_content_option', array(
+                    'label'       => __( 'Show #3 ad in: ', 'maizi' ),
+                    'section'     => 'maizi_ad_options',
+                    'settings'    => 'maizi_ad_after_content_option',
+                    'type'        => 'select',
+                    'choices'     => array(
+                        'both'  => __( 'Page and Post', 'maizi' ),
+						'post' => __( 'Only Post', 'maizi' ),
+                        'page' => __( 'Only Page', 'maizi' ),
+                        'none' => __( 'Neither', 'maizi' ),
+                    ),
+                    'priority'    => '20',
+                )
+            ) );
+
+    }
+} // endif function_exists( 'maizi_ad_register' ).
+add_action( 'customize_register', 'maizi_ad_register' );

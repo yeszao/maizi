@@ -22,4 +22,5 @@ require get_template_directory() . '/includes/jetpack.php';
 require get_template_directory() . '/includes/bs4Navwalker.php';
 require get_template_directory() . '/includes/woocommerce.php';
 require get_template_directory() . '/includes/editor.php';
+require get_template_directory() . '/includes/ad.php';
 

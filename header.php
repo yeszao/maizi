@@ -92,3 +92,9 @@ $container = get_theme_mod( 'maizi_container_type' );
 		<?php get_template_part( 'sidebar-slider' ); ?>
 
 	<?php endif; ?>
+
+    <?php if (get_theme_mod( 'maizi_ad_under_nav_bar' )) : ?>
+        <div class="<?php echo esc_html( get_theme_mod( 'maizi_container_type' ) ); ?>">
+            <?php echo htmlspecialchars_decode(get_theme_mod('maizi_ad_under_nav_bar')); ?>
+        </div>
+    <?php endif; ?>
