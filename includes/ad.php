@@ -14,10 +14,12 @@ if ( ! function_exists( 'maizi_ad_content' ) ) :
 			return;
 		}
 
-		$ad_before = str_replace('[url]', get_permalink(), get_theme_mod( 'maizi_ad_before_content' ));
+		$ad_before = get_theme_mod( 'maizi_ad_before_content' );
+		$ad_before = htmlspecialchars_decode(str_replace('[url]', get_permalink(), $ad_before));
         $ad_before_option = get_theme_mod( 'maizi_ad_before_content_option' );
 
-		$ad_after = str_replace('[url]', get_permalink(), get_theme_mod( 'maizi_ad_after_content' ));
+        $ad_after = get_theme_mod( 'maizi_ad_after_content' );
+		$ad_after = htmlspecialchars_decode(str_replace('[url]', get_permalink(), $ad_after));
         $ad_after_option = get_theme_mod( 'maizi_ad_after_content_option' );
 
 		if (is_single() && ($ad_before_option == 'both' || $ad_before_option == 'post')
