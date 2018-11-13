@@ -130,3 +130,13 @@ function https_image_replacer( $content ) {
 	return $content;
 }
 add_filter('the_content', 'https_image_replacer');
+
+
+/**
+ * Get current url link
+ * @return string
+ */
+function get_url(){
+	global $wp;
+	return home_url( $wp->request );
+}
