@@ -44,7 +44,13 @@ ul, li {
 
 
 p, pre{/*word-break:break-all*/;word-wrap:break-word;white-space: pre-wrap; max-width: 100%;}
-
+blockquote{
+    border-left: 2px solid #aaa;
+    padding: 12px 0 12px 12px;
+    font-style: italic;
+    background: #f7f7f7;
+}
+blockquote p{margin:0!important;}
 
 /* Sidebar menu */
 aside li {line-height: 2rem; list-style-type: none;}
