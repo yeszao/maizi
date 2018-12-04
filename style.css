@@ -40,7 +40,7 @@ button,
 ul, li {
     list-style-position: inside;
 }
-
+ul li {margin-bottom: .5rem;}
 
 
 p, pre{/*word-break:break-all*/;word-wrap:break-word;white-space: pre-wrap; max-width: 100%;}
