@@ -177,7 +177,7 @@ a.skip-link {
 .jumbotron {
     margin-bottom: 0px; }
 
-.code-compare {display: flex; flex-wrap: nowrap; align-items: stretch; justify-content: space-between;}
+.code-compare {display: flex; flex-wrap: nowrap; justify-content: space-between;}
 .code-compare .item, .code-compare div {width: 48%;}
 
 
