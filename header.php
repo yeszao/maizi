@@ -93,7 +93,8 @@ $container = get_theme_mod( 'maizi_container_type' );
 
 	<?php endif; ?>
 
-    <?php if (trim(get_theme_mod( 'maizi_ad_under_nav_bar' ))) : ?>
+    <?php if (trim(get_theme_mod( 'maizi_ad_under_nav_bar' )) && !in_array(get_the_ID(), explode(',', trim
+        (get_theme_mod( 'maizi_ad_disable_ids' ))))) : ?>
         <div class="<?php echo esc_html( get_theme_mod( 'maizi_container_type' ) ); ?>">
             <?php echo htmlspecialchars_decode(str_replace('[url]', get_url(), trim(get_theme_mod('maizi_ad_under_nav_bar'))))
             ; ?>

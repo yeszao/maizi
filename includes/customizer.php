@@ -351,6 +351,7 @@ if ( ! function_exists( 'maizi_ad_register' ) ) {
                 $wp_customize,
                 'ad_under_nav_bar', array(
                     'label'       => __( '#1. Global Ad under nav bar', 'maizi' ),
+					'description' => __( '<code>[url]</code> is short code of current page link'),
                     'section'     => 'maizi_ad_options',
                     'settings'    => 'maizi_ad_under_nav_bar',
                     'type'        => 'textarea',
@@ -371,6 +372,7 @@ if ( ! function_exists( 'maizi_ad_register' ) ) {
                 $wp_customize,
                 'ad_before_content', array(
                     'label'       => __( '#2. Ad before content', 'maizi' ),
+					'description' => __( '<code>[url]</code> is short code of current page link'),
                     'section'     => 'maizi_ad_options',
                     'settings'    => 'maizi_ad_before_content',
                     'type'        => 'textarea',
@@ -417,6 +419,7 @@ if ( ! function_exists( 'maizi_ad_register' ) ) {
                 $wp_customize,
                 'ad_after_content', array(
                     'label'       => __( '#3. Ad after content content', 'maizi' ),
+					'description' => __( '<code>[url]</code> is short code of current page link'),
                     'section'     => 'maizi_ad_options',
                     'settings'    => 'maizi_ad_after_content',
                     'type'        => 'textarea',
@@ -450,6 +453,26 @@ if ( ! function_exists( 'maizi_ad_register' ) ) {
                 )
             ) );
 
+        // Disable display in these ids
+		$wp_customize->add_setting( 'maizi_ad_disable_ids', array(
+			'default'           => '',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+		) );
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'ad_disable_ids_option', array(
+					'label'       => __( 'Post or page ids DONOT display ad', 'maizi' ),
+					'description' => __( 'eg: <code>1,2,3</code>'),
+					'section'     => 'maizi_ad_options',
+					'settings'    => 'maizi_ad_disable_ids',
+					'type'        => 'text',
+					'priority'    => '20',
+				)
+			) );
     }
 } // endif function_exists( 'maizi_ad_register' ).
 add_action( 'customize_register', 'maizi_ad_register' );

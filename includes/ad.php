@@ -14,6 +14,10 @@ if ( ! function_exists( 'maizi_ad_content' ) ) :
 			return;
 		}
 
+		if (in_array(get_the_ID(), explode(',', trim(get_theme_mod( 'maizi_ad_disable_ids' ))))) {
+			return $content;
+		}
+
 		$ad_before = trim(get_theme_mod( 'maizi_ad_before_content' ));
 		$ad_before = htmlspecialchars_decode(str_replace('[url]', get_permalink(), $ad_before));
         $ad_before_option = get_theme_mod( 'maizi_ad_before_content_option' );
