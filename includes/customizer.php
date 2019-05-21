@@ -134,7 +134,7 @@ if ( ! function_exists( 'maizi_theme_customize_register' ) ) {
 
         // JS component
         $wp_customize->add_setting( 'maizi_code_highlight', array(
-            'default'           => '',
+            'default'           => 'yes',
             'type'              => 'theme_mod',
             'sanitize_callback' => 'esc_textarea',
             'capability'        => 'edit_theme_options',
@@ -147,8 +147,11 @@ if ( ! function_exists( 'maizi_theme_customize_register' ) ) {
                     'label'       => __( 'Enable Code highlight', 'maizi' ),
                     'section'     => 'maizi_theme_layout_options',
                     'settings'    => 'maizi_code_highlight',
-                    'type'        => 'checkbox',
-                    'value'       => '1',
+                    'type'        => 'select',
+                    'choices'     => array(
+                        'no'  => __( 'No', 'maizi' ),
+                        'yes' => __( 'Yes', 'maizi' ),
+                    ),
                     'priority'    => '20',
                 )
             ) );
