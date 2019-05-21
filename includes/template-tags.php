@@ -26,7 +26,7 @@ if ( ! function_exists('maizi_post_meta') ) :
 		}
 
 		if ( in_array('pv', $list_meta) && in_array( 'wp-postviews-plus/wp-postviews-plus.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-			echo '<span class="posted-view meta-item mr-3 text-muted"><i class="ico icon-eye-open icon12"></i> ',
+			echo '<span class="posted-view meta-item mr-3 text-muted"><i class="dashicons dashicons-visibility icon14"></i> ',
 			(int) get_post_meta( get_the_ID(), 'views', true ),
 			esc_html__( 'View', 'maizi' ),
 			'</span>';
