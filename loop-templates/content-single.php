@@ -13,7 +13,7 @@
 
 		<div class="entry-meta mb-4 small text-muted">
 
-			<?php maizi_post_metas(); ?>
+			<?php maizi_post_meta(); ?>
 
 		</div><!-- .entry-meta -->
 
@@ -31,23 +31,5 @@
 		?>
 
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer mt-3">
-
-		<?php $tags_list = get_the_tag_list( '', esc_html__( ', ', 'maizi' ) ); ?>
-
-		<?php if ( $tags_list ) : ?>
-
-			<span class="tags-links meta-item">
-
-				<strong><?php echo esc_html__( 'Tags: ' ); ?></strong>
-
-                <?php echo $tags_list ?>
-
-			</span>
-
-		<?php endif; ?>
-
-	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->

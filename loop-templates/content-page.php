@@ -13,7 +13,7 @@
 
 		<div class="entry-meta mb-4 small text-muted">
 
-			<?php maizi_post_metas(); ?>
+			<?php maizi_post_meta(); ?>
 
 		</div><!-- .entry-meta -->
 

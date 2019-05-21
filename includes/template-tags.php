@@ -7,49 +7,57 @@
  * @package maizi
  */
 
-if ( ! function_exists('maizi_post_metas') ) :
+if ( ! function_exists('maizi_post_meta') ) :
 
-	function maizi_post_metas() {
-		$posted_on = '<time class="published" datetime="%1$s">%2$s</time>';
-		$posted_on = sprintf( $posted_on, esc_attr( get_the_date( 'c' ) ), esc_html( get_the_date() ) );
+	function maizi_post_meta() {
+        $list_meta = (array)get_theme_mod( 'maizi_post_list_meta', ('date') );
 
-		echo '<span class="posted-date meta-item mr-3 text-muted"><i class="icon-time icon12"></i> ',
-			$posted_on,
-		'</span>';
+        if (in_array('date', $list_meta)) {
+            $posted_on = '<time class="published" datetime="%1$s">%2$s</time>';
+		    $posted_on = sprintf( $posted_on, esc_attr( get_the_date( 'c' ) ), esc_html( get_the_date() ) );
+            echo '<span class="posted-date meta-item mr-3 text-muted"><i class="icon-time icon12"></i> ', $posted_on, '</span>';
+        }
 
-		// Display author name.
-		$display_author = get_theme_mod( 'maizi_display_author', 'no' );
-		if ( 'yes' === $display_author ) {
+		if ( in_array('author', $list_meta) ) {
 			$byline = sprintf(
 				'<span class="author vcard"><a class="url fn n text-muted" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 			);
 			echo '<span class="byline meta-item mr-3 text-muted"><i class="icon-user icon12"></i> ', $byline, '</span>';
 		}
 
-		if ( in_array( 'wp-postviews-plus/wp-postviews-plus.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+		if ( in_array('pv', $list_meta) && in_array( 'wp-postviews-plus/wp-postviews-plus.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 			echo '<span class="posted-view meta-item mr-3 text-muted"><i class="ico icon-eye-open icon12"></i> ',
 			(int) get_post_meta( get_the_ID(), 'views', true ),
 			esc_html__( 'View', 'maizi' ),
 			'</span>';
 		}
 
-		// Hide category and tag text for pages.
-		if ( 'post' === get_post_type() ) {
+		if ( in_array('category', $list_meta) && 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'maizi' ) );
 			$categories_list = str_replace( '<a href="', '<a class="text-muted" href="', $categories_list );
 			if ( $categories_list && maizi_categorized_blog() ) {
-				printf( '<span class="cat-links meta-item mr-3 text-muted"><i class="icon-list icon12"></i> ' . esc_html__( 'Posted in %1$s', 'maizi' ) . '</span>', $categories_list );
+				printf( '<span class="cat-links meta-item mr-3 text-muted"><i class="icon-list icon12"></i> %s</span>', $categories_list );
 			}
 		}
 
-		$comments_number = get_comments_number();
-		if ( ! post_password_required() && ( comments_open() || $comments_number ) ) {
-			echo '<span class="comments-link meta-item mr-3"><i class="icon-comment icon12"></i> ';
-			comments_popup_link( __( 'Leave a Comment' ), __( '1 Comment' ), esc_html__('% Comments', 'maizi' ),
-				'text-muted' );
-			echo '</span>';
-		}
+        if ( in_array('tags', $list_meta) && 'post' === get_post_type() ) {
+            $tags_list = get_the_tag_list('', esc_html__(', ', 'maizi'));
+            $tags_list = str_replace( '<a href="', '<a class="text-muted" href="', $tags_list );
+            if ($tags_list) {
+                echo sprintf('<span class="tags-links meta-item mr-3 text-muted"><i class="icon-tags icon12"></i> %s</span>', $tags_list);
+            }
+        }
+
+		if ( in_array('comment_link', $list_meta) ) {
+            $comments_number = get_comments_number();
+            if (!post_password_required() && (comments_open() || $comments_number)) {
+                echo '<span class="comments-link meta-item mr-3"><i class="icon-comment icon12"></i> ';
+                comments_popup_link(__('Leave a Comment'), __('1 Comment'), esc_html__('% Comments', 'maizi'),
+                    'text-muted');
+                echo '</span>';
+            }
+        }
 
 		edit_post_link(
 			__( 'Edit' ),

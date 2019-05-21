@@ -134,7 +134,7 @@ if ( ! function_exists( 'maizi_theme_customize_register' ) ) {
 
         // Post list metas
         $wp_customize->add_setting( 'maizi_post_list_meta', array(
-            'default'           => 'apple',
+            'default'           => array('date', 'category', 'author', 'submit_comment'),
             'sanitize_callback' => 'sanitize_multiple_checkbox',
             'capability'        => 'edit_theme_options',
             //'transport'         => 'postMessage',
@@ -148,11 +148,12 @@ if ( ! function_exists( 'maizi_theme_customize_register' ) ) {
                     'section'     => 'maizi_theme_layout_options',
                     'settings'    => 'maizi_post_list_meta',
                     'choices' => array(
-                        'apple'      => __( 'Apple',      'maizi' ),
-                        'banana'     => __( 'Banana',     'maizi' ),
-                        'date'       => __( 'Date',       'maizi' ),
-                        'orange'     => __( 'Orange',     'maizi' ),
-                        'watermelon' => __( 'Watermelon', 'maizi' )
+                        'date'          => __( 'Date',      'maizi' ),
+                        'author'        => __( 'Author',    'maizi' ),
+                        'pv'            => __( 'PV (need plugin Postviews Plus)',   'maizi' ),
+                        'category'      => __( 'Category',  'maizi' ),
+                        'tags'          => __( 'Tags',      'maizi' ),
+                        'comment_link'  => __( 'Comment Link',   'maizi' )
                     ),
                     'priority'    => '20',
                 )

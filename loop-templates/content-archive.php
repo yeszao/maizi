@@ -40,7 +40,7 @@ $list_type = get_theme_mod( 'maizi_post_list_type', 'thumbnail' );
 
                 <?php if ( 'post' == get_post_type() && $list_type !== 'title') : ?>
                     <div class="entry-meta my-1 text-muted small p-0 <?php echo ( $list_type === 'meta' ) ? 'col-sm-3' : 'col-sm-12'; ?>">
-                        <?php maizi_post_metas(); ?>
+                        <?php maizi_post_meta(); ?>
                     </div>
                 <?php endif; ?>
 

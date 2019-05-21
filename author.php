@@ -76,7 +76,7 @@ $sidebar_pos = get_theme_mod( 'maizi_sidebar_position' );
 										<a rel="bookmark" href="<?php the_permalink(); ?>"
 										   title="Permanent Link: <?php the_title(); ?>">
 											<?php the_title(); ?></a>
-										<?php maizi_post_metas(); ?>
+										<?php maizi_post_meta(); ?>
 									</li>
 								<?php endwhile; ?>
 
