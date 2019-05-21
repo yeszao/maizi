@@ -13,7 +13,7 @@
     wp.customize( 'blogname', function( value ) {
         value.bind( function( newval ) {
             console.log(newval);
-            $( '.navbar-header a' ).html( newval );
+            $( '.navbar-brand a' ).html( newval );
         } );
     } );
 

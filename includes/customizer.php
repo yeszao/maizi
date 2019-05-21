@@ -18,6 +18,30 @@ if ( ! function_exists( 'maizi_customize_register' ) ) {
 }
 add_action( 'customize_register', 'maizi_customize_register' );
 
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ */
+if ( ! function_exists( 'maizi_customizer_live_preview' ) ) {
+    /**
+     * Setup JS integration for custom live previewing,
+     * These is just for settings which transport is `postMessage`.
+     */
+    function maizi_customizer_live_preview() {
+        wp_enqueue_script( 'theme-customizer-js', get_template_directory_uri() . '/assets/js/theme-customizer.js', array( 'jquery', 'customize-preview' ), '', true );
+    }
+}
+add_action( 'customize_preview_init', 'maizi_customizer_live_preview' );
+
+
+if ( ! function_exists( 'load_checkbox_multiple_controls' ) ) {
+    function load_checkbox_multiple_controls()
+    {
+        require trailingslashit(get_template_directory()) . 'includes/control-checkbox-multiple.php';
+    }
+}
+add_action( 'customize_register', 'load_checkbox_multiple_controls', 0 );
+
+
 if ( ! function_exists( 'maizi_theme_customize_register' ) ) {
 	/**
 	 * Register individual settings through customizer's API.
@@ -108,25 +132,27 @@ if ( ! function_exists( 'maizi_theme_customize_register' ) ) {
 				)
 			) );
 
-        // Display or not author name in post
-        $wp_customize->add_setting( 'maizi_display_author', array(
-            'default'           => 'no',
-            'type'              => 'theme_mod',
-            'sanitize_callback' => 'esc_textarea',
+        // Post list metas
+        $wp_customize->add_setting( 'maizi_post_list_meta', array(
+            'default'           => 'apple',
+            'sanitize_callback' => 'sanitize_multiple_checkbox',
             'capability'        => 'edit_theme_options',
+            //'transport'         => 'postMessage',
         ) );
 
         $wp_customize->add_control(
-            new WP_Customize_Control(
+            new Customize_Control_Checkbox_Multiple(
                 $wp_customize,
-                'display_author', array(
-                    'label'       => __( 'Display or not author name', 'maizi' ),
+                'post_list_meta', array(
+                    'label'       => __( 'Post list meta(s) to display', 'maizi' ),
                     'section'     => 'maizi_theme_layout_options',
-                    'settings'    => 'maizi_display_author',
-                    'type'        => 'select',
-                    'choices'     => array(
-                        'no'  => __( 'Do not display author name', 'maizi' ),
-                        'yes' => __( 'Yes, display author name', 'maizi' ),
+                    'settings'    => 'maizi_post_list_meta',
+                    'choices' => array(
+                        'apple'      => __( 'Apple',      'maizi' ),
+                        'banana'     => __( 'Banana',     'maizi' ),
+                        'date'       => __( 'Date',       'maizi' ),
+                        'orange'     => __( 'Orange',     'maizi' ),
+                        'watermelon' => __( 'Watermelon', 'maizi' )
                     ),
                     'priority'    => '20',
                 )
@@ -313,20 +339,6 @@ function mytheme_customize_css()
     <?php
 }
 add_action( 'wp_head', 'mytheme_customize_css');
-
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-if ( ! function_exists( 'maizi_customize_preview_js' ) ) {
-	/**
-	 * Setup JS integration for live previewing.
-	 */
-	function maizi_customize_preview_js() {
-		wp_enqueue_script( 'maizi_customizer', get_template_directory_uri() . '/js/customizer.js',
-			array( 'customize-preview' ), '20130508', true );
-	}
-}
-//add_action( 'customize_preview_init', 'maizi_customize_preview_js' );
 
 
 if ( ! function_exists( 'maizi_ad_register' ) ) {
