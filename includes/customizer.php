@@ -99,8 +99,10 @@ if ( ! function_exists( 'maizi_theme_customize_register' ) ) {
 					'settings'    => 'maizi_post_list_type',
 					'type'        => 'select',
 					'choices'     => array(
-						'none'  => __( 'Do not display thumbnail', 'maizi' ),
-						'thumbnail' => __( 'Display thumbnail and placeholder image', 'maizi' ),
+					    'title' => __('Only title', 'maizi'),
+					    'meta' => __('Only title and meta', 'maizi'),
+					    'excerpt' => __('Display title, meta and excerpt', 'maizi'),
+						'thumbnail' => __( 'Display title, meta, excerpt and thumbnail', 'maizi' ),
 					),
 					'priority'    => '20',
 				)

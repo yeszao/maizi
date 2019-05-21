@@ -7,11 +7,9 @@
  * @package maizi
  */
 
-if ( ! function_exists( 'maizi_posted_on' ) ) :
-	/**
-	 * Prints HTML with meta information for the current post-date/time and author.
-	 */
-	function maizi_posted_on() {
+if ( ! function_exists('maizi_post_metas') ) :
+
+	function maizi_post_metas() {
 		$posted_on = '<time class="published" datetime="%1$s">%2$s</time>';
 		$posted_on = sprintf( $posted_on, esc_attr( get_the_date( 'c' ) ), esc_html( get_the_date() ) );
 

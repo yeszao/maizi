@@ -4,7 +4,7 @@
  *
  */
 
-$list_type = get_theme_mod( 'maizi_post_list_type', 'none' );
+$list_type = get_theme_mod( 'maizi_post_list_type', 'thumbnail' );
 ?>
 
 <article <?php post_class( 'container mb-5' ) ?> id="post-<?php the_ID(); ?>">
@@ -32,27 +32,27 @@ $list_type = get_theme_mod( 'maizi_post_list_type', 'none' );
 
 		<div class="entry-content <?php echo ( $list_type === 'thumbnail' ) ? 'col-sm-9' : 'col-sm-12'; ?>">
 
+            <div class="row">
 
-			<header class="entry-header">
+                <header class="entry-header p-0 <?php echo ( $list_type === 'meta' ) ? 'col-sm-9' : 'col-sm-12'; ?>">
+                    <?php the_title( sprintf( '<h2 class="entry-title font-weight-bold"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                </header>
 
-				<?php the_title( sprintf( '<h2 class="entry-title font-weight-bold"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                <?php if ( 'post' == get_post_type() && $list_type !== 'title') : ?>
+                    <div class="entry-meta my-1 text-muted small p-0 <?php echo ( $list_type === 'meta' ) ? 'col-sm-3' : 'col-sm-12'; ?>">
+                        <?php maizi_post_metas(); ?>
+                    </div>
+                <?php endif; ?>
 
-			</header><!-- .entry-header -->
+                <?php if ( $list_type === 'excerpt' || $list_type === 'thumbnail') : ?>
+                <div class="col-sm-12 p-0">
+                    <?php maizi_excerpt(); ?>
+                </div>
+                <?php endif; ?>
+            </div>
 
-			<?php if ( 'post' == get_post_type() ) : ?>
+        </div>
 
-				<div class="entry-meta my-1 text-muted small">
+	</div>
 
-					<?php maizi_posted_on(); ?>
-
-				</div><!-- .entry-meta -->
-
-			<?php endif; ?>
-
-			<?php maizi_excerpt(); ?>
-
-		</div>
-
-	</div><!-- .entry-content -->
-
-</article><!-- #post-## -->
+</article>
