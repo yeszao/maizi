@@ -53,6 +53,7 @@ if ( ! function_exists( 'add_script' ) ) {
 	 */
 	function add_script() {
 		// CSS file.
+        wp_enqueue_style('dashicons');
 		wp_enqueue_style( 'bootstrap-css', get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css', array(),
 			'4.0.0' );
 		wp_enqueue_style( 'style-css', get_stylesheet_directory_uri() . '/style.css', array(),

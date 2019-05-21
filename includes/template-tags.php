@@ -15,14 +15,14 @@ if ( ! function_exists('maizi_post_meta') ) :
         if (in_array('date', $list_meta)) {
             $posted_on = '<time class="published" datetime="%1$s">%2$s</time>';
 		    $posted_on = sprintf( $posted_on, esc_attr( get_the_date( 'c' ) ), esc_html( get_the_date() ) );
-            echo '<span class="posted-date meta-item mr-3 text-muted"><i class="icon-time icon12"></i> ', $posted_on, '</span>';
+            echo '<span class="posted-date meta-item mr-3 text-muted"><i class="dashicons dashicons-clock icon14"></i> ', $posted_on, '</span>';
         }
 
 		if ( in_array('author', $list_meta) ) {
 			$byline = sprintf(
 				'<span class="author vcard"><a class="url fn n text-muted" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 			);
-			echo '<span class="byline meta-item mr-3 text-muted"><i class="icon-user icon12"></i> ', $byline, '</span>';
+			echo '<span class="byline meta-item mr-3 text-muted"><i class="dashicons dashicons-admin-users icon14"></i> ', $byline, '</span>';
 		}
 
 		if ( in_array('pv', $list_meta) && in_array( 'wp-postviews-plus/wp-postviews-plus.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
@@ -37,7 +37,7 @@ if ( ! function_exists('maizi_post_meta') ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'maizi' ) );
 			$categories_list = str_replace( '<a href="', '<a class="text-muted" href="', $categories_list );
 			if ( $categories_list && maizi_categorized_blog() ) {
-				printf( '<span class="cat-links meta-item mr-3 text-muted"><i class="icon-list icon12"></i> %s</span>', $categories_list );
+				printf( '<span class="cat-links meta-item mr-3 text-muted"><i class="dashicons dashicons-screenoptions icon14"></i> %s</span>', $categories_list );
 			}
 		}
 
@@ -45,14 +45,14 @@ if ( ! function_exists('maizi_post_meta') ) :
             $tags_list = get_the_tag_list('', esc_html__(', ', 'maizi'));
             $tags_list = str_replace( '<a href="', '<a class="text-muted" href="', $tags_list );
             if ($tags_list) {
-                echo sprintf('<span class="tags-links meta-item mr-3 text-muted"><i class="icon-tags icon12"></i> %s</span>', $tags_list);
+                echo sprintf('<span class="tags-links meta-item mr-3 text-muted"><i class="dashicons dashicons-tag icon14"></i> %s</span>', $tags_list);
             }
         }
 
 		if ( in_array('comment_link', $list_meta) ) {
             $comments_number = get_comments_number();
             if (!post_password_required() && (comments_open() || $comments_number)) {
-                echo '<span class="comments-link meta-item mr-3"><i class="icon-comment icon12"></i> ';
+                echo '<span class="comments-link meta-item mr-3"><i class="dashicons dashicons-admin-comments icon14"></i> ';
                 comments_popup_link(__('Leave a Comment'), __('1 Comment'), esc_html__('% Comments', 'maizi'),
                     'text-muted');
                 echo '</span>';
@@ -61,7 +61,7 @@ if ( ! function_exists('maizi_post_meta') ) :
 
 		edit_post_link(
 			__( 'Edit' ),
-			'<span class="edit-link meta-item mr-3"><i class="icon-edit icon12"></i> ',
+			'<span class="edit-link meta-item mr-3"><i class="dashicons dashicons-edit icon14"></i> ',
 			'</span>',
 			0,
 			'text-muted'
