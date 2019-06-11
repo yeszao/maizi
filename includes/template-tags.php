@@ -25,9 +25,9 @@ if ( ! function_exists('maizi_post_meta') ) :
 			echo '<span class="byline meta-item mr-3 text-muted"><i class="dashicons dashicons-admin-users icon14"></i> ', $byline, '</span>';
 		}
 
-		if ( in_array('pv', $list_meta) && in_array( 'wp-postviews-plus/wp-postviews-plus.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+		if ( in_array('pv', $list_meta) ) {
 			echo '<span class="posted-view meta-item mr-3 text-muted"><i class="dashicons dashicons-visibility icon14"></i> ',
-			(int) get_post_meta( get_the_ID(), 'views', true ),
+			(int) getPostViews(get_the_ID()),
 			esc_html__( 'View', 'maizi' ),
 			'</span>';
 		}

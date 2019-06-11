@@ -23,4 +23,5 @@ require get_template_directory() . '/includes/bs4Navwalker.php';
 require get_template_directory() . '/includes/woocommerce.php';
 require get_template_directory() . '/includes/editor.php';
 require get_template_directory() . '/includes/ad.php';
+require get_template_directory() . '/includes/post-view.php';
 
