@@ -3,8 +3,6 @@
  * Partial template for content in page.php
  *
  */
-
-setPostViews(get_the_ID());
 ?>
 <article <?php post_class( 'article-content' ); ?> id="post-<?php the_ID(); ?>">
 
