@@ -42,6 +42,12 @@ if ( ! function_exists( 'maizi_setup' ) ) :
 		if ( '' == $maizi_container_type ) {
 			set_theme_mod( 'maizi_container_type', 'container' );
 		}
+
+        // List type.
+        $maizi_container_type = get_theme_mod( 'maizi_post_list_type' );
+        if ( '' == $maizi_container_type ) {
+            set_theme_mod( 'maizi_post_list_type', 'excerpt' );
+        }
 	}
 endif;
 add_action( 'after_setup_theme', 'maizi_setup' );
