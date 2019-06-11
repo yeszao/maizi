@@ -73,6 +73,9 @@ if ( ! function_exists( 'add_script' ) ) {
 		.0', true );
 		wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/assets/js/theme.js', array(), '1.0.0', true );
 
+        wp_register_script( 'inline-js', '', [], '', true );
+        wp_enqueue_script( 'inline-js');
+
 		// Code Highlight.
 		$code_highlight   = get_theme_mod( 'maizi_code_highlight', 'yes' );
 		if ( $code_highlight === 'yes' && (is_page() || is_singular()) ) {
@@ -80,7 +83,7 @@ if ( ! function_exists( 'add_script' ) ) {
 				'9.9.0' );
 			wp_enqueue_script( 'highlight-js', get_template_directory_uri() . '/assets/js/highlight.min.js', array(),
 				'9.9.0', true );
-			wp_add_inline_script( 'highlight-js', 'jQuery(document).ready(function(){jQuery("pre,code").each(function(i,block){hljs.highlightBlock(block);});});' );
+            wp_add_inline_script( 'inline-js', 'jQuery(document).ready(function(){jQuery("pre,code").each(function(i,block){hljs.highlightBlock(block);});});' );
 		}
 	}
 }

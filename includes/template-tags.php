@@ -27,7 +27,7 @@ if ( ! function_exists('maizi_post_meta') ) :
 
 		if ( in_array('pv', $list_meta) ) {
 			echo '<span class="posted-view meta-item mr-3 text-muted"><i class="dashicons dashicons-visibility icon14"></i> ',
-			(int) getPostViews(get_the_ID()),
+			(int) get_post_views(get_the_ID()),
 			esc_html__( 'View', 'maizi' ),
 			'</span>';
 		}
