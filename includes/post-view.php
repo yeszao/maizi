@@ -9,7 +9,7 @@ function get_post_views($postID)
 
 
 function add_post_views_script() {
-    if ( is_single() || is_page() ) {
+    if ( is_singular() ) {
         $url = admin_url('admin-ajax.php');
         $postID = get_the_ID();
         $data = "jQuery.post('$url', {
@@ -39,5 +39,5 @@ function update_post_views() {
 
     wp_die();
 }
-//add_action( 'wp_ajax_update_post_views', 'update_post_views' );       // for login user
+add_action( 'wp_ajax_update_post_views', 'update_post_views' );       // for login user
 add_action( 'wp_ajax_nopriv_update_post_views', 'update_post_views' );  // for users that are not logged in
