@@ -45,10 +45,13 @@ button,
     vertical-align: text-bottom;
 }
 
+ul {
+    margin-bottom: 0;
+}
 ul, li {
     list-style-position: inside;
 }
-ul > li, ol > li {margin-bottom: .5rem;}
+
 
 
 p, pre{/*word-break:break-all*/;word-wrap:break-word;white-space: pre-wrap; max-width: 100%;}
@@ -60,11 +63,11 @@ blockquote{
 blockquote p{margin:0!important;}
 
 /* Sidebar menu */
-aside li {line-height: 2rem; list-style-type: none;}
+aside li {opacity: 0.85;}
 aside ul,
 aside > ul > li {padding-left: 0;}
 aside.widget {margin-bottom: 2rem;}
-aside.widget h3 {color: #666; padding-bottom: 0.5rem; border-bottom: 1px solid #e0e0e0;}
+aside.widget h3 {color: #666; padding-bottom: 0.5rem;}
 
 aside .sub-menu {display: none;}
 aside .sub-menu li {padding-left: 2rem;}
@@ -195,7 +198,13 @@ a.skip-link {
     clear: both; }
 
 aside.widget {
-    clear: both; }
+    clear: both;
+    border: 1px solid #cbcbcb;
+    border-radius: 6px;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+}
 
 #wrapper-hero .carousel-inner .textwidget {
     width: 100%; }
