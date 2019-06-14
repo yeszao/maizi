@@ -37,6 +37,10 @@ button,
 [type="reset"],
 [type="submit"] {cursor: pointer;}
 
+.entry-meta i.dashicons {
+    vertical-align: text-bottom;
+}
+
 .icon14 {
     width: 14px;
     height: 14px;

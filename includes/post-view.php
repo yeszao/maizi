@@ -4,9 +4,23 @@ const POST_META_VIEWS_KEY = 'views';
 
 function get_post_views($postID)
 {
-    return (int)get_post_meta($postID, POST_META_VIEWS_KEY, true);
+    return shorten_number((int)get_post_meta($postID, POST_META_VIEWS_KEY, true));
 }
 
+function shorten_number($n, $precision = 1)
+{
+    if ($n < 1e+3) {
+        $out = number_format($n);
+    } else if ($n < 1e+6) {
+        $out = number_format($n / 1e+3, $precision) . 'k';
+    } else if ($n < 1e+9) {
+        $out = number_format($n / 1e+6, $precision) . 'm';
+    } else if ($n < 1e+12) {
+        $out = number_format($n / 1e+9, $precision) . 'b';
+    }
+
+    return $out;
+}
 
 function add_post_views_script() {
     if ( is_singular() ) {

@@ -27,8 +27,8 @@ if ( ! function_exists('maizi_post_meta') ) :
 
 		if ( in_array('pv', $list_meta) ) {
 			echo '<span class="posted-view meta-item mr-3 text-muted"><i class="dashicons dashicons-visibility icon14"></i> ',
-			(int) get_post_views(get_the_ID()),
-			esc_html__( 'View', 'maizi' ),
+			get_post_views(get_the_ID()),
+//			esc_html__( 'View', 'maizi' ),
 			'</span>';
 		}
 
@@ -37,7 +37,7 @@ if ( ! function_exists('maizi_post_meta') ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'maizi' ) );
 			$categories_list = str_replace( '<a href="', '<a class="text-muted" href="', $categories_list );
 			if ( $categories_list && maizi_categorized_blog() ) {
-				printf( '<span class="cat-links meta-item mr-3 text-muted"><i class="dashicons dashicons-screenoptions icon14"></i> %s</span>', $categories_list );
+				printf( '<span class="cat-links meta-item mr-3 text-muted"><i class="dashicons dashicons-category icon14"></i> %s</span>', $categories_list );
 			}
 		}
 
