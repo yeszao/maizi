@@ -199,9 +199,9 @@ a.skip-link {
 
 aside.widget {
     clear: both;
-    border: 1px solid #cbcbcb;
+/*    border: 1px solid #cbcbcb;
     border-radius: 6px;
-    background: #fff;
+    background: #fff;*/
     margin-bottom: 20px;
     padding: 10px;
 }
