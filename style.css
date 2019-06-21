@@ -75,7 +75,7 @@ aside .current-menu-item > a{font-weight: 700;}
 aside li[class*="current-menu-"] > .sub-menu
 {display: block;}
 
-
+/*
 aside .menu-item-has-children > a:before,
 aside .current-menu-parent > a:before,
 aside .current-menu-item.menu-item-has-children > a:before
@@ -97,7 +97,7 @@ aside .current-menu-item.menu-item-has-children > a:before{
     margin-right: .3rem;
     border-color: transparent;
     border-top: .3rem solid #444;
-}
+}*/
 
 
 .thumbnail {max-width: 100%; max-height: 10rem;height: auto;}
