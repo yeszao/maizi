@@ -33,7 +33,7 @@ $sidebar_pos = get_theme_mod( 'maizi_sidebar_position' );
 
 				<?php if ( have_posts() ) : ?>
 
-					<header class="page-header container">
+					<header class="page-header">
 						<?php
 						the_archive_title( '<h1 class="page-title mb-3">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description text-muted mb-4">', '</div>' );

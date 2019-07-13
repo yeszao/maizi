@@ -31,7 +31,7 @@ $sidebar_pos = get_theme_mod( 'maizi_sidebar_position' );
 
 					<main class="site-main" id="main">
 
-						<header class="page-header author-header">
+						<header class="page-header">
 
 							<?php
 							$curauth = isset( $_GET['author_name'] )
