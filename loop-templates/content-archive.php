@@ -40,7 +40,7 @@ $margin_bottom = ($list_type === 'meta') ? '' : 'mb-5';
                 </header>
 
                 <?php if ( 'post' == get_post_type() && $list_type !== 'title') : ?>
-                    <div class="entry-meta my-1 text-muted small p-0 <?php echo ( $list_type === 'meta' ) ? 'col-sm-3' : 'col-sm-12'; ?>">
+                    <div class="entry-meta my-1 text-muted small p-0 <?php echo ( $list_type === 'meta' ) ? 'col-sm-3 text-right' : 'col-sm-12'; ?>">
                         <?php maizi_post_meta(); ?>
                     </div>
                 <?php endif; ?>
