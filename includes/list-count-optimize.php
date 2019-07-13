@@ -53,7 +53,7 @@ if ( ! function_exists( 'maizi_set_found_posts' ) ) {
 
         // Construct and run the query. Set the result as the 'found_posts'
         // param on the main query we want to run.
-        $wp_query->found_posts = (int)$wpdb->get_row("EXPLAIN SELECT $distinct * FROM {$wpdb->posts} $join WHERE 1=1 $where")->rows;
+        $wp_query->found_posts = (int)$wpdb->get_row("SELECT $distinct COUNT(*) AS total FROM {$wpdb->posts} $join WHERE 1=1 $where")->total;
 
         // Work out how many posts per page there should be.
         $posts_per_page = (!empty($wp_query->query_vars['posts_per_page']) ? absint($wp_query->query_vars['posts_per_page']) : absint(get_option('posts_per_page')));
