@@ -22,6 +22,11 @@
 
 		<?php the_content(); ?>
 
+        <p class="text-center">
+            <?php previous_post_link(); ?>
+            <?php next_post_link(); ?>
+        </p>
+
 		<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . __( 'Pages:', 'maizi' ),
