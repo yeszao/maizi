@@ -16,6 +16,9 @@ if ( ! function_exists( 'maizi_pagination' ) ) :
 
 		$pages = paginate_links( array(
 			'type' => 'array',
+            'prev_text' => '&laquo;',
+            'next_text' => '&raquo;',
+            'end_size' => 0,
 		) );
 
 		$pagination = '';
