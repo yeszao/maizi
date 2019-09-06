@@ -249,7 +249,7 @@ if ( ! function_exists( 'maizi_customize_colors' ) ) {
         );
 
         $wp_customize->add_setting('maizi_list_bottom_border_color', array(
-            'default' => '#dddddd',
+            'default' => '#ffffff',
             'type' => 'theme_mod',
             'sanitize_callback' => 'esc_textarea',
             'capability' => 'edit_theme_options',
@@ -374,7 +374,7 @@ function mytheme_customize_css()
 			color: <?php echo get_theme_mod('maizi_button_color', '#0275d8'); ?>;
 		}
         article {
-            border-bottom: 1px solid <?php echo get_theme_mod('maizi_list_bottom_border_color', '#ddd'); ?>;
+            border-bottom: 1px solid <?php echo get_theme_mod('maizi_list_bottom_border_color', '#fff'); ?>;
         }
     </style>
     <?php
