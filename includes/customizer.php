@@ -178,30 +178,6 @@ if ( ! function_exists( 'maizi_theme_customize_register' ) ) {
                 )
             ) );
 
-        // JS component
-        $wp_customize->add_setting( 'maizi_code_highlight', array(
-            'default'           => 'yes',
-            'type'              => 'theme_mod',
-            'sanitize_callback' => 'esc_textarea',
-            'capability'        => 'edit_theme_options',
-        ) );
-
-        $wp_customize->add_control(
-            new WP_Customize_Control(
-                $wp_customize,
-                'code_highlight', array(
-                    'label'       => __( 'Enable Code highlight', 'maizi' ),
-                    'section'     => 'maizi_theme_layout_options',
-                    'settings'    => 'maizi_code_highlight',
-                    'type'        => 'select',
-                    'choices'     => array(
-                        'no'  => __( 'No', 'maizi' ),
-                        'yes' => __( 'Yes', 'maizi' ),
-                    ),
-                    'priority'    => '20',
-                )
-            ) );
-
 	}
 } // endif function_exists( 'maizi_theme_customize_register' ).
 add_action( 'customize_register', 'maizi_theme_customize_register' );

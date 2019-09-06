@@ -2,6 +2,8 @@ Maizi - Best brand Wordpress theme build with bootstrap
 
 * [Official Website and Demo](https://www.awaimai.com/maizi)
 
+> Notice: Built-in Highlight function had been removed, please use plugin **Prismatic** instead.
+
 ## Basic Features
 
 - Completely Open source

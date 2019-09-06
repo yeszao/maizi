@@ -81,16 +81,6 @@ if ( ! function_exists( 'add_script' ) ) {
 
         wp_register_script( 'inline-js', '', [], '', true );
         wp_enqueue_script( 'inline-js');
-
-		// Code Highlight.
-		$code_highlight   = get_theme_mod( 'maizi_code_highlight', 'yes' );
-		if ( $code_highlight === 'yes' && (is_page() || is_singular()) ) {
-			wp_enqueue_style( 'highlight-css', get_stylesheet_directory_uri() . '/assets/css/github-gist.css', array(),
-				'9.9.0' );
-			wp_enqueue_script( 'highlight-js', get_template_directory_uri() . '/assets/js/highlight.min.js', array(),
-				'9.9.0', true );
-            wp_add_inline_script( 'inline-js', 'jQuery(document).ready(function(){jQuery("pre,code").each(function(i,block){hljs.highlightBlock(block);});});' );
-		}
 	}
 }
 add_action( 'wp_enqueue_scripts', 'add_script' );
