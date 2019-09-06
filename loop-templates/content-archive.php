@@ -5,33 +5,25 @@
  */
 
 $list_type = get_theme_mod( 'maizi_post_list_type', 'thumbnail' );
-$margin_bottom = ($list_type === 'meta') ? 'mb-1' : 'mb-5';
+$margin_bottom = ($list_type === 'meta') ? 'mb-1' : 'mt-5 mb-5 pb-5';
 ?>
 
 <article <?php post_class( "container $margin_bottom" ) ?> id="post-<?php the_ID(); ?>">
 
 	<div class="row">
 
-		<?php if ( 'thumbnail' === $list_type ) : ?>
+		<?php if ( 'thumbnail' === $list_type && has_post_thumbnail() ) : ?>
 
 			<div class="col-sm-3 align-middle">
 
-				<?php if ( has_post_thumbnail() ) : ?>
-
-					<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'class' => 'thumbnail' ) ); ?>
-
-				<?php else : ?>
-
-					<img class="thumbnail" src="<?php echo get_template_directory_uri() ?>/assets/img/thumbnail.png"/>
-
-				<?php endif; ?>
+                <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'class' => 'thumbnail' ) ); ?>
 
 			</div>
 
 		<?php endif; ?>
 
 
-		<div class="entry-content <?php echo ( $list_type === 'thumbnail' ) ? 'col-sm-9' : 'col-sm-12'; ?>">
+		<div class="entry-content <?php echo ( $list_type === 'thumbnail' && has_post_thumbnail() ) ? 'col-sm-9' : 'col-sm-12'; ?>">
 
             <div class="row">
 
