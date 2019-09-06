@@ -5,7 +5,7 @@
  */
 
 $list_type = get_theme_mod( 'maizi_post_list_type', 'thumbnail' );
-$margin_bottom = ($list_type === 'meta') ? 'mb-1' : 'mt-5 mb-5 pb-5';
+$margin_bottom = in_array($list_type, ['title', 'meta']) ? 'mt-2 mb-2 pb-2' : 'mt-4 mb-4 pb-4';
 ?>
 
 <article <?php post_class( "container $margin_bottom" ) ?> id="post-<?php the_ID(); ?>">

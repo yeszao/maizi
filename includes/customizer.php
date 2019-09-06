@@ -248,6 +248,24 @@ if ( ! function_exists( 'maizi_customize_colors' ) ) {
                 ))
         );
 
+        $wp_customize->add_setting('maizi_list_bottom_border_color', array(
+            'default' => '#dddddd',
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'esc_textarea',
+            'capability' => 'edit_theme_options',
+        ));
+
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'maizi_list_bottom_border_color',
+                array(
+                    'label' => 'List Bottom Border Color',
+                    'section' => 'colors',
+                    'settings' => 'maizi_list_bottom_border_color',
+                ))
+        );
+
         $wp_customize->add_setting('maizi_navbar_bg_color', array(
             'default' => '#000000',
             'type' => 'theme_mod',
@@ -355,6 +373,9 @@ function mytheme_customize_css()
 		.page-link, .page-link:focus, .page-link:hover{
 			color: <?php echo get_theme_mod('maizi_button_color', '#0275d8'); ?>;
 		}
+        article {
+            border-bottom: 1px solid <?php echo get_theme_mod('maizi_list_bottom_border_color', '#ddd'); ?>;
+        }
     </style>
     <?php
 }
