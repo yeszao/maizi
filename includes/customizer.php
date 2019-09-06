@@ -373,7 +373,7 @@ function mytheme_customize_css()
 		.page-link, .page-link:focus, .page-link:hover{
 			color: <?php echo get_theme_mod('maizi_button_color', '#0275d8'); ?>;
 		}
-        article {
+        .home article, .archive article {
             border-bottom: 1px solid <?php echo get_theme_mod('maizi_list_bottom_border_color', '#fff'); ?>;
         }
     </style>
