@@ -159,6 +159,25 @@ if ( ! function_exists( 'maizi_theme_customize_register' ) ) {
                 )
             ) );
 
+        // Excerpt word number
+        $wp_customize->add_setting( 'maizi_excerpt_word_number', array(
+            'sanitize_callback' => 'esc_textarea',
+            'capability'        => 'edit_theme_options',
+            //'transport'         => 'postMessage',
+        ) );
+
+        $wp_customize->add_control(
+            new Customize_Control_Checkbox_Multiple(
+                $wp_customize,
+                'excerpt_word_number', array(
+                    'label'       => __( 'Excerpt word number', 'maizi' ),
+                    'section'     => 'maizi_theme_layout_options',
+                    'settings'    => 'maizi_excerpt_word_number',
+                    'type'        => 'number',
+                    'priority'    => '20',
+                )
+            ) );
+
         // JS component
         $wp_customize->add_setting( 'maizi_code_highlight', array(
             'default'           => 'yes',

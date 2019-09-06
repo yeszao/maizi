@@ -47,7 +47,8 @@ $margin_bottom = ($list_type === 'meta') ? 'mb-1' : 'mb-5';
 
                 <?php if ( $list_type === 'excerpt' || $list_type === 'thumbnail') : ?>
                 <div class="col-sm-12 p-0">
-                    <?php maizi_excerpt(); ?>
+                    <?php $word_number = get_theme_mod( 'maizi_excerpt_word_number', 180 ); ?>
+                    <?php maizi_excerpt($word_number); ?>
                 </div>
                 <?php endif; ?>
             </div>

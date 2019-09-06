@@ -48,6 +48,12 @@ if ( ! function_exists( 'maizi_setup' ) ) :
         if ( '' == $maizi_container_type ) {
             set_theme_mod( 'maizi_post_list_type', 'excerpt' );
         }
+
+        // Excerpt word numbers.
+        $maizi_container_type = get_theme_mod( 'maizi_excerpt_word_number' );
+        if ( '' == $maizi_container_type ) {
+            set_theme_mod( 'maizi_excerpt_word_number', 180 );
+        }
 	}
 endif;
 add_action( 'after_setup_theme', 'maizi_setup' );
