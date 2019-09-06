@@ -118,6 +118,7 @@ add_action( 'save_post', 'maizi_category_transient_flusher' );
  */
 function maizi_excerpt( $limit = 180 ) {
 	$excerpt = get_the_content();
+	$excerpt = str_replace('&nbsp;', ' ', $excerpt);
 	$excerpt = preg_replace( '/\s+/', ' ', strip_tags( $excerpt ) );
 	if ( mb_strwidth( $excerpt ) > $limit ) {
 		$excerpt = mb_strimwidth( $excerpt, 0, $limit, '&hellip;' );
