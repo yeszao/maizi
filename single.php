@@ -32,7 +32,7 @@ $sidebar_pos = get_theme_mod( 'maizi_sidebar_position' );
 
 							<?php the_post(); ?>
 
-							<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+							<?php get_template_part( 'loop-templates/content', get_post_format() ); ?>
 
 							<?php
 							// If comments are open or we have at least one comment, load up the comment template.
