@@ -38,47 +38,54 @@
     ?>
 
 	<div class="entry-content">
-        <h3>答案</h3>
-        <div class="row">
-            <div class="col-3 text-left">
-                <div class="nav flex-column nav-pills" id="myTab" role="tablist" aria-orientation="vertical">
-                    <?php foreach ($languages as $name => $title) : ?>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
 
-                        <a class="nav-link<?php if ($name == 'cpp'): ?> active<?php endif; ?>" id="<?php echo $name?>-tab" data-toggle="pill" href="#<?php echo $name ?>" role="tab" aria-controls="<?php echo $name ?>" aria-selected="<?php if ($name == 'cpp'): ?>true<?php else: ?>false<?php endif ?>">
+            <li class="nav-item">
+                <a class="nav-link active" id="analyse-tab" data-toggle="tab" href="#analyse" role="tab" aria-controls="analyse" aria-selected="true">
 
-                            <?php if (get_field($name)): ?>
-                                <span class="dashicons dashicons-yes-alt text-success"></span>
-                            <?php else: ?>
-                                <span class="dashicons dashicons-warning text-muted"></span>
-                            <?php endif; ?>
+                    <?php if ( $content = get_the_content() ): ?>
+                        <span class="dashicons dashicons-yes-alt text-success"></span>
+                    <?php else: ?>
+                        <span class="dashicons dashicons-warning text-muted"></span>
+                    <?php endif; ?>
 
-                            <?php echo $title ?>
-                        </a>
+                    答案解析
+                </a>
+            </li>
 
-                    <?php endforeach; ?>
-                </div>
+            <?php foreach ($languages as $name => $title) : ?>
+            <li class="nav-item">
+                <a class="nav-link" id="<?php echo $name?>-tab" data-toggle="tab" href="#<?php echo $name ?>" role="tab" aria-controls="<?php echo $name ?>" aria-selected="false">
+
+                    <?php if ( get_field($name) ): ?>
+                        <span class="dashicons dashicons-yes-alt text-success"></span>
+                    <?php else: ?>
+                        <span class="dashicons dashicons-warning text-muted"></span>
+                    <?php endif; ?>
+
+                    <?php echo $title ?>
+                </a>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+
+        <div class="tab-content my-4" id="myTabContent">
+            <div class="tab-pane fade show active" id="analyse" role="tabpanel" aria-labelledby="analyse-tab">
+                <?php echo $content; ?>
             </div>
 
-            <div class="col-9">
-                <div class="tab-content" id="myTabContent">
-                    <?php foreach ($languages as $name => $title) : ?>
+            <?php foreach ($languages as $name => $title) : ?>
+            <div class="tab-pane fade<?php if ($name == 'cpp'): ?> show active<?php endif ?>" id="<?php echo $name ?>" role="tabpanel" aria-labelledby="<?php echo $name ?>-tab">
 
-                    <div class="tab-pane fade<?php if ($name == 'cpp'): ?> show active<?php endif ?>" id="<?php echo $name ?>" role="tabpanel" aria-labelledby="<?php echo $name ?>-tab">
+                <?php if ($field = get_field($name)): ?>
+                    <?php echo $field ?>
+                <?php else: ?>
+                    <p class="text-muted"><i>暂无<?php echo $title ?>解法</i></p>
+                <?php endif; ?>
 
-                        <?php if (get_field($name)): ?>
-                            <?php echo get_field($name) ?>
-                        <?php else: ?>
-                            <p class="text-muted my-3"><i>暂无<?php echo $title ?>解法</i></p>
-                        <?php endif; ?>
-
-                    </div>
-                    <?php endforeach; ?>
-                </div>
             </div>
+            <?php endforeach; ?>
         </div>
-
-        <h3>解析</h3>
-		<?php the_content(); ?>
 
         <p class="text-center">
             <?php previous_post_link(); ?>
