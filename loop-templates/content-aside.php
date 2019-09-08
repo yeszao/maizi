@@ -75,7 +75,7 @@
             </div>
 
             <?php foreach ($languages as $name => $title) : ?>
-            <div class="tab-pane fade<?php if ($name == 'cpp'): ?> show active<?php endif ?>" id="<?php echo $name ?>" role="tabpanel" aria-labelledby="<?php echo $name ?>-tab">
+            <div class="tab-pane fade" id="<?php echo $name ?>" role="tabpanel" aria-labelledby="<?php echo $name ?>-tab">
 
                 <?php if ($field = get_field($name)): ?>
                     <?php echo $field ?>
