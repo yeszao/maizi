@@ -80,6 +80,25 @@ if ( ! function_exists( 'maizi_theme_customize_register' ) ) {
 				)
 			) );
 
+        // Container width
+        $wp_customize->add_setting( 'maizi_container_max_width', array(
+            'type'              => 'theme_mod',
+            'sanitize_callback' => 'esc_textarea',
+            'capability'        => 'edit_theme_options',
+        ) );
+
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+                'container_max_width', array(
+                    'label'       => __( 'Container max width while width is FIXED', 'maizi' ),
+                    'description' => __(  'For example: <code>1200</code> in px, left empty to use Bootstrap max container.' , 'maizi'),
+                    'section'     => 'maizi_theme_layout_options',
+                    'settings'    => 'maizi_container_max_width',
+                    'type'        => 'number',
+                    'priority'    => '15',
+                )
+            ) );
 
 		// Sidebar position settings
 		$wp_customize->add_setting( 'maizi_sidebar_position', array(
@@ -305,6 +324,15 @@ function mytheme_customize_css()
 {
     ?>
     <style type="text/css">
+        <?php if ( get_theme_mod('maizi_container_type') == 'container'
+                    && get_theme_mod('maizi_container_max_width') ): ?>
+        @media (min-width: <?php echo get_theme_mod('maizi_container_max_width') ?>px) {
+            .container {
+                max-width: <?php echo get_theme_mod('maizi_container_max_width'); ?>px;
+            }
+        }
+        <?php endif; ?>
+
         #primaryMenu.navbar,
         #primaryMenu .dropdown-menu {
 			background-color: <?php echo get_theme_mod('maizi_navbar_bg_color', '#000000'); ?> !important;
