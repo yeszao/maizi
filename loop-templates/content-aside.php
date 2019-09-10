@@ -21,11 +21,11 @@
 	</header><!-- .entry-header -->
 
     <?php $languages = [
-        'cpp' => 'C++',
+        'cplusplus' => 'C++',
         'java' => 'Java',
         'python' =>'Python',
         'c' => 'C',
-        'c-sharp' => 'C#',
+        'csharp' => 'C#',
         'javascript' => 'JavaScript',
         'ruby' => 'Ruby',
         'swift' => 'Swift',
@@ -39,31 +39,21 @@
 
 	<div class="entry-content">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <?php $content = get_the_content() ?>
 
             <li class="nav-item">
-                <a class="nav-link active" id="analyse-tab" data-toggle="tab" href="#analyse" role="tab" aria-controls="analyse" aria-selected="true">
-
-                    <?php if ( $content = get_the_content() ): ?>
-                        <span class="dashicons dashicons-yes-alt text-success"></span>
-                    <?php else: ?>
-                        <span class="dashicons dashicons-warning text-muted"></span>
-                    <?php endif; ?>
-
-                    答案解析
+                <a class="nav-link active<?php if (!$content): ?> text-muted<?php endif; ?>" id="analyse-tab"
+                   data-toggle="tab" href="#analyse" role="tab" aria-controls="analyse" aria-selected="true">
+                    <span class="dashicons dashicons-code-standards"></span>
+                    <span>答案解析</span>
                 </a>
             </li>
 
             <?php foreach ($languages as $name => $title) : ?>
             <li class="nav-item">
-                <a class="nav-link" id="<?php echo $name?>-tab" data-toggle="tab" href="#<?php echo $name ?>" role="tab" aria-controls="<?php echo $name ?>" aria-selected="false">
-
-                    <?php if ( get_field($name) ): ?>
-                        <span class="dashicons dashicons-yes-alt text-success"></span>
-                    <?php else: ?>
-                        <span class="dashicons dashicons-warning text-muted"></span>
-                    <?php endif; ?>
-
-                    <?php echo $title ?>
+                <a class="nav-link<?php if ( !get_field($name) ): ?> text-muted<?php endif ?>" id="<?php echo $name?>-tab"
+                   data-toggle="tab" href="#<?php echo $name ?>" role="tab" aria-controls="<?php echo $name ?>" aria-selected="false">
+                    <span><?php echo $title ?></span>
                 </a>
             </li>
             <?php endforeach; ?>
