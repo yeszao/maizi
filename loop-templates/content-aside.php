@@ -4,7 +4,7 @@
  *
  */
 ?>
-<article <?php post_class( 'article-content' ); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class( 'article-content aside-content' ); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
 

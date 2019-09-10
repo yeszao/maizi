@@ -6,10 +6,10 @@ function rename_jquery() {
 add_action( 'wp_enqueue_scripts', 'rename_jquery' );
 
 
-function add_cookie_js_script() {
+function add_aside_tab_cookie_script() {
     if ( is_singular() ) {
         $js = "
-            var cookieName = 'singular-tab-id';
+            var cookieName = 'aside-content-tab-id';
 
             var tabId = Cookies.get(cookieName);
             if (tabId !== undefined) {
@@ -17,7 +17,7 @@ function add_cookie_js_script() {
             }
             
 
-            $('.nav-link').on('click', function() {
+            $('.aside-content').find('.nav-link').on('click', function() {
                 tabId = \$(this).attr('aria-controls');
                 Cookies.set(cookieName, tabId, { expires: 7, path: '/' })
             });
@@ -26,4 +26,4 @@ function add_cookie_js_script() {
         wp_add_inline_script('inline-js', $js);
     }
 }
-add_action( 'wp_enqueue_scripts', 'add_cookie_js_script' );
+add_action( 'wp_enqueue_scripts', 'add_aside_tab_cookie_script' );
