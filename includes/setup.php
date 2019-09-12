@@ -147,3 +147,14 @@ function get_url(){
 	global $wp;
 	return home_url( $wp->request );
 }
+
+
+function the_icp() {
+    if ( defined( 'WP_ZH_CN_ICP_NUM' ) && WP_ZH_CN_ICP_NUM &&
+        get_option( 'zh_cn_l10n_icp_num' ) ) {
+        echo '<a href="http://www.beian.miit.gov.cn/" rel="nofollow" target="_blank"' .
+            'title="工业和信息化部ICP/IP地址/域名信息备案管理系统">' .
+            esc_attr( get_option( 'zh_cn_l10n_icp_num' ) ) .
+            "</a>\n";
+    }
+}
