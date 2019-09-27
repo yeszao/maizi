@@ -21,19 +21,12 @@
 	</header><!-- .entry-header -->
 
     <?php $languages = [
-        'cplusplus' => 'C++',
-        'java' => 'Java',
         'python' =>'Python',
+        'java' => 'Java',
         'c' => 'C',
+        'cplusplus' => 'C++',
         'csharp' => 'C#',
         'javascript' => 'JavaScript',
-        'ruby' => 'Ruby',
-        'swift' => 'Swift',
-        'go' => 'Go',
-        'scala' => 'Scala',
-        'kotlin' => 'Kotlin',
-        'rust' => 'Rust',
-        'php' => 'PHP'
     ]
     ?>
 
