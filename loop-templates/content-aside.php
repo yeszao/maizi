@@ -21,10 +21,10 @@
 	</header><!-- .entry-header -->
 
     <?php $languages = [
-        'python' =>'Python',
         'java' => 'Java',
-        'c' => 'C',
+        'python' =>'Python',
         'cpp' => 'C++',
+        'c' => 'C',
     ]
     ?>
 
