@@ -20,13 +20,7 @@
 
 	</header><!-- .entry-header -->
 
-    <?php $languages = [
-        'java' => 'Java',
-        'python' =>'Python',
-        'cpp' => 'C++',
-        'c' => 'C',
-    ]
-    ?>
+    <?php $fields = get_field_objects(); ?>
 
 	<div class="entry-content">
 
@@ -34,48 +28,38 @@
             <h2>答案</h2>
             <div>
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <?php $content = get_the_content() ?>
+                    <?php foreach ($fields as $field) : ?>
+                    <?php if ( substr($field['name'], 0, 5) === 'lang-' && trim($field['value']) ): ?>
 
-                    <?php foreach ($languages as $name => $title) : ?>
                     <li class="nav-item">
-                        <a class="nav-link<?php if ( !get_field($name) ): ?> text-muted<?php endif ?>" id="<?php echo $name?>-tab"
-                           data-toggle="tab" href="#<?php echo $name ?>" role="tab" aria-controls="<?php echo $name ?>" aria-selected="false">
-                            <span><?php echo $title ?></span>
+                        <a class="nav-link" id="<?php echo $field['name'] ?>-tab"
+                           data-toggle="tab" href="#<?php echo $field['name'] ?>" role="tab"
+                           aria-controls="<?php echo $field['name'] ?>" aria-selected="false">
+                            <span><?php echo $field['label'] ?></span>
                         </a>
                     </li>
+
+                    <?php endif; ?>
                     <?php endforeach; ?>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-muted" id="empty-tab"
-                           data-toggle="tab" href="#empty" role="tab" aria-controls="empty" aria-selected="false">
-                            <span>不显示</span>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
 
         <div class="tab-content my-4" id="myTabContent">
-            <?php foreach ($languages as $name => $title) : ?>
-            <div class="tab-pane fade" id="<?php echo $name ?>" role="tabpanel" aria-labelledby="<?php echo $name ?>-tab">
+            <?php foreach ($fields as $field) : ?>
+            <?php if ( substr($field['name'], 0, 5) === 'lang-' && trim($field['value']) ): ?>
 
-                <?php if ($field = get_field($name)): ?>
-                    <pre><code  class="language language-<?php echo $name ?>"><?php echo $field ?></code></pre>
-                <?php else: ?>
-                    <p class="text-muted"><i>暂无<?php echo $title ?>语言解法</i></p>
-                <?php endif; ?>
+                <div class="tab-pane fade" id="<?php echo $field['name'] ?>" role="tabpanel" aria-labelledby="<?php echo $field['name'] ?>-tab">
+                    <pre><code class="language <?php echo $field['name'] ?>"><?php echo $field['value'] ?></code></pre>
+                </div>
 
-            </div>
+            <?php endif; ?>
             <?php endforeach; ?>
-
-            <div class="tab-pane fade" id="empty" role="tabpanel" aria-labelledby="empty-tab">
-                    <p class="text-muted"><i>（不显示答案）</i></p>
-            </div>
         </div>
 
         <h2>解析</h2>
         <div class="answer-analysis">
-            <?php echo $content; ?>
+            <?php the_content(); ?>
         </div>
 
         <p class="text-center">
