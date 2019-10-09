@@ -194,11 +194,15 @@ class WP_Bootstrap_Comments_Walker extends Walker_Comment {
             <div class="media-body ml-1">
 
                 <div class="comment-meta text-muted small">
-                    <span class="comment-author vcard meta-item mr-2">
+                    <span class="comment-author vcard meta-item">
                         <?php printf( __( '%s <span class="says sr-only">says:</span>' ), get_comment_author_link( $comment  ) ); ?>
                     </span><!-- /.comment-author -->
 
-                    <span class="comment-metadata meta-item mr-2">
+                    <?php if ( $comment->user_id == get_the_author_meta('ID') ): ?>
+                        <span class="badge badge-secondary"> <?php echo  __( 'Author' ) ?></span>
+                    <?php endif; ?>
+
+                    <span class="comment-metadata meta-item ml-2">
                         <time datetime="<?php comment_time( 'c' ); ?>">
                             <?php
                             /* translators: 1: comment date, 2: comment time */
@@ -210,7 +214,7 @@ class WP_Bootstrap_Comments_Walker extends Walker_Comment {
 
                     <?php $this->comment_reply_link( $comment, $depth, $args, $add_below = 'reply-comment' ); ?>
 
-                    <?php edit_comment_link( __( 'Edit' ), '<span class="edit-link meta-item mr-2">', '</span>' ); ?>
+                    <?php edit_comment_link( __( 'Edit' ), '<span class="edit-link meta-item ml-2 small">', '</span>' ); ?>
 
 
                     <?php if ( '0' == $comment->comment_approved ) : ?>
@@ -315,7 +319,7 @@ class WP_Bootstrap_Comments_Walker extends Walker_Comment {
             'add_below' => $add_below,
             'depth'     => $depth,
             'max_depth' => $args['max_depth'],
-            'before'    => '<span id="reply-comment-'.$comment->comment_ID.'" class="reply meta-item mr-2 small">',
+            'before'    => '<span id="reply-comment-'.$comment->comment_ID.'" class="reply meta-item ml-2 small">',
             'after'     => '</span>'
         ) ) );
     }
