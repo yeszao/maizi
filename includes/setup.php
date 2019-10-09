@@ -158,17 +158,3 @@ function the_icp() {
             "</a>\n";
     }
 }
-
-/**
- * Custom mapping for ElasticPress
- *
- * @param $mapping
- *
- * @return mixed
- */
-function elasticpress_config_mapping( $mapping ) {
-    $mapping['mappings']['post']['properties']['post_title']['fields']['post_title']['analyzer'] = 'ik_smart';
-
-    return $mapping;
-}
-add_filter( 'ep_config_mapping', 'elasticpress_config_mapping', 10, 1 );
