@@ -17,7 +17,7 @@ require get_template_directory() . '/includes/template-tags.php';
 require get_template_directory() . '/includes/pagination.php';
 require get_template_directory() . '/includes/extras.php';
 require get_template_directory() . '/includes/customizer.php';
-require get_template_directory() . '/includes/custom-comments.php';
+require get_template_directory() . '/includes/comment-form.php';
 require get_template_directory() . '/includes/jetpack.php';
 require get_template_directory() . '/includes/bs4Navwalker.php';
 require get_template_directory() . '/includes/woocommerce.php';
