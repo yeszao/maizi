@@ -163,7 +163,7 @@ if ( ! function_exists( 'maizi_theme_customize_register' ) ) {
             new Customize_Control_Checkbox_Multiple(
                 $wp_customize,
                 'post_list_meta', array(
-                    'label'       => __( 'Post list meta(s) to display', 'maizi' ),
+                    'label'       => __( 'Post meta items to display', 'maizi' ),
                     'section'     => 'maizi_theme_layout_options',
                     'settings'    => 'maizi_post_list_meta',
                     'choices' => array(

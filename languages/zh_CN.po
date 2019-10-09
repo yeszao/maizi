@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maizi\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2017-12-06 15:43+0800\n"
-"PO-Revision-Date: 2017-12-06 15:43+0800\n"
+"POT-Creation-Date: 2019-10-09 15:10+0800\n"
+"PO-Revision-Date: 2019-10-09 15:12+0800\n"
 "Last-Translator: \n"
 "Language-Team: http://www.awaimai.com\n"
 "Language: zh_CN\n"
@@ -13,7 +13,7 @@ msgstr ""
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
@@ -25,6 +25,7 @@ msgstr ""
 "X-Poedit-SearchPath-2: includes\n"
 "X-Poedit-SearchPath-3: loop-templates\n"
 "X-Poedit-SearchPath-4: page-templates\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
 
 #: 404.php:28
 msgid "Oops! That page can&rsquo;t be found."
@@ -45,19 +46,11 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: assets/js/bootstrap.min.js:6
-msgid "[data-toggle=\"collapse\"][href=\"#"
-msgstr ""
-
-#: assets/js/bootstrap.min.js:6
-msgid "body"
-msgstr ""
-
 #: author.php:42
 msgid "About:"
 msgstr "关于: "
 
-#: author.php:50 includes/custom-comments.php:30
+#: author.php:50 includes/comment-form.php:27
 msgid "Website"
 msgstr "网站"
 
@@ -75,132 +68,223 @@ msgid "%s Comment"
 msgid_plural "%s Comments"
 msgstr[0] "%s评论"
 
-#: comments.php:39 comments.php:64
+#: comments.php:39 comments.php:65
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:41 comments.php:66
+#: comments.php:41 comments.php:67
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:45 comments.php:70
+#: comments.php:45 comments.php:71
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:83
+#: comments.php:84
 msgid "Comments are closed."
 msgstr ""
 
-#: includes/custom-comments.php:24
+#: includes/comment-form.php:21
 msgid "Name"
 msgstr "昵称"
 
-#: includes/custom-comments.php:27
+#: includes/comment-form.php:24
 msgid "Email"
 msgstr "邮箱"
 
-#: includes/custom-comments.php:49
+#: includes/comment-form.php:45
 msgctxt "noun"
 msgid "Comment"
 msgstr "评论"
 
-#: includes/customizer.php:31
+#: includes/customizer.php:55
 msgid "Layout Settings"
 msgstr "布局设置"
 
-#: includes/customizer.php:47
+#: includes/customizer.php:71
 msgid "Container Width"
 msgstr "容器宽度"
 
-#: includes/customizer.php:52
+#: includes/customizer.php:76
 msgid "Fixed width"
 msgstr "固定宽度"
 
-#: includes/customizer.php:53 includes/widget-slider-unit.php:172
+#: includes/customizer.php:77 includes/widget-slider-unit.php:173
 msgid "Full width"
 msgstr "全宽"
 
-#: includes/customizer.php:72
+#: includes/customizer.php:94
+msgid "Container max width while width is FIXED"
+msgstr "容器为固定宽度时的具体宽度"
+
+#: includes/customizer.php:95
+msgid ""
+"For example: <code>1200</code> in px, left empty to use Bootstrap max "
+"container."
+msgstr ""
+"例如：<code>1200</code>，单位为<code>px</code>，留空则使用Bootstrap默认宽度。"
+
+#: includes/customizer.php:115
 msgid "Sidebar Position"
 msgstr "侧边栏位置"
 
-#: includes/customizer.php:77
+#: includes/customizer.php:120
 msgid "Left"
 msgstr "左侧"
 
-#: includes/customizer.php:78
+#: includes/customizer.php:121
 msgid "Right"
 msgstr "右侧"
 
-#: includes/customizer.php:79
+#: includes/customizer.php:122
 msgid "No sidebar"
 msgstr "无"
 
-#: includes/customizer.php:97
+#: includes/customizer.php:140
 msgid "Post List Type"
 msgstr "文章列表样式"
 
-#: includes/customizer.php:102
-msgid "Do not display thumbnail"
-msgstr "不显示缩略图"
-
-#: includes/customizer.php:103
-msgid "Display thumbnail and placeholder image"
-msgstr "显示缩略图和占位图片"
-
-#: includes/customizer.php:121
-msgid "Display or not author name"
-msgstr "是否显示作者名称"
-
-#: includes/customizer.php:126
-msgid "Do not display author name"
-msgstr "不显示"
-
-#: includes/customizer.php:127
-msgid "Yes, display author name"
-msgstr "显示"
-
 #: includes/customizer.php:145
-msgid "Enable Code highlight"
-msgstr "使用代码高亮？"
+msgid "Only title"
+msgstr "仅标题"
+
+#: includes/customizer.php:146
+msgid "Only title and meta"
+msgstr "标题和meta"
+
+#: includes/customizer.php:147
+msgid "Display title, meta and excerpt"
+msgstr "标题、meta和摘要"
+
+#: includes/customizer.php:148
+msgid "Display title, meta, excerpt and thumbnail"
+msgstr "标题、meta、摘要和缩略图"
+
+#: includes/customizer.php:166
+msgid "Post meta items to display"
+msgstr "Meta显示项"
+
+#: includes/customizer.php:170 woocommerce/myaccount/my-orders.php:14
+msgid "Date"
+msgstr "日期"
+
+#: includes/customizer.php:171 includes/wp-bootstrap-comments.php:202
+msgid "Author"
+msgstr "作者"
+
+#: includes/customizer.php:172
+msgid "PV (need plugin Postviews Plus)"
+msgstr "浏览量"
+
+#: includes/customizer.php:173
+msgid "Category"
+msgstr "分类"
+
+#: includes/customizer.php:174
+msgid "Tags"
+msgstr "标签"
+
+#: includes/customizer.php:175
+msgid "Comment Link"
+msgstr "评论链接"
+
+#: includes/customizer.php:192
+msgid "Excerpt word number"
+msgstr "摘要字数"
+
+#: includes/customizer.php:398
+#, fuzzy
+#| msgid "Layout Settings"
+msgid "Ad Settings"
+msgstr "布局设置"
+
+#: includes/customizer.php:415
+msgid "#1. Global Ad under nav bar"
+msgstr ""
+
+#: includes/customizer.php:416 includes/customizer.php:437
+#: includes/customizer.php:484
+msgid "<code>[url]</code> is short code of current page link"
+msgstr ""
+
+#: includes/customizer.php:436
+msgid "#2. Ad before content"
+msgstr ""
+
+#: includes/customizer.php:457
+msgid "Show #2 ad in: "
+msgstr ""
+
+#: includes/customizer.php:462 includes/customizer.php:509
+#, fuzzy
+#| msgid "Page %s"
+msgid "Page and Post"
+msgstr "%s 页"
+
+#: includes/customizer.php:463 includes/customizer.php:510
+msgid "Only Post"
+msgstr ""
+
+#: includes/customizer.php:464 includes/customizer.php:511
+msgid "Only Page"
+msgstr ""
+
+#: includes/customizer.php:465 includes/customizer.php:512
+msgid "Neither"
+msgstr ""
+
+#: includes/customizer.php:483
+msgid "#3. Ad after content content"
+msgstr ""
+
+#: includes/customizer.php:504
+msgid "Show #3 ad in: "
+msgstr ""
+
+#: includes/customizer.php:530
+msgid "Post or page ids DONOT display ad"
+msgstr ""
+
+#: includes/customizer.php:531
+msgid "eg: <code>1,2,3</code>"
+msgstr ""
+
+#: includes/previous-next.php:12
+msgid "Previous post:"
+msgstr "上一篇："
+
+#: includes/previous-next.php:16
+msgid "Next post:"
+msgstr "下一篇："
 
 #: includes/setup.php:20
 msgid "Primary Menu"
 msgstr "主菜单"
 
-#: includes/setup.php:91
+#: includes/setup.php:98
 #, php-format
 msgid "Page %s"
 msgstr "%s 页"
 
-#: includes/template-tags.php:24 woocommerce/myaccount/my-orders.php:76
-#: woocommerce/myaccount/orders.php:75
-msgid "View"
-msgstr "浏览"
-
-#: includes/template-tags.php:39 loop-templates/content-single.php:37
+#: includes/template-tags.php:37 includes/template-tags.php:45
 msgid ", "
 msgstr ""
 
-#: includes/template-tags.php:42
-#, php-format
-msgid "Posted in %1$s"
-msgstr "%1$s"
-
-#: includes/template-tags.php:49
+#: includes/template-tags.php:56
 msgid "Leave a Comment"
 msgstr "去评论"
 
-#: includes/template-tags.php:49
+#: includes/template-tags.php:56
 msgid "1 Comment"
 msgstr "1评论"
 
-#: includes/template-tags.php:49
+#: includes/template-tags.php:56
 msgid "% Comments"
 msgstr "%评论"
 
-#: includes/template-tags.php:55 includes/wp-bootstrap-comments.php:213
-#: includes/wp-bootstrap-comments.php:289 loop-templates/content-page.php:16
+#: includes/template-tags.php:63 includes/wp-bootstrap-comments.php:217
+#: includes/wp-bootstrap-comments.php:293
+#: page-templates/default-with-meta.php:46
 #: woocommerce/myaccount/my-address.php:51
 msgid "Edit"
 msgstr "编辑"
@@ -242,39 +326,39 @@ msgstr "&mdash; 选择 &mdash;"
 msgid "Edit Menu"
 msgstr "编辑菜单"
 
-#: includes/widget-slider-unit.php:88
+#: includes/widget-slider-unit.php:89
 msgid "Title"
 msgstr "标题"
 
-#: includes/widget-slider-unit.php:98
+#: includes/widget-slider-unit.php:99
 msgid "Background color"
 msgstr "背景颜色"
 
-#: includes/widget-slider-unit.php:109
+#: includes/widget-slider-unit.php:110
 msgid "Height"
 msgstr "高度"
 
-#: includes/widget-slider-unit.php:119
+#: includes/widget-slider-unit.php:120
 msgid "Image"
 msgstr "图像"
 
-#: includes/widget-slider-unit.php:129
+#: includes/widget-slider-unit.php:130
 msgid "No image selected"
 msgstr "未选择图像"
 
-#: includes/widget-slider-unit.php:139
+#: includes/widget-slider-unit.php:140
 msgid "Select Image"
 msgstr "选择图像"
 
-#: includes/widget-slider-unit.php:141
+#: includes/widget-slider-unit.php:142
 msgid "Remove Image"
 msgstr "删除图像"
 
-#: includes/widget-slider-unit.php:147
+#: includes/widget-slider-unit.php:148
 msgid "Caption"
 msgstr "标题"
 
-#: includes/widget-slider-unit.php:157
+#: includes/widget-slider-unit.php:158
 msgid "Links"
 msgstr "链接"
 
@@ -346,17 +430,22 @@ msgstr "规格"
 msgid "%s <span class=\"says sr-only\">says:</span>"
 msgstr ""
 
-#: includes/wp-bootstrap-comments.php:205
+#: includes/wp-bootstrap-comments.php:209
 #, php-format
 msgid "%1$s"
 msgstr ""
 
-#: includes/wp-bootstrap-comments.php:217
+#: includes/wp-bootstrap-comments.php:221
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: includes/wp-bootstrap-comments.php:289
+#: includes/wp-bootstrap-comments.php:293
 msgid "Pingback:"
+msgstr ""
+
+#: loop-templates/content-aside.php:69 loop-templates/content-page.php:27
+#: loop-templates/content.php:29 page-templates/default-with-meta.php:62
+msgid "Pages:"
 msgstr ""
 
 #: loop-templates/content-none.php:15
@@ -379,14 +468,6 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
-
-#: loop-templates/content-page.php:32 loop-templates/content-single.php:28
-msgid "Pages:"
-msgstr ""
-
-#: loop-templates/content-single.php:43
-msgid "Tags: "
 msgstr ""
 
 #: search.php:40
@@ -685,10 +766,6 @@ msgstr ""
 msgid "Order"
 msgstr "订单"
 
-#: woocommerce/myaccount/my-orders.php:14
-msgid "Date"
-msgstr "日期"
-
 #: woocommerce/myaccount/my-orders.php:15
 msgid "Status"
 msgstr "状态"
@@ -711,6 +788,10 @@ msgstr[0] ""
 #: woocommerce/myaccount/my-orders.php:72 woocommerce/myaccount/orders.php:71
 msgid "Pay"
 msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:76 woocommerce/myaccount/orders.php:75
+msgid "View"
+msgstr "浏览"
 
 #: woocommerce/myaccount/my-orders.php:80 woocommerce/myaccount/orders.php:79
 msgid "Cancel"
@@ -756,6 +837,28 @@ msgstr "搜索"
 #| msgid "Product"
 msgid "Products Details"
 msgstr "产品"
+
+#~ msgid "Do not display thumbnail"
+#~ msgstr "不显示缩略图"
+
+#~ msgid "Display thumbnail and placeholder image"
+#~ msgstr "显示缩略图和占位图片"
+
+#~ msgid "Display or not author name"
+#~ msgstr "是否显示作者名称"
+
+#~ msgid "Do not display author name"
+#~ msgstr "不显示"
+
+#~ msgid "Yes, display author name"
+#~ msgstr "显示"
+
+#~ msgid "Enable Code highlight"
+#~ msgstr "使用代码高亮？"
+
+#, php-format
+#~ msgid "Posted in %1$s"
+#~ msgstr "%1$s"
 
 #~ msgctxt "comments title"
 #~ msgid "One thought on &ldquo;%2$s&rdquo;"
