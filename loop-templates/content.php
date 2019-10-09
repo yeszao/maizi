@@ -22,10 +22,7 @@
 
 		<?php the_content(); ?>
 
-        <p class="text-center">
-            <?php previous_post_link(); ?>
-            <?php next_post_link(); ?>
-        </p>
+        <?php get_previous_and_next_post() ?>
 
 		<?php
 		wp_link_pages( array(

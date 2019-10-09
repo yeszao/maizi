@@ -25,7 +25,7 @@
 	<div class="entry-content">
 
         <div class="d-flex justify-content-between flex-wrap">
-            <h2>答案</h2>
+            <h2><?php _e('Answer', 'maizi') ?></h2>
             <div>
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <?php foreach ($fields as $field) : ?>
@@ -57,15 +57,12 @@
             <?php endforeach; ?>
         </div>
 
-        <h2>解析</h2>
+        <h2><?php _e('Analysis', 'maizi') ?></h2>
         <div class="answer-analysis">
             <?php the_content(); ?>
         </div>
 
-        <p class="text-center">
-            <?php previous_post_link(); ?>
-            <?php next_post_link(); ?>
-        </p>
+        <?php get_previous_and_next_post() ?>
 
 		<?php
 		wp_link_pages( array(

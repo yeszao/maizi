@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maizi\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2019-10-09 15:10+0800\n"
-"PO-Revision-Date: 2019-10-09 15:12+0800\n"
+"POT-Creation-Date: 2019-10-09 15:21+0800\n"
+"PO-Revision-Date: 2019-10-09 15:23+0800\n"
 "Last-Translator: \n"
 "Language-Team: http://www.awaimai.com\n"
 "Language: zh_CN\n"
@@ -437,11 +437,19 @@ msgstr ""
 
 #: includes/wp-bootstrap-comments.php:221
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "评论审核中。"
 
 #: includes/wp-bootstrap-comments.php:293
 msgid "Pingback:"
-msgstr ""
+msgstr "引用通告："
+
+#: loop-templates/content-aside.php:28
+msgid "Answer"
+msgstr "答案"
+
+#: loop-templates/content-aside.php:60
+msgid "Analysis"
+msgstr "分析"
 
 #: loop-templates/content-aside.php:69 loop-templates/content-page.php:27
 #: loop-templates/content.php:29 page-templates/default-with-meta.php:62
@@ -450,7 +458,7 @@ msgstr ""
 
 #: loop-templates/content-none.php:15
 msgid "Nothing Found"
-msgstr ""
+msgstr "页面找不到了"
 
 #: loop-templates/content-none.php:24
 #, php-format
@@ -462,7 +470,7 @@ msgstr ""
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
+msgstr "抱歉，没有找到任何文章，换一个关键词试试吧。"
 
 #: loop-templates/content-none.php:37
 msgid ""
