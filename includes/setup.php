@@ -69,7 +69,7 @@ if ( ! function_exists( 'add_script' ) ) {
 		wp_enqueue_style( 'bootstrap-css', get_stylesheet_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css', array(),
 			'4.3.1' );
 		wp_enqueue_style( 'style-css', get_stylesheet_directory_uri() . '/style.css', array(),
-			'1.0.1' );
+			'1.0.2' );
 
 		// JS file.
 		wp_enqueue_script('jquery');
