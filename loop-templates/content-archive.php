@@ -5,7 +5,6 @@
  */
 
 $list_type = get_theme_mod( 'maizi_post_list_type', 'thumbnail' );
-$margin_bottom = in_array($list_type, ['title', 'meta']) ? 'mb-2 pb-2' : 'mb-4 pb-4';
 $has_thumbnail = has_post_thumbnail();
 ?>
 
@@ -15,7 +14,7 @@ $has_thumbnail = has_post_thumbnail();
 
         <div class="<?php if ( $has_thumbnail ): ?>row<?php endif; ?> no-gutters">
 
-            <?php if (has_post_thumbnail()): ?>
+            <?php if (has_post_thumbnail() && $list_type == 'thumbnail'): ?>
             <div class="col-md-3  pt-4 pl-4 pb-4">
                 <?php if ( 'thumbnail' === $list_type && has_post_thumbnail() ) : ?>
 
@@ -26,9 +25,10 @@ $has_thumbnail = has_post_thumbnail();
             <?php endif; ?>
 
             <div class="<?php if ( has_post_thumbnail() ): ?>col-md-9<?php endif; ?>">
-                <div class="card-body p-4">
+                <div class="card-body <?php if ( $list_type === 'title' || $list_type === 'meta') : ?>p-3<?php else: ?>p-4<?php endif; ?>">
+                    <?php $title_bottom = ( $list_type === 'title' || $list_type === 'meta') ? 'mb-0' : ''; ?>
 
-                    <?php the_title( sprintf( '<h2 class="card-title font-weight-bold"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                    <?php the_title( sprintf( '<h3 class="card-title font-weight-bold ' . $title_bottom . '"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
                     <?php if ( 'post' == get_post_type() && $list_type !== 'title') : ?>
                         <div class="card-subtitle text-muted small mt-2">
