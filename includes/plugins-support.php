@@ -30,7 +30,7 @@ function get_programing_language_metas($post_id) {
 
     $languages = array();
     foreach ($metas as $key => $value) {
-        if ( is_programing_language_meta($key) ) {
+        if ( is_programing_language_meta($key) && $value[0]) {
             $languages[$key]['value'] = $value[0];
             $languages[$key]['label'] = get_programing_language_label($key);
         }
