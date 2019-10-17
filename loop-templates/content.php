@@ -6,31 +6,33 @@
 ?>
 <article <?php post_class( 'article-content' ); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+    <div class="card">
+        <header class="card-header bg-light">
 
-		<?php the_title( '<h1 class="entry-title mb-3">', '</h1>' ); ?>
+            <?php the_title( '<h1 class="card-title">', '</h1>' ); ?>
 
-		<div class="entry-meta mb-4 small text-muted">
+            <div class="card-text small text-muted">
 
-			<?php maizi_post_meta(); ?>
+                <?php maizi_post_meta(); ?>
 
-		</div><!-- .entry-meta -->
+            </div>
 
-	</header><!-- .entry-header -->
+        </header><!-- .entry-header -->
 
-	<div class="entry-content">
+        <div class="card-body">
 
-		<?php the_content(); ?>
+            <?php the_content(); ?>
 
-        <?php get_previous_and_next_post() ?>
+            <?php get_previous_and_next_post() ?>
 
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'maizi' ),
-			'after'  => '</div>',
-		) );
-		?>
+            <?php
+            wp_link_pages( array(
+                'before' => '<div class="page-links">' . __( 'Pages:', 'maizi' ),
+                'after'  => '</div>',
+            ) );
+            ?>
 
-	</div><!-- .entry-content -->
+        </div>
+    </div>
 
 </article><!-- #post-## -->

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maizi\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2019-10-17 17:59+0800\n"
-"PO-Revision-Date: 2019-10-17 18:01+0800\n"
+"POT-Creation-Date: 2019-10-17 22:02+0800\n"
+"PO-Revision-Date: 2019-10-17 22:03+0800\n"
 "Last-Translator: \n"
 "Language-Team: http://www.awaimai.com\n"
 "Language: zh_CN\n"
@@ -201,8 +201,8 @@ msgid "Link Hover Color"
 msgstr "链接停放颜色"
 
 #: includes/customizer.php:258
-msgid "List card background Color"
-msgstr "列表条目背景颜色"
+msgid "Card background Color"
+msgstr "卡片背景颜色"
 
 #: includes/customizer.php:275
 msgid "Navbar Background Color"
@@ -467,16 +467,16 @@ msgstr "评论审核中。"
 msgid "Pingback:"
 msgstr "引用通告："
 
-#: loop-templates/content-aside.php:28
+#: loop-templates/content-aside.php:29
 msgid "Answer"
 msgstr "答案"
 
-#: loop-templates/content-aside.php:56
+#: loop-templates/content-aside.php:57
 msgid "Analysis"
 msgstr "分析"
 
-#: loop-templates/content-aside.php:65 loop-templates/content-page.php:27
-#: loop-templates/content.php:29 page-templates/default-with-meta.php:62
+#: loop-templates/content-aside.php:66 loop-templates/content-page.php:27
+#: loop-templates/content.php:30 page-templates/default-with-meta.php:62
 msgid "Pages:"
 msgstr ""
 

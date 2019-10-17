@@ -243,7 +243,7 @@ if ( ! function_exists( 'maizi_customize_colors' ) ) {
                 ))
         );
 
-        $wp_customize->add_setting('maizi_list_card_bg_color', array(
+        $wp_customize->add_setting('maizi_card_bg_color', array(
             'default' => '#ffffff',
             'type' => 'theme_mod',
             'sanitize_callback' => 'esc_textarea',
@@ -253,11 +253,11 @@ if ( ! function_exists( 'maizi_customize_colors' ) ) {
         $wp_customize->add_control(
             new WP_Customize_Color_Control(
                 $wp_customize,
-                'maizi_list_card_bg_color',
+                'maizi_card_bg_color',
                 array(
-                    'label' => __('List card background Color', 'maizi'),
+                    'label' => __('Card background Color', 'maizi'),
                     'section' => 'colors',
-                    'settings' => 'maizi_list_card_bg_color',
+                    'settings' => 'maizi_card_bg_color',
                 ))
         );
 
@@ -377,8 +377,8 @@ function mytheme_customize_css()
 		.page-link, .page-link:focus, .page-link:hover{
 			color: <?php echo get_theme_mod('maizi_button_color', '#0275d8'); ?>;
 		}
-        .home .card, .archive .card {
-            background-color: <?php echo get_theme_mod('maizi_list_card_bg_color', '#f5f5f5'); ?>;
+        article .card {
+            background-color: <?php echo get_theme_mod('maizi_card_bg_color', '#f5f5f5'); ?>;
         }
     </style>
     <?php
