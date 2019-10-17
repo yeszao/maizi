@@ -6,6 +6,10 @@
  */
 function acf_code_field_support_prismatic()
 {
+    if (!is_singular()) {
+        return;
+    }
+
     global $post;
 
     $metas = get_programing_language_metas($post->ID);
@@ -26,6 +30,10 @@ add_action('wp_enqueue_scripts', 'acf_code_field_support_prismatic', 5);
  * @return array
  */
 function get_programing_language_metas($post_id) {
+    if (!is_singular()) {
+        return array();
+    }
+
     $metas = get_post_meta($post_id);
 
     $languages = array();
