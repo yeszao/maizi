@@ -219,7 +219,7 @@ if ( ! function_exists( 'maizi_customize_colors' ) ) {
                 $wp_customize,
                 'maizi_link_color',
                 array(
-                    'label' => 'Link Color',
+                    'label' => __('Link Color', 'maizi'),
                     'section' => 'colors',
                     'settings' => 'maizi_link_color',
                 ))
@@ -237,13 +237,13 @@ if ( ! function_exists( 'maizi_customize_colors' ) ) {
                 $wp_customize,
                 'maizi_link_hover_color',
                 array(
-                    'label' => 'Link Hover Color',
+                    'label' => __('Link Hover Color', 'maizi'),
                     'section' => 'colors',
                     'settings' => 'maizi_link_hover_color',
                 ))
         );
 
-        $wp_customize->add_setting('maizi_list_bottom_border_color', array(
+        $wp_customize->add_setting('maizi_list_card_bg_color', array(
             'default' => '#ffffff',
             'type' => 'theme_mod',
             'sanitize_callback' => 'esc_textarea',
@@ -253,11 +253,11 @@ if ( ! function_exists( 'maizi_customize_colors' ) ) {
         $wp_customize->add_control(
             new WP_Customize_Color_Control(
                 $wp_customize,
-                'maizi_list_bottom_border_color',
+                'maizi_list_card_bg_color',
                 array(
-                    'label' => 'List Bottom Border Color',
+                    'label' => __('List card background Color', 'maizi'),
                     'section' => 'colors',
-                    'settings' => 'maizi_list_bottom_border_color',
+                    'settings' => 'maizi_list_card_bg_color',
                 ))
         );
 
@@ -272,7 +272,7 @@ if ( ! function_exists( 'maizi_customize_colors' ) ) {
                 $wp_customize,
                 'maizi_navbar_bg_color',
                 array(
-                    'label' => 'Navbar Background Color',
+                    'label' => __('Navbar Background Color', 'maizi'),
                     'section' => 'colors',
                     'settings' => 'maizi_navbar_bg_color',
                 )
@@ -290,7 +290,7 @@ if ( ! function_exists( 'maizi_customize_colors' ) ) {
 				$wp_customize,
 				'maizi_navbar_text_color',
 				array(
-					'label' => 'Navbar Text Color',
+					'label' => __('Navbar Text Color', 'maizi'),
 					'section' => 'colors',
 					'settings' => 'maizi_navbar_text_color',
 				)
@@ -308,7 +308,7 @@ if ( ! function_exists( 'maizi_customize_colors' ) ) {
 				$wp_customize,
 				'maizi_button_color',
 				array(
-					'label' => 'Button Color',
+					'label' => __('Button Color', 'maizi'),
 					'section' => 'colors',
 					'settings' => 'maizi_button_color',
 				)
@@ -377,8 +377,8 @@ function mytheme_customize_css()
 		.page-link, .page-link:focus, .page-link:hover{
 			color: <?php echo get_theme_mod('maizi_button_color', '#0275d8'); ?>;
 		}
-        .home article, .archive article {
-            border-bottom: 1px solid <?php echo get_theme_mod('maizi_list_bottom_border_color', '#fff'); ?>;
+        .home .card, .archive .card {
+            background-color: <?php echo get_theme_mod('maizi_list_card_bg_color', '#f5f5f5'); ?>;
         }
     </style>
     <?php

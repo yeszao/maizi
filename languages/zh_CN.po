@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maizi\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2019-10-09 15:21+0800\n"
-"PO-Revision-Date: 2019-10-09 15:23+0800\n"
+"POT-Creation-Date: 2019-10-17 17:59+0800\n"
+"PO-Revision-Date: 2019-10-17 18:01+0800\n"
 "Last-Translator: \n"
 "Language-Team: http://www.awaimai.com\n"
 "Language: zh_CN\n"
@@ -192,6 +192,30 @@ msgstr "评论链接"
 msgid "Excerpt word number"
 msgstr "摘要字数"
 
+#: includes/customizer.php:222
+msgid "Link Color"
+msgstr "链接颜色"
+
+#: includes/customizer.php:240
+msgid "Link Hover Color"
+msgstr "链接停放颜色"
+
+#: includes/customizer.php:258
+msgid "List card background Color"
+msgstr "列表条目背景颜色"
+
+#: includes/customizer.php:275
+msgid "Navbar Background Color"
+msgstr "导航栏背景颜色"
+
+#: includes/customizer.php:293
+msgid "Navbar Text Color"
+msgstr "导航栏文字颜色"
+
+#: includes/customizer.php:311
+msgid "Button Color"
+msgstr "按钮颜色"
+
 #: includes/customizer.php:398
 #, fuzzy
 #| msgid "Layout Settings"
@@ -253,7 +277,7 @@ msgstr ""
 msgid "Previous post:"
 msgstr "上一篇："
 
-#: includes/previous-next.php:16
+#: includes/previous-next.php:18
 msgid "Next post:"
 msgstr "下一篇："
 
@@ -447,11 +471,11 @@ msgstr "引用通告："
 msgid "Answer"
 msgstr "答案"
 
-#: loop-templates/content-aside.php:60
+#: loop-templates/content-aside.php:56
 msgid "Analysis"
 msgstr "分析"
 
-#: loop-templates/content-aside.php:69 loop-templates/content-page.php:27
+#: loop-templates/content-aside.php:65 loop-templates/content-page.php:27
 #: loop-templates/content.php:29 page-templates/default-with-meta.php:62
 msgid "Pages:"
 msgstr ""
