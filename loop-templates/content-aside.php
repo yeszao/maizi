@@ -10,7 +10,7 @@
 
 		<?php the_title( '<h1 class="entry-title mb-3">', '</h1>' ); ?>
 
-        <p><?php echo get_the_excerpt() ?></p>
+        <p><?php echo get_post_field('post_excerpt') ?></p>
 
 		<div class="entry-meta mb-4 small text-muted">
 
