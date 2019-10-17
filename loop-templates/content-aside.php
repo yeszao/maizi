@@ -10,7 +10,7 @@
 
 		<?php the_title( '<h1 class="entry-title mb-3">', '</h1>' ); ?>
 
-        <p><?php echo get_field('title_desc') ?></p>
+        <p><?php echo get_the_excerpt() ?></p>
 
 		<div class="entry-meta mb-4 small text-muted">
 
@@ -20,7 +20,7 @@
 
 	</header><!-- .entry-header -->
 
-    <?php $fields = get_field_objects(); ?>
+    <?php $metas = get_programing_language_metas(get_the_ID()); ?>
 
 	<div class="entry-content">
 
@@ -28,32 +28,28 @@
             <h2><?php _e('Answer', 'maizi') ?></h2>
             <div>
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <?php foreach ($fields as $field) : ?>
-                    <?php if ( substr($field['name'], 0, 5) === 'lang-' && trim($field['value']) ): ?>
+                    <?php foreach ($metas as $key => $value) : ?>
 
                     <li class="nav-item">
-                        <a class="nav-link" id="<?php echo $field['name'] ?>-tab"
-                           data-toggle="tab" href="#<?php echo $field['name'] ?>" role="tab"
-                           aria-controls="<?php echo $field['name'] ?>" aria-selected="false">
-                            <span><?php echo $field['label'] ?></span>
+                        <a class="nav-link" id="<?php echo $key ?>-tab"
+                           data-toggle="tab" href="#<?php echo $key ?>" role="tab"
+                           aria-controls="<?php echo $key ?>" aria-selected="false">
+                            <span><?php echo $value['label'] ?></span>
                         </a>
                     </li>
 
-                    <?php endif; ?>
                     <?php endforeach; ?>
                 </ul>
             </div>
         </div>
 
         <div class="tab-content my-4" id="myTabContent">
-            <?php foreach ($fields as $field) : ?>
-            <?php if ( substr($field['name'], 0, 5) === 'lang-' && trim($field['value']) ): ?>
+            <?php foreach ($metas as $key => $value) : ?>
 
-                <div class="tab-pane fade" id="<?php echo $field['name'] ?>" role="tabpanel" aria-labelledby="<?php echo $field['name'] ?>-tab">
-                    <pre><code class="language <?php echo $field['name'] ?>"><?php echo $field['value'] ?></code></pre>
+                <div class="tab-pane fade" id="<?php echo $key ?>" role="tabpanel" aria-labelledby="<?php echo $key ?>-tab">
+                    <pre><code class="language <?php echo $key ?>"><?php echo $value['value'] ?></code></pre>
                 </div>
 
-            <?php endif; ?>
             <?php endforeach; ?>
         </div>
 

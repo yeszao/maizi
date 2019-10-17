@@ -27,4 +27,5 @@ require get_template_directory() . '/includes/inline-js.php';
 require get_template_directory() . '/includes/post-view.php';
 require get_template_directory() . '/includes/list-count-optimize.php';
 require get_template_directory() . '/includes/previous-next.php';
+require get_template_directory() . '/includes/plugins-support.php';
 
