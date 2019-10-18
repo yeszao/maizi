@@ -21,3 +21,17 @@ Maizi - Best brand Wordpress theme build with bootstrap
 - Login to your WordPress backend
 - Go to Appearance → Themes
 - Activate the Maizi theme
+
+
+### TODO
+- [ ] Color scheme.
+- [ ] Remove built-in slider widget.
+- [ ] Remove footer widget.
+- [ ] Remove built-in advertise support.
+- [ ] Find a plugins that can add Ads well.
+- [ ] Optimize list page title and meta only structure.
+- [ ] Add an option to change post and page meta position.
+- [ ] Add an option to show/hide "power by" information. 
+- [ ] Make sidebar list dot better-looking.
+- [ ] Translate all words.
+- [ ] Add an user manual.
