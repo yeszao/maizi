@@ -377,7 +377,7 @@ function mytheme_customize_css()
 		.page-link, .page-link:focus, .page-link:hover{
 			color: <?php echo get_theme_mod('maizi_button_color', '#0275d8'); ?>;
 		}
-        article .card {
+        article .card, article .card-body {
             background-color: <?php echo get_theme_mod('maizi_card_bg_color', '#f5f5f5'); ?>;
         }
     </style>
