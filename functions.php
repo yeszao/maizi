@@ -22,7 +22,6 @@ require get_template_directory() . '/includes/jetpack.php';
 require get_template_directory() . '/includes/bs4Navwalker.php';
 require get_template_directory() . '/includes/woocommerce.php';
 require get_template_directory() . '/includes/editor.php';
-require get_template_directory() . '/includes/ad.php';
 require get_template_directory() . '/includes/inline-js.php';
 require get_template_directory() . '/includes/post-view.php';
 require get_template_directory() . '/includes/list-count-optimize.php';
