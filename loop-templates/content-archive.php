@@ -5,26 +5,22 @@
  */
 
 $list_type = get_theme_mod( 'maizi_post_list_type', 'thumbnail' );
-$has_thumbnail = has_post_thumbnail();
+$display_thumbnail = $list_type == 'thumbnail' && has_post_thumbnail();
 ?>
 
-<article <?php post_class( "" ) ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 	<div class="card mb-4">
 
-        <div class="<?php if ( $has_thumbnail ): ?>row<?php endif; ?> no-gutters">
+        <div class="<?php if ( $display_thumbnail ): ?>row<?php endif; ?> no-gutters">
 
-            <?php if (has_post_thumbnail() && $list_type == 'thumbnail'): ?>
+            <?php if ( $display_thumbnail ): ?>
             <div class="col-md-3  pt-4 pl-4 pb-4">
-                <?php if ( 'thumbnail' === $list_type && has_post_thumbnail() ) : ?>
-
-                    <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'class' => 'card-img-top bg-gray' ) ); ?>
-
-                <?php endif; ?>
+                <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'class' => 'card-img-top bg-gray' ) ); ?>
             </div>
             <?php endif; ?>
 
-            <div class="<?php if ( has_post_thumbnail() ): ?>col-md-9<?php endif; ?>">
+            <div class="<?php if ( $display_thumbnail ): ?>col-md-9<?php endif; ?>">
                 <div class="card-body <?php if ( $list_type === 'title' || $list_type === 'meta') : ?>p-3<?php else: ?>p-4<?php endif; ?>">
                     <?php $title_bottom = ( $list_type === 'title' || $list_type === 'meta') ? 'mb-0' : ''; ?>
 
@@ -45,8 +41,6 @@ $has_thumbnail = has_post_thumbnail();
 
 
                 </div>
-
-                <div class="card-"
             </div>
         </div>
 
