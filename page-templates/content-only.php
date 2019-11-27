@@ -8,66 +8,58 @@
 
 get_header();
 $container   = get_theme_mod( 'maizi_container_type' );
-$sidebar_pos = get_theme_mod( 'maizi_sidebar_position' );
+
 ?>
 
 <div class="wrapper" id="single-wrapper">
 
     <div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
-        <div class="row d-flex <?php echo 'left' === $sidebar_pos ? 'flex-row-reverse' : 'flex-row'; ?>">
+        <div class="row d-flex flex-row">
 
-            <?php if ( 'none' !== $sidebar_pos ) : ?>
+            <div class="col-md-12 content-area" id="primary">
 
-            <div class="col-md-9 content-area" id="primary">
+                <main class="site-main" id="main">
 
-                <?php else : ?>
+                    <?php while ( have_posts() ) : ?>
 
-                <div class="col-md-12 content-area" id="primary">
+                        <?php the_post(); ?>
 
-                    <?php endif; ?>
+                        <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-                    <main class="site-main" id="main">
+                            <div class="card">
+                                <header class="card-header bg-light">
 
-                        <?php while ( have_posts() ) : ?>
+                                    <?php the_title( '<h1 class="card-title">', '</h1>' ); ?>
 
-                            <?php the_post(); ?>
+                                </header><!-- .entry-header -->
 
-                            <article <?php post_class( 'article-content' ); ?> id="post-<?php the_ID(); ?>">
+                                <div class="card-body">
 
-                                <div class="card">
-                                    <header class="card-header bg-light">
+                                    <?php the_content(); ?>
 
-                                        <?php the_title( '<h1 class="card-title">', '</h1>' ); ?>
-
-                                    </header><!-- .entry-header -->
-
-                                    <div class="card-body">
-
-                                        <?php the_content(); ?>
-
-                                    </div>
                                 </div>
+                            </div>
 
-                            </article><!-- #post-## -->
+                        </article><!-- #post-## -->
 
-                            <?php
-                            // If comments are open or we have at least one comment, load up the comment template.
-                            if ( comments_open() || get_comments_number() ) :
-                                comments_template();
-                            endif;
-                            ?>
+                        <?php
+                        // If comments are open or we have at least one comment, load up the comment template.
+                        if ( comments_open() || get_comments_number() ) :
+                            comments_template();
+                        endif;
+                        ?>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                    </main><!-- #main -->
+                </main><!-- #main -->
 
-                </div><!-- #primary -->
+            </div><!-- #primary -->
 
-            </div><!-- .row -->
+        </div><!-- .row -->
 
-        </div><!-- Container end -->
+    </div><!-- Container end -->
 
-    </div><!-- Wrapper end -->
+</div><!-- Wrapper end -->
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
