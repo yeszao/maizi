@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blank Page Template
+ * Template Name: Blank Template
  *
  * Template for displaying a blank page.
  *
@@ -24,7 +24,7 @@
 <body>
 <?php while ( have_posts() ) : the_post(); ?>
 
-	<?php get_template_part( 'loop-templates/content', 'empty' ); ?>
+	<?php the_content() ?>
 
 <?php endwhile; // end of the loop. ?>
 <?php wp_footer(); ?>

@@ -1,13 +1,9 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Template Name: Content Only Template
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
+ * Template with content only, no left sidebar, right sidebar and post meta.
  *
- * @package maizi
  */
 
 get_header();
@@ -15,7 +11,7 @@ $container   = get_theme_mod( 'maizi_container_type' );
 $sidebar_pos = get_theme_mod( 'maizi_sidebar_position' );
 ?>
 
-    <div class="wrapper" id="single-wrapper">
+<div class="wrapper" id="single-wrapper">
 
     <div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
@@ -44,12 +40,6 @@ $sidebar_pos = get_theme_mod( 'maizi_sidebar_position' );
 
                                         <?php the_title( '<h1 class="card-title">', '</h1>' ); ?>
 
-                                        <div class="card-text small text-muted">
-
-                                            <?php maizi_post_meta(); ?>
-
-                                        </div>
-
                                     </header><!-- .entry-header -->
 
                                     <div class="card-body">
@@ -74,12 +64,10 @@ $sidebar_pos = get_theme_mod( 'maizi_sidebar_position' );
 
                 </div><!-- #primary -->
 
-                <?php get_sidebar(); ?>
-
             </div><!-- .row -->
 
         </div><!-- Container end -->
 
     </div><!-- Wrapper end -->
 
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
