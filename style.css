@@ -20,12 +20,27 @@ html,body {
 a:focus, a:hover {
     text-decoration: none;
 }
-h1{font-size: 1.4rem; font-weight: 600;}
-h2{font-size: 1.3rem; font-weight: 600;}
-h3, h4, h5, h6{font-size: 1.2rem; font-weight: 600;}
+h1{font-size: 1.4rem;}
+h2{
+    border-left: 0.55rem solid;
+    font-size: 1.3rem;
+    padding-left: 0.6rem;
+    line-height: 1.25rem;
+}
+h3, h4, h5, h6{font-size: 1.1rem; }
 
-article h1, h2, h3, h4, h5, h6 {font-family: "Microsoft YaHei UI Light", "SimHei", "SimSun", 'sans-serif'}
+article h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
 
+.article-content h2,
+.article-content h3{
+    margin: 2rem 0 1.5rem;
+}
+
+article img{
+    object-fit: cover;
+}
 article img, figure, img
 {
     max-width: 100%;
@@ -249,10 +264,7 @@ a.skip-link {
 .article-content {
     color: #3f3f3f;
 }
-.article-content h2,
-.article-content h3{
-    margin: 1.2rem 0 .6rem;
-}
+
 .article-content table td {
     border: 1px solid #dfdfdf;
     padding: 3px;
