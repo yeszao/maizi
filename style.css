@@ -68,7 +68,19 @@ ul, li {
 
 
 
-p, pre{/*word-break:break-all*/;word-wrap:break-word;white-space: pre-wrap; max-width: 100%;}
+article-content p{
+    max-width: 100%;
+    white-space: pre-wrap;
+}
+
+code[class*=language-], pre[class*=language-] {
+    max-width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
 blockquote{
     border-left: 2px solid #aaa;
     padding: 12px 0 12px 12px;
