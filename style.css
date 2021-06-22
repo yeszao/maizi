@@ -269,6 +269,9 @@ a.skip-link {
     border: 1px solid #dfdfdf;
     padding: 3px;
 }
+.article-content p {
+    line-height: 1.8rem;;
+}
 
 /* 评论 */
 .comment-content p, .comment-content pre {
