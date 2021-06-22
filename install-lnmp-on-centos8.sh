@@ -1,4 +1,5 @@
 yum -y install nginx
+systemctl enable nginx
 
 # Install php 7.4 on Centos 8
 dnf install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
