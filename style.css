@@ -75,6 +75,11 @@ code[class*=language-], pre[class*=language-] {
     overflow-wrap: break-word;
 }
 
+p > code, blockquote > code, ul > li > code {
+    margin: auto 0.2rem;
+    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+}
+
 blockquote{
     border-left: 2px solid #aaa;
     padding: 12px 0 12px 12px;
