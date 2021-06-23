@@ -67,12 +67,6 @@ ul, li {
 }
 
 
-
-article-content p{
-    max-width: 100%;
-    white-space: pre-wrap;
-}
-
 code[class*=language-], pre[class*=language-] {
     max-width: 100%;
     white-space: pre-wrap;
@@ -282,7 +276,16 @@ a.skip-link {
     padding: 3px;
 }
 .article-content p {
-    line-height: 1.8rem;;
+    line-height: 1.7rem;
+    max-width: 100%;
+    white-space: pre-wrap;
+}
+
+.article-content ul {
+    margin-bottom: 1rem;
+}
+.article-content ul li {
+    line-height: 1.65rem;
 }
 
 /* 评论 */
