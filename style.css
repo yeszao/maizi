@@ -293,6 +293,12 @@ a.skip-link {
     line-height: 1.65rem;
 }
 
+.article-content .card-body > ul,
+.article-content .card-body > ol,
+.article-content .card-body > dl {
+    padding-left: 0;
+}
+
 /* 评论 */
 .comment-content p, .comment-content pre {
     white-space: normal;
