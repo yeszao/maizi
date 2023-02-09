@@ -2,10 +2,8 @@
 
 /**
  * Class Name: bs4Navwalker
- * GitHub URI: https://github.com/dupkey/bs4navwalker
- * Description: A custom WordPress nav walker class for Bootstrap 4 (v4.0.0-alpha.1) nav menus in a custom theme using the WordPress built in menu manager
- * Version: 0.1
- * Author: Dominic Businaro - @dominicbusinaro
+ * GitHub URI: https://gitlab.com/nicgene/bs4navwalker
+ * Description: A custom WordPress nav walker class for Bootstrap 4 nav menus in a custom theme using the WordPress built in menu manager.
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
@@ -128,13 +126,11 @@ class bs4Navwalker extends Walker_Nav_Menu
         if ($depth === 0 && in_array('menu-item-has-children', $classes)) {
             $atts['class']       .= ' dropdown-toggle';
             $atts['data-toggle']  = 'dropdown';
-			$atts['role']         = "button";
-			$atts['aria-haspopup']= "true";
-			$atts['aria-expanded']="false";
         }
 
         if ($depth > 0) {
-            $atts['class'] = 'dropdown-item';
+            $manual_class = array_values($classes)[0] .' '. 'dropdown-item';
+            $atts ['class']= $manual_class;
         }
 
         if (in_array('current-menu-item', $item->classes)) {
@@ -219,7 +215,7 @@ class bs4Navwalker extends Walker_Nav_Menu
      * @param array  $args   An array of arguments. @see wp_nav_menu()
      */
     public function end_el( &$output, $item, $depth = 0, $args = array() ) {
-        if (isset($args->has_children) && $depth === 0) {
+        if ($depth === 0) {
             $output .= "</li>\n";
         }
     }
